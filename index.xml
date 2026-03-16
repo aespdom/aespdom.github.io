@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Mathematical Adventures</title>
-<link>https://your-website-url.example.com/</link>
-<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://aespdom.github.io/</link>
+<atom:link href="https://aespdom.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.9.35</generator>
 <lastBuildDate>Sun, 15 Mar 2026 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Exploring Periodicity, Part II: The Wall of Measurability</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
-  <link>https://your-website-url.example.com/posts/en/Dense-Periods-Measurability/</link>
+  <link>https://aespdom.github.io/posts/en/Dense-Periods-Measurability/</link>
   <description><![CDATA[ 
 
 
@@ -55,13 +55,13 @@
   <category>measure theory</category>
   <category>periodic functions</category>
   <category>ergodic theory</category>
-  <guid>https://your-website-url.example.com/posts/en/Dense-Periods-Measurability/</guid>
+  <guid>https://aespdom.github.io/posts/en/Dense-Periods-Measurability/</guid>
   <pubDate>Sun, 15 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Exploring Periodicity, Part I: Introduction and Preliminaries</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
-  <link>https://your-website-url.example.com/posts/en/Intro-prelims/</link>
+  <link>https://aespdom.github.io/posts/en/Intro-prelims/</link>
   <description><![CDATA[ 
 
 
@@ -118,13 +118,13 @@
   <category>Exploring Periodicity</category>
   <category>periodic functions</category>
   <category>period modules</category>
-  <guid>https://your-website-url.example.com/posts/en/Intro-prelims/</guid>
+  <guid>https://aespdom.github.io/posts/en/Intro-prelims/</guid>
   <pubDate>Sun, 15 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Welcome to Mathematical Adventures!</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
-  <link>https://your-website-url.example.com/posts/en/Welcome-to-Math-Adventures/</link>
+  <link>https://aespdom.github.io/posts/en/Welcome-to-Math-Adventures/</link>
   <description><![CDATA[ 
 
 
@@ -140,7 +140,7 @@
  ]]></description>
   <category>introduction</category>
   <category>philosophy</category>
-  <guid>https://your-website-url.example.com/posts/en/Welcome-to-Math-Adventures/</guid>
+  <guid>https://aespdom.github.io/posts/en/Welcome-to-Math-Adventures/</guid>
   <pubDate>Sat, 14 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 </channel>
