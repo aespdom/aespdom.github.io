@@ -176,8 +176,16 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">2. Preliminaries</a></li>
+  <li><a href="#some-non-continuous-periodic-functions" id="toc-some-non-continuous-periodic-functions" class="nav-link" data-scroll-target="#some-non-continuous-periodic-functions">3. Some non-continuous periodic functions</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -186,7 +194,8 @@ window.Quarto = {
 
 
 
-<p><strong>1. Introduction</strong></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
 <p>It is an elementary exercise in linear algebra to show that the set of all periodic functions is not a vector space, since the sum of periodic functions with incommensurable periods (i.e., periods whose ratio is irrational) <em>may</em> fail to be periodic. However, this leads to many more subtle questions. For instance:</p>
 <ul>
 <li>Do there exist any periodic functions with incommensurable periods whose sum is nonetheless periodic? Can we characterize such functions?</li>
@@ -196,7 +205,9 @@ window.Quarto = {
 </ul>
 <p>As it turns out, these seemingly simple questions open a can of worms involving many fields of mathematics at once: algebra, measure and ergodic theory, topology of <span class="math inline">\(\mathbb{R}\)</span>, and the foundations of mathematics (namely, set theory and the Axiom of Choice). In particular, using the Axiom of Choice on quotients <span class="math inline">\(\mathbb{R}/G\)</span>, where <span class="math inline">\(G\)</span> is either a <span class="math inline">\(\mathbb{Z}\)</span>-submodule of <span class="math inline">\(\mathbb{R}\)</span> or a <span class="math inline">\(\mathbb{Q}\)</span>-subspace of <span class="math inline">\(\mathbb{R}\)</span>, we can find highly pathological examples answering the first three questions in the affirmative, but only for non-measurable functions. This is all very closely related to what is called the Periodic Decomposition Problem, about which much has been written (<a href="https://arxiv.org/abs/1312.3798">see for instance this paper</a>).</p>
 <p>I am working now on figuring out 2 main questions: first, whether the existence of these pathological periodic functions is equivalent to or strictly weaker than the Axiom of Choice (I suspect the latter), and second, just how large the dimension of a vector space of periodic functions can be when it contains functions with incommensurable periods (I suspect not very large). I will write up my findings on these questions more formally in the next few months. However, in the meantime, I want to use this <em>Pathological Periodicity</em> series in the blog to further motivate this line of inquiry and record some elementary proofs I have come up with of classic results related to these questions, but that I won’t be including in the final write-up itself, since they are not new. I hope that these elementary proofs will be particularly useful to fellow students of mathematics as well as to instructors, and that they will inspire others to explore these questions further.</p>
-<p><strong>2. Preliminaries</strong></p>
+</section>
+<section id="preliminaries" class="level2">
+<h2 class="anchored" data-anchor-id="preliminaries">2. Preliminaries</h2>
 <p>Let’s review some basic definitions and facts about periodic functions that set the stage for our further explorations and that start to reveal the interplay of algebra, topology, and analysis in the world of periodicity.</p>
 <p><strong>Definition 2.1 (Periodic Function)</strong> A function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> is said to be <strong>periodic</strong> if there exists a non-zero real number <span class="math inline">\(p\)</span> such that <span class="math inline">\(f(x+p)=f(x)\)</span> for all <span class="math inline">\(x\in\mathbb{R}\)</span>. If there exists a smallest positive such <span class="math inline">\(p\)</span>, it is called the <strong>fundamental period</strong> of <span class="math inline">\(f\)</span>, and we say <span class="math inline">\(f\)</span> is <strong>strictly periodic</strong>.</p>
 <p><em>Remark</em>: Note that a function can be periodic without being strictly periodic; for instance, the constant functions are periodic with any real period, but they are not strictly periodic. Essentially, the whole line of inquiry that we are following in the first series of this blog is about the existence of non-strictly periodic functions other than the constant functions, in particular those with incommensurable periods.</p>
@@ -225,7 +236,9 @@ window.Quarto = {
 <p>For now, we conclude with the following corrollary, which is a direct consequence of the previous propositions and which we leave as an exercise to the reader (hint: use the difference operator, and the boundedness of continuous periodic functions, and the fact that the period module of a continuous periodic function fails to be one-dimensional if and only if it is constant):</p>
 <p><strong>Corollary 2.9:</strong> <em>Let <span class="math inline">\(f, g\)</span> be continuous periodic functions. Then <span class="math inline">\(f+g\)</span> is periodic if and only if <span class="math inline">\(f, g\)</span> are commensurable. Thus no set of continuous periodic functions containing two or more incommensurable functions can be a vector space.</em></p>
 <p><em>Remark</em>: This corollary says essentially that no incommensurable continuous functions satisfy the necesary condition in the second part of Proposition 2.8, naturally raising the question of whether <em>any</em> incommensurable functions can satisfy this condition. As we will see in the next section, the answer is yes, and we can even find strictly periodic (but not continuous) functions satisfying this condition. Moreover, the condition is not only necessary but also sufficient for the sum of incommensurable functions to be periodic, <em>assuming the Axiom of Choice</em>. This is deeply tied to the Periodic Decomposition Problem mentioned earlier, which we will explore in more detail in future posts.</p>
-<p><strong>3. Some non-continuous periodic functions</strong></p>
+</section>
+<section id="some-non-continuous-periodic-functions" class="level2">
+<h2 class="anchored" data-anchor-id="some-non-continuous-periodic-functions">3. Some non-continuous periodic functions</h2>
 <p>Most of the time, when we think of periodic functions, we think of nice, well-behaved functions like sines and cosines. From the perspective of their period modules, we have shown these are all rather boring: they are all one-dimensional over <span class="math inline">\(\mathbb{Z}\)</span>, none of them are dense, and any vector spaces <span class="math inline">\(\mathcal V\)</span> consisting solely of strictly periodic functions cannot contain any incommensurable functions, meaning the period spaces <span class="math inline">\(V_f\)</span> for all <span class="math inline">\(f\in \mathcal V\)</span> live along a single 1-dimensional line <span class="math inline">\(p\mathbb{Q}\)</span> of <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <p>But, as alluded to many times already, we can find more interesting periodic functions when we drop continuity:</p>
 <p><em>Examples 3.1</em>: Let <span class="math inline">\(p, q\)</span> be incommensurable, and consider the functions <span class="math inline">\(\mathbb{1}_{\mathbb{Q}}\)</span>, <span class="math inline">\(\mathbb{1}_{\mathbb{Z}_{p,q}}\)</span>, and <span class="math display">\[
@@ -255,6 +268,7 @@ window.Quarto = {
 <p>In the next installment of <em>Pathological Periodicity</em>, we will first use the axiom of choice to find a periodic function with a dense period module that is constant only on sets of measure zero. We will then prove that no such functions can be measurable, a classic result in measure theory. The third installment of the series will then explore period modules and spaces in more detail, and tackle the question about the maximal dimension of period spaces. Finally, the fourth installment will more explicitly tie all we have done to the Periodic Decomposition Problem, and will tackle the third of the above questions. Stay tuned!</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
