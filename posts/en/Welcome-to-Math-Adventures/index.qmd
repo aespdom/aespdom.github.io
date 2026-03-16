@@ -1,0 +1,13 @@
+---
+title: "Welcome to Mathematical Adventures!"
+author: "Alonso Espinosa Domínguez"
+date: "2026-03-14"
+categories: [introduction, philosophy]
+---
+
+Welcome to *Mathematical Adventures*! After many years away from mathematics, I am finally making my way back to this beautiful subject. In this blog, I will first and foremost share my reflections on mathematical topics as I dive into exploring (and re-learning) them. I hope to also provide some meta-mathematical reflections touching on philosophy, pedagogy, and the travails of becoming a mathematician in the current social, political, and economic context.
+
+When it comes to the mathematical content of this blog, I hope to step away from the highly polished, often opaque final forms of classical theorems and actually get our hands dirty. We will explore rigorous mathematics with the mindset of an adventurer: taking the scenic routes, avoiding black-box machinery whenever possible, and building our intuition from the ground up. I think this approach is not only more fun, but also more rewarding in terms of deep understanding, especially for anyone like myself needing to re-learn the basics.
+
+This blog will contain some stand alone posts, and some series. The first series I am launching, *Exploring Periodicity*, concerns intriguing questions about periodic functions $f:\mathbb{R}\to\mathbb{R}$. Hop on over to the first post to get started! 
+

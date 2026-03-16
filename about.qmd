@@ -1,0 +1,16 @@
+---
+title: "About"
+image: profile.png
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+
+---
+
+Hello! My name is Alonso, a mathematician-in-training based in Texas (and soon, Mexico City). I have been fascinated by mathematics since childhood, and I went on to obtain an undergraduate degree in the subject. However, for various reasons, I have been away from mathematics for several years. I am now making my way back to it with renewed enthusiasm and curiosity. This blog is a way for me to share my journey back into mathematics, as well as scattered reflections on the philosophy and pedagogy of the subject. I hope that my reflections and explorations will be useful and inspiring to others who are also interested in mathematics, whether they are students, educators, or simply curious minds.

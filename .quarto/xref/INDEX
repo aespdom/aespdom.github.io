@@ -1,0 +1,26 @@
+{
+  "posts/post-with-code/index.qmd": {
+    "index.html": "0a5d1cda"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "a8b46f50"
+  },
+  "index.qmd": {
+    "index.html": "1e359346"
+  },
+  "about.qmd": {
+    "about.html": "6c2e816b"
+  },
+  "posts/Welcome-to-Math-Adventures/index.qmd": {
+    "index.html": "182cc9cd"
+  },
+  "posts/en/Welcome-to-Math-Adventures/index.qmd": {
+    "index.html": "d869be54"
+  },
+  "posts/en/Dense-Periods-Measurability/index.qmd": {
+    "index.html": "3c7b6f72"
+  },
+  "posts/en/Intro-prelims/index.qmd": {
+    "index.html": "fe187c2b"
+  }
+}
