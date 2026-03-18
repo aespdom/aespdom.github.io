@@ -70,3 +70,10 @@ We leave the proof to the reader (hint: apply the final fact listed about differ
 With what we have established so far, a clear structural dichotomy emerges: any periodic function with a dense (and thus higher-dimensional) period module, and any pair of incommensurable functions whose sum manages to remain periodic, must be pathological—specifically, they must be discontinuous everywhere. 
 
 In the next installment of *Pathological Periodicity*, we will dive directly into the abyss of these nowhere-continuous functions. We will construct and dissect a variety of pathological examples, including some highly unintuitive functions that are constant only on sets of Lebesgue measure zero—a construction where the Axiom of Choice becomes absolutely indispensable. Stay tuned!
+
+::: {#def-period-space}
+## $\mathbb{Q}$-subspace and Period Space
+For any function $f$, we can consider the linear span of its period module over the rational numbers $\mathbb{Q}$. We denote this by $V_f := \text{span}_\mathbb{Q}(P_f)$, and call it the **period space** of $f$. By definition, $V_f$ is a **$\mathbb{Q}$-subspace** of $\mathbb{R}_{\mathbb{Q}}$, which is how we denote the vector space of $\mathbb{R}$ over $\mathbb{Q}$. 
+:::
+
+* **Fact 3**: Because we are working within $\mathbb{R}$, any $\mathbb{Q}$-linear dependence between periods can be cleared of denominators to form a $\mathbb{Z}$-linear dependence. Therefore, the **rank** of the period module $P_f$ over $\mathbb{Z}$ is always strictly equal to the **dimension** of the period space $V_f$ over $\mathbb{Q}$. However, $P_f$ is often not finitely generated as a $\mathbb{Z}$-module. For instance, if $P_f = \mathbb{Q}$, its rank is exactly 1 (since any two rationals are $\mathbb{Z}$-linearly dependent), but it requires infinitely many generators over $\mathbb{Z}$, which is what gives it its dense topological structure.
