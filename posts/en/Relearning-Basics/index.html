@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alonso Espinosa Domínguez">
+<meta name="dcterms.date" content="2026-03-15">
 
-<title>Mathematical Adventures</title>
+<title>Pathological Periodicity, Part I: Relearning the Basics – Mathematical Adventures</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ffcf8a1dafcb3a63733302c678632eea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-ffcf8a1dafcb3a63733302c678632eea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -132,8 +103,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Mathematical Adventures" href="index.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../../styles.css">
+</head>
 
 <body class="nav-fixed quarto-light">
 
@@ -142,7 +113,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Mathematical Adventures</span>
     </a>
   </div>
@@ -153,7 +124,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -171,144 +142,78 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Mathematical Adventures</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Pathological Periodicity, Part I: Relearning the Basics</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Pathological Periodicity</div>
+                <div class="quarto-category">periodic functions</div>
+                <div class="quarto-category">linear algebra</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Alonso Espinosa Domínguez </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 15, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YWxnZWJyYQ==">algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50cm9kdWN0aW9u">introduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGluZWFyJTIwYWxnZWJyYQ==">linear algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVhc3VyZSUyMHRoZW9yeQ==">measure theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHk=">Pathological Periodicity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGVyaW9kaWMlMjBmdW5jdGlvbnM=">periodic functions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGhpbG9zb3BoeQ==">philosophy <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>My hiatus from math has been quite long. It’s been 9 years since my last algebra class (algebra was one of my weaker subjects, and I regrettably avoided it in favor of taking more analysis classes), a little under 8 years since I seriously attempted any research, 7 years since I gave up on becoming a mathematician, and 6 years since my last math class whatsoever. Needless to say, I am exceedingly rusty. So when life pushed me to reconsider my divorce from mathematics, I thought to myself, <em>let me revisit the basics.</em> And hence I picked up Axler’s excellent <em>Linear Algebra Done Right</em> and started working through the exercises, to start getting the wheels turning again.</p>
+<p>Just in the first chapter, I came across a very innocent-seeming exercise. Is the set of all periodic functions a vector subspace of <span class="math inline">\(\mathbb{R}^{\mathbb{R}}\)</span>, the space of all real-valued functions on <span class="math inline">\(\mathbb{R}\)</span>? As rusty as I may be, I was still able to quickly and emphatically answer in the negative, because <em>obviously</em> sums of periodic functions with incommensurable periods (i.e., periods whose ratio is irrational) <em>surely</em> fail to be periodic (though sums of functions with commensurable periods are <em>always</em> periodic). Moreover, the only possible vector subspaces consisting solely of periodic functions would <em>definitely</em> have to be made up of functions whose periods are commensurable with one another. I thought to myself, <em>I will hammer out a quick little proof of this, and I will move on to more exciting things in linear algebra.</em></p>
+<p>And then I sat down to write and found myself a little bit… stuck. First, I realized I needed to be a bit more precise with what I meant by functions having incommensurable periods—I didn’t just need there to <em>exist</em> periods <span class="math inline">\(p\)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(q\)</span> of <span class="math inline">\(g\)</span> with <span class="math inline">\(p/q \not\in \mathbb{Q}\)</span>, I needed <em>all</em> periods of <span class="math inline">\(f\)</span> to be incommensurable with those of <span class="math inline">\(g\)</span> in order for <span class="math inline">\(f+g\)</span> to potentially fail to be periodic. This was important to specify because constant functions have the “unusual” property of having incommensurable real numbers in their sets of periods, since their set of periods is just all of <span class="math inline">\(\mathbb{R}\)</span>, and this is what makes it possible to add them to any periodic function without affecting the periodicity at all.</p>
+<p>So now I had two questions at once on my mind:</p>
+<ul>
+<li><strong>Question 1:</strong> Was I wrong about sums of incommensurable functions? That is, can I find a pair of <span class="math inline">\(f, g\)</span> such that they are incommensurable in the sense that they have no periods in common (equivalent to having no periods that are rational multiples of each other) and yet <span class="math inline">\(f+g\)</span> is periodic?</li>
+<li><strong>Question 2:</strong> Are there any functions other than constant functions that can have two or more incommensurable periods?</li>
+</ul>
+<p>For a brief period (pun intended) of time, I continued believing that the answer to the above would be no. In particular, for the second question, I realized that if a set of periods contains incommensurables, it would have to be dense, and then it becomes relatively easy to prove that in the continuous case this is only possible for constant functions.</p>
+<p>This is also what led me to suddenly realize I was almost certainly wrong about Question 2, and by extension probably wrong about Question 1 as well. Even the better part of a decade later, I still remember vividly just how pathological a function can get when you abandon continuity. All of a sudden, the prospect of a non-constant function with a dense set of periods seemed like exactly the sort of thing possible in the strange world of nowhere continuous functions.</p>
+<p>So I set out to come up with some examples. Within hours, I had my first example showing Question 2 could be answered affirmatively: if I chose any incommensurable <span class="math inline">\(p, q\)</span>, then the characteristic function over <span class="math inline">\(p\mathbb{Q} + q\mathbb{Q}\)</span> would be non-constant and have a set of periods equal to all of <span class="math inline">\(p\mathbb{Q} + q\mathbb{Q}\)</span>.</p>
+<p>Question 1 proved to be a bit trickier for me, but after a day or two, I finally came up with an example also answering this question affirmatively—but I won’t show it till a little later in the series, to give any readers a chance to try to come up with examples themselves. For now, suffice it to say, I was extremely intrigued. And as soon as I answered one question, more questions arose. For instance:</p>
+<ul>
+<li><strong>Question 3:</strong> Now that I know sums of incommensurable functions do not always fail to be periodic, is there a neat characterization of when these sums end up being periodic?</li>
+<li><strong>Question 4:</strong> Can I find a vector subspace of <span class="math inline">\(\mathbb{R}^\mathbb{R}\)</span> that consists solely of periodic functions and yet contains two or more incommensurable functions?</li>
+<li><strong>Question 5:</strong> All the examples I had at that point were constant almost everywhere. Do there exist examples that aren’t? Can I find an example that is constant “almost nowhere”? Would these examples have to be non-measurable?</li>
+<li><strong>Question 6:</strong> Given a function with incommensurable periods <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>, like my characteristic function mentioned above, can I break it apart into a function only periodic in <span class="math inline">\(p\mathbb{Z}\)</span> or <span class="math inline">\(p\mathbb{Q}\)</span>, and one only periodic in <span class="math inline">\(q\mathbb{Z}\)</span> or <span class="math inline">\(q\mathbb{Q}\)</span>?</li>
+<li><strong>Question 7:</strong> Clearly, sets of periods can have some interesting topological and algebraic structure. Sometimes they are dense, and they are always at least an additive group (actually, a <span class="math inline">\(\mathbb{Z}\)</span>-module, but I could hardly remember what that was at first). Sometimes they are also a vector space over <span class="math inline">\(\mathbb{Q}\)</span>—what more can be said about these sets/modules/spaces of periods and how they determine the behavior of the function they arise from?</li>
+</ul>
+<p>I can genuinely say, I had not felt this excited about math in at least 8 years. My excitement multiplied even more when I noticed I could invoke the Axiom of Choice to answer Question 5 affirmatively as well (except for the measurability part).</p>
+<p>In other words, here I was, thinking I was just doing a rudimentary exercise in Chapter 1 of a linear algebra text, only to open a can of worms involving many fields of mathematics at once: algebra, measure theory, topology, and set theory.</p>
+<p>With a little digging, I learned that unsurprisingly many others have been interested in similar questions, and that there is a substantial body of work on what is called the Periodic Decomposition Problem, which takes many of the questions I had been posing in directions I had not yet imagined (<a href="https://arxiv.org/abs/1312.3798">see for instance this paper</a>).</p>
+<p>I have much more to learn about the work done so far on the Periodic Decomposition Problem. But I do think I have identified at least two questions that haven’t been so directly posed and answered in the literature so far. First, though it is clear that ZF alone is not enough to show the existence of the most pathological examples I’ve come up with and found in the literature (those that end up being non-measurable), I’d like to know how many can be found in systems strictly weaker than full ZFC, (or if their existence is actually equivalent to the Axiom of Choice). I suspect I could probably use ultrafilters or something like that which is weaker than full AC, but I still need to hammer that out. Second, I’d like to know just how large the dimension of a vector space of periodic functions can be when it contains functions with incommensurable periods. I suspect the answer is not very large, since it seems hard enough to make even a one-dimensional space of this sort (though at least that I know can be done with some AC trickery). But again, I haven’t worked that out yet.</p>
+<p>While I work on these questions (and write up the results more formally), I want to use this blog to bring any readers along with me on this journey into the world of <em>Pathological Periodicity</em>. I hope you enjoy it as much as I have. See you in the next post!</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHklMkNwZXJpb2RpYyUyMGZ1bmN0aW9ucyUyQ21lYXN1cmUlMjB0aGVvcnklMkNhbGdlYnJh" data-listing-date-sort="1773810000000" data-listing-file-modified-sort="1773818060544" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1547">
-<div class="thumbnail"><a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">Pathological Periodicity, Part II: The Algebra and Topology of Periods</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHk='); return false;">Pathological Periodicity</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyaW9kaWMlMjBmdW5jdGlvbnM='); return false;">periodic functions</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWVhc3VyZSUyMHRoZW9yeQ=='); return false;">measure theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWxnZWJyYQ=='); return false;">algebra</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">
-In the previous post, we motivated a series of questions surrounding the sums of periodic functions and the existence of functions with incommensurable periods. To…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">
-<div class="listing-date">
-Mar 18, 2026
-</div>
-<div class="listing-author">
-Alonso Espinosa Domínguez
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHklMkNwZXJpb2RpYyUyMGZ1bmN0aW9ucyUyQ2xpbmVhciUyMGFsZ2VicmE=" data-listing-date-sort="1773550800000" data-listing-file-modified-sort="1773817071909" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1323">
-<div class="thumbnail"><a href="./posts/en/Relearning-Basics/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Relearning-Basics/index.html" class="no-external">Pathological Periodicity, Part I: Relearning the Basics</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHk='); return false;">Pathological Periodicity</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyaW9kaWMlMjBmdW5jdGlvbnM='); return false;">periodic functions</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGluZWFyJTIwYWxnZWJyYQ=='); return false;">linear algebra</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Relearning-Basics/index.html" class="no-external">
-My hiatus from math has been quite long. It’s been 9 years since my last algebra class (algebra was one of my weaker subjects, and I regrettably avoided it in favor of…<em></em><em></em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Relearning-Basics/index.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2026
-</div>
-<div class="listing-author">
-Alonso Espinosa Domínguez
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="aW50cm9kdWN0aW9uJTJDcGhpbG9zb3BoeQ==" data-listing-date-sort="1773464400000" data-listing-file-modified-sort="1773623507755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
-<div class="thumbnail"><a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">Welcome to Mathematical Adventures!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50cm9kdWN0aW9u'); return false;">introduction</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGhpbG9zb3BoeQ=='); return false;">philosophy</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-Welcome to <em>Mathematical Adventures</em>! After many years away from mathematics, I am finally making my way back to this beautiful subject. In this blog, I will first and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-<div class="listing-date">
-Mar 14, 2026
-</div>
-<div class="listing-author">
-Alonso Espinosa Domínguez
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
