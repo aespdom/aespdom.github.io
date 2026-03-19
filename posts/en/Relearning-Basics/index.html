@@ -35,6 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
+<link href="../../../profile.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -44,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-ffcf8a1dafcb3a63733302c678632eea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-88ed4e9de74e0a7db13eb1032620cd46.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,6 +73,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -104,6 +108,14 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Mathematical Adventures">
+<meta property="og:description" content="A blog documenting one mathematician’s return to the subject.">
+<meta property="og:image" content="https://aespdom.github.io/posts/en/Relearning-Basics/profile.png">
+<meta property="og:site_name" content="Mathematical Adventures">
+<meta name="twitter:title" content="Mathematical Adventures">
+<meta name="twitter:description" content="A blog documenting one mathematician’s return to the subject.">
+<meta name="twitter:image" content="https://aespdom.github.io/posts/en/Relearning-Basics/profile.png">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -122,13 +134,32 @@ window.Quarto = {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../series.html"> 
+<span class="menu-text">Series</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../archive.html"> 
+<span class="menu-text">Archive</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/aespdom/aespdom.github.io"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/aespdom"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../../blog.xml"> <i class="bi bi-rss" role="img" aria-label="RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -187,15 +218,15 @@ window.Quarto = {
 
 
 <p>My hiatus from math has been quite long. It’s been 9 years since my last algebra class (algebra was one of my weaker subjects, and I regrettably avoided it in favor of taking more analysis classes), a little under 8 years since I seriously attempted any research, 7 years since I gave up on becoming a mathematician, and 6 years since my last math class whatsoever. Needless to say, I am exceedingly rusty. So when life pushed me to reconsider my divorce from mathematics, I thought to myself, <em>let me revisit the basics.</em> And hence I picked up Axler’s excellent <em>Linear Algebra Done Right</em> and started working through the exercises, to start getting the wheels turning again.</p>
-<p>Just in the first chapter, I came across a very innocent-seeming exercise. Is the set of all periodic functions a vector subspace of <span class="math inline">\(\mathbb{R}^{\mathbb{R}}\)</span>, the space of all real-valued functions on <span class="math inline">\(\mathbb{R}\)</span>? As rusty as I may be, I was still able to quickly and emphatically answer in the negative, because <em>obviously</em> sums of periodic functions with incommensurable periods (i.e., periods whose ratio is irrational) <em>surely</em> fail to be periodic (though sums of functions with commensurable periods are <em>always</em> periodic). Moreover, the only possible vector subspaces consisting solely of periodic functions would <em>definitely</em> have to be made up of functions whose periods are commensurable with one another. I thought to myself, <em>I will hammer out a quick little proof of this, and I will move on to more exciting things in linear algebra.</em></p>
+<p>Just in the first chapter, I came across a very innocent-seeming question. Is the set of all periodic functions a vector subspace of <span class="math inline">\(\mathbb{R}^{\mathbb{R}}\)</span>, the space of all real-valued functions on <span class="math inline">\(\mathbb{R}\)</span>? As rusty as I may be, I was still able to quickly and emphatically answer in the negative, because <em>obviously</em> sums of periodic functions with incommensurable periods (i.e., periods whose ratio is irrational) <em>surely</em> fail to be periodic (though sums of functions with commensurable periods are always periodic). Moreover, the only possible vector subspaces consisting solely of periodic functions would <em>definitely</em> have to be made up of functions whose periods are commensurable with one another. I thought to myself, <em>I will hammer out a quick little proof of this, and I will move on to more exciting things in linear algebra.</em></p>
 <p>And then I sat down to write and found myself a little bit… stuck. First, I realized I needed to be a bit more precise with what I meant by functions having incommensurable periods—I didn’t just need there to <em>exist</em> periods <span class="math inline">\(p\)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(q\)</span> of <span class="math inline">\(g\)</span> with <span class="math inline">\(p/q \not\in \mathbb{Q}\)</span>, I needed <em>all</em> periods of <span class="math inline">\(f\)</span> to be incommensurable with those of <span class="math inline">\(g\)</span> in order for <span class="math inline">\(f+g\)</span> to potentially fail to be periodic. This was important to specify because constant functions have the “unusual” property of having incommensurable real numbers in their sets of periods, since their set of periods is just all of <span class="math inline">\(\mathbb{R}\)</span>, and this is what makes it possible to add them to any periodic function without affecting the periodicity at all.</p>
 <p>So now I had two questions at once on my mind:</p>
 <ul>
 <li><strong>Question 1:</strong> Was I wrong about sums of incommensurable functions? That is, can I find a pair of <span class="math inline">\(f, g\)</span> such that they are incommensurable in the sense that they have no periods in common (equivalent to having no periods that are rational multiples of each other) and yet <span class="math inline">\(f+g\)</span> is periodic?</li>
 <li><strong>Question 2:</strong> Are there any functions other than constant functions that can have two or more incommensurable periods?</li>
 </ul>
-<p>For a brief period (pun intended) of time, I continued believing that the answer to the above would be no. In particular, for the second question, I realized that if a set of periods contains incommensurables, it would have to be dense, and then it becomes relatively easy to prove that in the continuous case this is only possible for constant functions.</p>
-<p>This is also what led me to suddenly realize I was almost certainly wrong about Question 2, and by extension probably wrong about Question 1 as well. Even the better part of a decade later, I still remember vividly just how pathological a function can get when you abandon continuity. All of a sudden, the prospect of a non-constant function with a dense set of periods seemed like exactly the sort of thing possible in the strange world of nowhere continuous functions.</p>
+<p>For a brief period (pun intended) of time, I continued believing that the answer to the above would be no. In particular, for the second question, I realized that if a set of periods contains incommensurables. And surely, only constant functions could have a dense period, right?</p>
+<p>With a little more thought I concluded this is not hard to prove if I restrict myself to continuous functions…and that the proof for continuous functions cannot really be generalized or extended. This was precisely the moment I realized I was almost certainly wrong about Question 2, and by extension probably wrong about Question 1 as well. Even the better part of a decade later, I still remember vividly just how pathological a function can get when you abandon continuity. All of a sudden, the prospect of a non-constant function with a dense set of periods seemed like exactly the sort of thing possible in the strange world of nowhere continuous functions.</p>
 <p>So I set out to come up with some examples. Within hours, I had my first example showing Question 2 could be answered affirmatively: if I chose any incommensurable <span class="math inline">\(p, q\)</span>, then the characteristic function over <span class="math inline">\(p\mathbb{Q} + q\mathbb{Q}\)</span> would be non-constant and have a set of periods equal to all of <span class="math inline">\(p\mathbb{Q} + q\mathbb{Q}\)</span>.</p>
 <p>Question 1 proved to be a bit trickier for me, but after a day or two, I finally came up with an example also answering this question affirmatively—but I won’t show it till a little later in the series, to give any readers a chance to try to come up with examples themselves. For now, suffice it to say, I was extremely intrigued. And as soon as I answered one question, more questions arose. For instance:</p>
 <ul>
@@ -214,6 +245,22 @@ window.Quarto = {
 
 
 </main> <!-- /main -->
+<div class="post-footer-custom">
+
+  <h3>Stay in touch</h3>
+  <p>If you enjoyed this post or spotted an error, I'd love to hear from you.
+  You can reach me at <a href="mailto:aloespdom@gmail.com">aloespdom@gmail.com</a>,
+  find me on <a href="https://github.com/aespdom">GitHub</a>,
+  or connect on <a href="https://www.linkedin.com/in/aespdom">LinkedIn</a>.</p>
+
+  <h3>Subscribe</h3>
+  <p>You can follow this blog via
+  <a href="../../../blog.xml"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16" style="vertical-align: -1px;"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg> RSS feed</a>.</p>
+
+  <h3>Share</h3>
+  <p>If you found this useful, consider sharing it with someone who might enjoy it too.</p>
+
+</div>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -287,7 +334,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/aespdom\.github\.io\/");
+        var filterRegex = new RegExp("https:\/\/aespdom\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

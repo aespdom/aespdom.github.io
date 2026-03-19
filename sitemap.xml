@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aespdom.github.io/blog.html</loc>
+    <lastmod>2026-03-19T03:18:20.009Z</lastmod>
+  </url>
+  <url>
     <loc>https://aespdom.github.io/about.html</loc>
     <lastmod>2026-03-16T14:05:59.975Z</lastmod>
   </url>
   <url>
+    <loc>https://aespdom.github.io/archive.html</loc>
+    <lastmod>2026-03-19T03:19:39.062Z</lastmod>
+  </url>
+  <url>
     <loc>https://aespdom.github.io/posts/en/Welcome-to-Math-Adventures/index.html</loc>
-    <lastmod>2026-03-18T16:51:33.483Z</lastmod>
+    <lastmod>2026-03-19T04:45:04.287Z</lastmod>
   </url>
   <url>
     <loc>https://aespdom.github.io/posts/en/Alg-Top-Periods/index.html</loc>
-    <lastmod>2026-03-18T07:24:17.870Z</lastmod>
+    <lastmod>2026-03-19T03:38:47.222Z</lastmod>
   </url>
   <url>
     <loc>https://aespdom.github.io/posts/en/Relearning-Basics/index.html</loc>
-    <lastmod>2026-03-18T15:12:50.573Z</lastmod>
+    <lastmod>2026-03-19T03:47:20.760Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aespdom.github.io/series.html</loc>
+    <lastmod>2026-03-19T03:19:32.831Z</lastmod>
   </url>
   <url>
     <loc>https://aespdom.github.io/index.html</loc>
-    <lastmod>2026-03-16T00:27:59.995Z</lastmod>
+    <lastmod>2026-03-19T03:18:48.624Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aespdom.github.io/pathological-periodicity.html</loc>
+    <lastmod>2026-03-19T03:19:36.397Z</lastmod>
   </url>
 </urlset>

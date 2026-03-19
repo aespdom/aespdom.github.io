@@ -1,10 +1,25 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
       "/posts/en/Alg-Top-Periods/index.html",
       "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Welcome-to-Math-Adventures/index.html"
+    ]
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/posts/en/Alg-Top-Periods/index.html",
+      "/posts/en/Relearning-Basics/index.html",
+      "/posts/en/Welcome-to-Math-Adventures/index.html"
+    ]
+  },
+  {
+    "listing": "/pathological-periodicity.html",
+    "items": [
+      "/posts/en/Relearning-Basics/index.html",
+      "/posts/en/Alg-Top-Periods/index.html"
     ]
   }
 ]
