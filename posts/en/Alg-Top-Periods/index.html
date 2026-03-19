@@ -153,6 +153,33 @@ window.Quarto = {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-es">    
+        <li>
+    <a class="dropdown-item" href="../../../index-es.html">
+ <span class="dropdown-text">Inicio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../blog-es.html">
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../series-es.html">
+ <span class="dropdown-text">Series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../archive-es.html">
+ <span class="dropdown-text">Archivo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about-es.html">
+ <span class="dropdown-text">Acerca de</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/aespdom"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -234,7 +261,7 @@ window.Quarto = {
 </div>
 <p><em>Remark</em>: Note that a function can be periodic without being strictly periodic; for instance, the constant functions are periodic with any real period, but they are not strictly periodic. In this series, we will examine pathological examples of functions that fail to be strictly periodic but are also not constant. Some are even constant only on sets of measure zero, which is as far from being constant as one can get. We will also see pathological functions that actually are strictly periodic.</p>
 <div id="def-period-module" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (The Period Module)</strong></span> For any function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span>, we denote by <span class="math inline">\(P_f\)</span> the set of all periods of <span class="math inline">\(f\)</span>, i.e., <span class="math inline">\(P_f := \{p\in\mathbb{R}\setminus\{0\} : f(x+p)=f(x) \text{ for all } x\in\mathbb{R}\}\)</span>. We call <span class="math inline">\(P_f\)</span> the <strong>period module</strong> of <span class="math inline">\(f\)</span>. Also, we say two periodic functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are <strong>incommensurable</strong> if <span class="math inline">\(P_f\cap P_g = \{0\}\)</span>, and they are <strong>commensurable</strong> otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 2 (The Period Module)</strong></span> For any function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span>, we denote by <span class="math inline">\(P_f\)</span> the set of all periods of <span class="math inline">\(f\)</span>, i.e., <span class="math inline">\(P_f := \{p\in\mathbb{R}: f(x+p)=f(x) \text{ for all } x\in\mathbb{R}\}\)</span>. We call <span class="math inline">\(P_f\)</span> the <strong>period module</strong> of <span class="math inline">\(f\)</span>. Also, we say two periodic functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are <strong>incommensurable</strong> if <span class="math inline">\(P_f\cap P_g = \{0\}\)</span>, and they are <strong>commensurable</strong> otherwise.</p>
 </div>
 <p><em>(Note: Constant functions are trivially commensurable with any periodic function. Non-periodic functions still have a period module, but it is just <span class="math inline">\(\{0\}\)</span>).</em></p>
 <div id="def-submodule" class="theorem definition">
@@ -252,7 +279,7 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Proposition 1</strong></span> <span class="math inline">\(P_f\)</span> is dense if and only if <span class="math inline">\(f\)</span> is not strictly periodic. Thus, if a periodic <span class="math inline">\(f\)</span> is non-constant and continuous, it must be strictly periodic.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(P_f\)</span> is dense, then the infimum of positive periods must be zero, and thus no fundamental period can exist. Conversely, if no fundamental period exists, the infimum <span class="math inline">\(p\)</span> of positive periods must be zero; for otherwise, we could find two distinct periods arbitrarily close to <span class="math inline">\(p\)</span>, and their difference would be a strictly positive period smaller than <span class="math inline">\(p\)</span>, violating the infimum. Thus, any interval around <span class="math inline">\(0\)</span> must contain elements of <span class="math inline">\(P_f\)</span>. Now take any interval <span class="math inline">\((a, b)\)</span> with <span class="math inline">\(0\not\in (a, b)\)</span>. By the foregoing, we can find <span class="math inline">\(x\in P_f\)</span> with <span class="math inline">\(0&lt;|x|&lt;\min(\{|b|, |a|, |b-a|\})\)</span>. There thus must be some integer <span class="math inline">\(n\)</span> so that <span class="math inline">\(nx\in (a, b)\)</span>, for otherwise we could find an <span class="math inline">\(n\)</span> so that <span class="math inline">\((n-1)x \le a &lt; b \le nx\)</span>, which contradicts <span class="math inline">\(|x| &lt; |b-a|\)</span>. But <span class="math inline">\(nx\in P_f\)</span>, showing <span class="math inline">\(P_f\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. The last part is an immediate consequence of this density and Fact 3.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(P_f\)</span> is dense, then the infimum of positive periods must be zero, and thus no fundamental period can exist. Conversely, if no fundamental period exists, the infimum <span class="math inline">\(p\)</span> of positive periods must be zero; for otherwise, we could find two distinct periods arbitrarily close to <span class="math inline">\(p\)</span> such that their positive difference would be a positive period smaller than <span class="math inline">\(p\)</span>, violating the infimum. Thus, any interval around <span class="math inline">\(0\)</span> must contain elements of <span class="math inline">\(P_f\)</span>. Now take any interval <span class="math inline">\((a, b)\)</span> with <span class="math inline">\(0\not\in (a, b)\)</span>. By the foregoing, we can find <span class="math inline">\(x\in P_f\)</span> with <span class="math inline">\(0&lt;|x|&lt;\min(\{|b|, |a|, |b-a|\})\)</span>. There thus must be some integer <span class="math inline">\(n\)</span> so that <span class="math inline">\(nx\in (a, b)\)</span>, for otherwise we could find an <span class="math inline">\(n\)</span> so that <span class="math inline">\((n-1)x \le a &lt; b \le nx\)</span>, which contradicts <span class="math inline">\(|x| &lt; |b-a|\)</span>. But <span class="math inline">\(nx\in P_f\)</span>, showing <span class="math inline">\(P_f\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. The last part is an immediate consequence of this density and Fact 3.</p>
 </div>
 <div id="prp-incommensurable-dense" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposition 2</strong></span> If <span class="math inline">\(p, q\)</span> are incommensurable (<span class="math inline">\(p/q\not\in \mathbb{Q}\)</span>), then the <span class="math inline">\(\mathbb{Z}\)</span>-module <span class="math inline">\(\mathbb{Z}_{p,q}:=\{np + mq : n,m\in\mathbb{Z}\}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. In particular, if a function <span class="math inline">\(f\)</span> has two incommensurable periods <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>, then <span class="math inline">\(\mathbb{Z}_{p,q}\subseteq P_f\)</span>, meaning its period module is dense and <span class="math inline">\(f\)</span> is not strictly periodic. Therefore, <strong>non-constant functions with incommensurable periods are nowhere continuous.</strong></p>
@@ -711,6 +738,35 @@ window.Quarto = {
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "aespdom/aespdom.github.io";
+    script.dataset.repoId = "R_kgDORn_NFQ";
+    script.dataset.category = "Blog Comments";
+    script.dataset.categoryId = "DIC_kwDORn_NFc4C4yXu";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 

@@ -8,6 +8,22 @@
     ]
   },
   {
+    "listing": "/blog-es.html",
+    "items": [
+      "/posts/es/Bienvenida/index.html"
+    ]
+  },
+  {
+    "listing": "/archive-es.html",
+    "items": [
+      "/posts/es/Bienvenida/index.html"
+    ]
+  },
+  {
+    "listing": "/periodicidad-patologica.html",
+    "items": []
+  },
+  {
     "listing": "/archive.html",
     "items": [
       "/posts/en/Alg-Top-Periods/index.html",

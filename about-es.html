@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>All Posts – Mathematical Adventures</title>
+<title>Acerca de – Mathematical Adventures</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,13 +34,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./profile.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -73,71 +70,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Mathematical Adventures" href="blog.xml" data-external="1"><meta property="og:title" content="Mathematical Adventures">
+<meta property="og:title" content="Mathematical Adventures">
 <meta property="og:description" content="Mathematics, relearned and reconsidered.">
 <meta property="og:image" content="https://aespdom.github.io/profile.png">
 <meta property="og:site_name" content="Mathematical Adventures">
@@ -151,7 +90,7 @@ window.Quarto = {
 <meta name="twitter:image-width" content="800">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -169,7 +108,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -231,153 +170,46 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YWxnZWJyYQ==">algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50cm9kdWN0aW9u">introduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGluZWFyJTIwYWxnZWJyYQ==">linear algebra <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHk=">Pathological Periodicity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGVyaW9kaWMlMjBmdW5jdGlvbnM=">periodic functions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGhpbG9zb3BoeQ==">philosophy <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-about-jolla">
+  <img src="profile.png" class="about-image
+  round " style="height: 15em; width: 15em;">
+ <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">All Posts</h1>
+<h1 class="title">Acerca de</h1>
 </div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
+<div class="quarto-title-meta">
   </div>
-  
+</header><main class="content" id="quarto-document-content">
+<p>Mi nombre es Alonso Espinosa Domínguez. Soy un matemático en formación, actualmente en Texas y pronto en la Ciudad de México. Completé una licenciatura en matemáticas en el MIT en 2020, pasé varios años alejado de la disciplina, y ahora estoy encontrando el camino de vuelta.</p>
+<p>Mis intereses matemáticos se centran en el análisis, la topología, la geometría, y la lógica matemática y fundamentos. También me interesa la historia y la filosofía de las matemáticas — en particular, tomar en serio la idea de que la práctica matemática es una actividad humana y social, moldeada por las mismas fuerzas que moldean todo lo demás.</p>
+<p>La versión larga de todo esto está en el <a href="./posts/es/Bienvenida/index.html">post de bienvenida</a>.</p>
 
 
-</header>
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHklMkNwZXJpb2RpYyUyMGZ1bmN0aW9ucyUyQ2FsZ2VicmE=" data-listing-date-sort="1773810000000" data-listing-file-modified-sort="1773932674959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1648">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">Pathological Periodicity, Part II: The Algebra and Topology of Periods</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHk='); return false;">Pathological Periodicity</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyaW9kaWMlMjBmdW5jdGlvbnM='); return false;">periodic functions</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWxnZWJyYQ=='); return false;">algebra</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">
-In the previous post, we motivated a series of questions surrounding the sums of periodic functions and the existence of functions with incommensurable periods. Now, we are…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">
-<div class="listing-date">
-Mar 18, 2026
-</div>
-<div class="listing-reading-time">9 min</div>
-</a>
+</main> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="https://www.linkedin.com/in/aespdom" class="about-link" rel="" target="">
+    <i class="bi bi-linkedin"></i>
+     <span class="about-link-text">LinkedIn</span>
+  </a>
+  <a href="https://github.com/aespdom" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">Github</span>
+  </a>
+  <a href="mailto:aloespdom@gmail.com" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">Email</span>
+  </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHklMkNwZXJpb2RpYyUyMGZ1bmN0aW9ucyUyQ2xpbmVhciUyMGFsZ2VicmE=" data-listing-date-sort="1773550800000" data-listing-file-modified-sort="1773892040760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1337">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Relearning-Basics/index.html" class="no-external">Pathological Periodicity, Part I: Relearning the Basics</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHk='); return false;">Pathological Periodicity</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyaW9kaWMlMjBmdW5jdGlvbnM='); return false;">periodic functions</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGluZWFyJTIwYWxnZWJyYQ=='); return false;">linear algebra</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Relearning-Basics/index.html" class="no-external">
-My hiatus from math has been quite long. It’s been 9 years since my last algebra class (algebra was one of my weaker subjects, and I regrettably avoided it in favor of…<em></em><em></em>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Relearning-Basics/index.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2026
-</div>
-<div class="listing-reading-time">7 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="aW50cm9kdWN0aW9uJTJDcGhpbG9zb3BoeQ==" data-listing-date-sort="1773464400000" data-listing-file-modified-sort="1773904420138" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="649">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">Welcome to Mathematical Adventures</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50cm9kdWN0aW9u'); return false;">introduction</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGhpbG9zb3BoeQ=='); return false;">philosophy</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-I did not leave mathematics gracefully.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-<div class="listing-date">
-Mar 14, 2026
-</div>
-<div class="listing-reading-time">4 min</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

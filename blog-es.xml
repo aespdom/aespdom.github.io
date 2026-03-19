@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Mathematical Adventures</title>
+<link>https://aespdom.github.io/blog-es.html</link>
+<atom:link href="https://aespdom.github.io/blog-es.xml" rel="self" type="application/rss+xml"/>
+<description>Mathematics, relearned and reconsidered.</description>
+<generator>quarto-1.9.35</generator>
+<lastBuildDate>Sat, 14 Mar 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bienvenida a Aventuras Matemáticas</title>
+  <dc:creator>Alonso Espinosa Domínguez</dc:creator>
+  <link>https://aespdom.github.io/posts/es/Bienvenida/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>No dejé las matemáticas con gracia.</p>
+<p>Para cuando terminé mi licenciatura en el MIT en 2020, estaba agotado de una manera que me tomó años entender completamente. Parte de ese agotamiento fue autoinfligido — tomar un curso de teoría de la medida a nivel de posgrado en mi primer año de universidad es, en retrospectiva, no la decisión más sabia que un joven matemático puede tomar. Pero parte de ese agotamiento era más profundo que una mala selección de cursos: había tratado a las matemáticas como una identidad que lo consumía todo desde el segundo de secundaria, y en algún punto del camino se me agotó lo que sea que mantiene vivo ese tipo de devoción.</p>
+<p>Así que me fui. Pero no me tomé tiempo para descansar, ni para reflexionar demasiado sobre mi tiempo haciendo matemáticas. En cambio, me lancé a un conjunto distinto de preguntas — políticas, históricas, filosóficas. Pasé años leyendo, organizando, protestando y pensando seriamente sobre el mundo social de una manera que nunca antes había hecho. Estudié filosofía, particularmente en la tradición marxista, y ese estudio me cambió de maneras que todavía estoy procesando.</p>
+<p>También cambió profundamente cómo veo las matemáticas.</p>
+<p>Antes de ese periodo, mi relación con la disciplina era — ahora me doy cuenta — vagamente kantiana. Creía, más o menos acríticamente, que las matemáticas eran la expresión más profunda de las estructuras de la mente, y que las estructuras de la mente eran, en algún sentido fundamental, la única realidad a la que teníamos acceso. Las matemáticas eran bellas precisamente porque eran la cartografía más rigurosa de nuestro único mundo posible. Esta visión era, ahora pienso, no solo incompleta sino fundamentalmente invertida. Sostenerla también hacía genuinamente difícil reconciliar mi amor por las matemáticas con la concretud chocante de la vida social y política. Si las estructuras de la mente son lo que más importa, entonces ¿qué hago con el hecho de que la gente enfrenta opresión y explotación material <em>ahora mismo</em>, de maneras que no tienen nada que ver con estructuras mentales?</p>
+<p>Ya no sostengo esa visión — aunque una tensión real permanece, y sospecho que siempre permanecerá: la pregunta de cuándo quedarse con un problema bello y cuándo dejarlo en favor de luchas más inmediatas no es una que se resuelva limpiamente.</p>
+<p>Soy ahora, en el sentido más amplio, un materialista. Tomo como punto de partida que existe un mundo real, objetivo, material; que lo representamos mental y simbólicamente; y que nuestras representaciones mejoran precisamente a través del proceso de actuar en el mundo y confrontar las consecuencias. Desde este punto de vista, las matemáticas lucen bastante diferentes. Los objetos de las matemáticas — estructuras, relaciones, invariantes — no son constructos de la mente proyectándose hacia afuera. Son rasgos reales del mundo material que hemos aprendido, a través de un proceso largo y genuinamente social, a percibir, abstraer y razonar.</p>
+<p>Este cambio ha hecho que las matemáticas me parezcan más, no menos, interesantes. Abre preguntas que apenas se me ocurría hacer antes: ¿Cómo ha cambiado la práctica matemática a lo largo de diferentes periodos históricos, y por qué? ¿Qué significa que ciertos tipos de matemáticas florecieran en ciertas sociedades y no en otras? ¿Cuál es la relación entre lo abstracto y lo aplicado, y cómo ha cambiado esa relación conforme las condiciones de la producción matemática han cambiado? Estas no son meramente preguntas sociológicas pegadas al exterior de las matemáticas — son, creo, preguntas genuinamente matemáticas en un sentido amplio, preguntas sobre qué <em>son</em> las matemáticas y cómo funcionan.</p>
+<p>Este blog es, antes que nada, un intento de volver a hacer matemáticas — trabajar problemas, reconstruir conocimiento oxidado, y ojalá descubrir algo genuinamente nuevo en el camino. Pero también es un espacio para el tipo de reflexión meta-matemática al que he estado apuntando: la filosofía, la historia, y las preguntas ocasionalmente incómodas sobre las matemáticas como actividad humana incrustada en un mundo humano. La primera serie, <em>Periodicidad Patológica</em>, cae de lleno en la primera categoría — una inmersión profunda en el mundo sorprendentemente rico de las funciones periódicas que comenzó con un solo ejercicio del Capítulo 1 de un libro de álgebra lineal. Posts posteriores se aventurarán más en la segunda.</p>
+<p>Espero que encuentres algo que valga la pena leer aquí. Entrémosle.</p>
+
+
+
+ ]]></description>
+  <category>introducción</category>
+  <category>filosofía</category>
+  <guid>https://aespdom.github.io/posts/es/Bienvenida/</guid>
+  <pubDate>Sat, 14 Mar 2026 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

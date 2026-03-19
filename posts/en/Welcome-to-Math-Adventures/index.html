@@ -124,6 +124,33 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-es">    
+        <li>
+    <a class="dropdown-item" href="../../../index-es.html">
+ <span class="dropdown-text">Inicio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../blog-es.html">
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../series-es.html">
+ <span class="dropdown-text">Series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../archive-es.html">
+ <span class="dropdown-text">Archivo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about-es.html">
+ <span class="dropdown-text">Acerca de</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/aespdom"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -189,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p>I did not leave mathematics gracefully.</p>
 <p>By the time I finished my undergraduate degree at MIT in 2020, I was exhausted in a way that took years to fully understand. Some of that exhaustion was self-inflicted — taking a graduate-level measure theory course in my first year of college is, in retrospect, not the wisest decision a young mathematician can make. But some of it was deeper than bad course selection: I had treated mathematics as an all-consuming identity since the eighth grade, and somewhere along the way I had run out of whatever it is that keeps that kind of devotion alive.</p>
-<p>So I left. But I didn’t take any time to rest, or reflect terribly much on my time doing mathematics. Instead, I threw myself into a different set of questions — political, historical, philosophical. I spent years reading, organizing, protesting, and thinking seriously about the social world in a way I never had before. I studied philosophy, particularly in the Marxist tradition, and that study changed me in ways I am still working out.</p>
+<p>So I left. But I didn’t take any time to rest, or to reflect terribly much on my time doing mathematics. Instead, I threw myself into a different set of questions — political, historical, philosophical. I spent years reading, organizing, protesting, and thinking seriously about the social world in a way I never had before. I studied philosophy, particularly in the Marxist tradition, and that study changed me in ways I am still working out.</p>
 <p>It also thoroughly changed how I see mathematics.</p>
 <p>Before that period, my relationship to the subject was — I now realize — vaguely Kantian. I believed, more or less uncritically, that mathematics was the deepest expression of the structures of the mind, and that the mind’s structures were, in some fundamental sense, the only reality we had access to. Mathematics was beautiful precisely because it was the most rigorous cartography of our only possible world. This view was, I now think, not merely incomplete but fundamentally inverted. Holding it also made it genuinely difficult to reconcile my love for mathematics with the jarring concreteness of social and political life. If the structures of the mind are what matter most, then what do I make of the fact that people face material oppression and exploitation <em>right now</em>, in ways that have nothing to do with mental structures?</p>
 <p>I no longer hold that view — though a real tension remains, and I suspect it always will: the question of when to sit with a beautiful problem and when to put it down in favor of more immediate struggles is not one that resolves itself cleanly.</p>
@@ -617,6 +644,35 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "aespdom/aespdom.github.io";
+    script.dataset.repoId = "R_kgDORn_NFQ";
+    script.dataset.category = "Blog Comments";
+    script.dataset.categoryId = "DIC_kwDORn_NFc4C4yXu";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 
