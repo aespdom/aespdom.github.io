@@ -1,0 +1,4 @@
+# Override for Spanish posts: use Spanish footer
+format:
+  html:
+    include-after-body: ../../../footer-es.html

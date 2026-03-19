@@ -1,0 +1,15 @@
+---
+title: "Series"
+page-layout: full
+title-block-banner: false
+---
+
+This blog is organized around long-form series exploring a mathematical topic in depth, alongside standalone posts.
+
+---
+
+## Pathological Periodicity
+
+An exploration of the set of periods of periodic functions $f:\mathbb{R}\to\mathbb{R}$, the surprising pathologies that arise when the axiom of choice is assumed, and related matters in real analysis and set theory. Read from the beginning — the series is designed to be followed in order.
+
+[→ View all posts in this series](pathological-periodicity.html)

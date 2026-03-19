@@ -1,10 +1,41 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
-      "/posts/en/Dense-Periods-Measurability/index.html",
-      "/posts/en/Intro-prelims/index.html",
+      "/posts/en/Alg-Top-Periods/index.html",
+      "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Welcome-to-Math-Adventures/index.html"
+    ]
+  },
+  {
+    "listing": "/blog-es.html",
+    "items": [
+      "/posts/es/Bienvenida/index.html"
+    ]
+  },
+  {
+    "listing": "/archive-es.html",
+    "items": [
+      "/posts/es/Bienvenida/index.html"
+    ]
+  },
+  {
+    "listing": "/periodicidad-patologica.html",
+    "items": []
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/posts/en/Alg-Top-Periods/index.html",
+      "/posts/en/Relearning-Basics/index.html",
+      "/posts/en/Welcome-to-Math-Adventures/index.html"
+    ]
+  },
+  {
+    "listing": "/pathological-periodicity.html",
+    "items": [
+      "/posts/en/Relearning-Basics/index.html",
+      "/posts/en/Alg-Top-Periods/index.html"
     ]
   }
 ]

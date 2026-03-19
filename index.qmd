@@ -1,15 +1,26 @@
 ---
-title: "Mathematical Adventures"
-listing:
-  contents: posts/en
-  feed: true
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
 
+::: {.grid .hero-section}
 
+::: {.g-col-12 .g-col-md-4 style="text-align: center; padding-top: 1.5rem;"}
+![](profile.png){width="200px" style="border-radius: 50%; border: 3px solid #1a4a6e;"}
+:::
+
+::: {.g-col-12 .g-col-md-8}
+
+# Mathematical Adventures
+
+::: {.hero-tagline}
+ Mathematics is a subject with surprising depth hiding in unexpected places — a routine exercise becomes a research problem, a question in analysis finds its answer in algebra. This blog documents that kind of exploration, alongside reflection on what mathematics is and how it works as a human practice. The current series, *Pathological Periodicity*, digs into the surprisingly rich structure hidden inside the set of periods of periodic functions $f:\mathbb{R}\to\mathbb{R}$.
+:::
+
+::: {.hero-links}
+[Read all posts →](blog.html) &ensp;·&ensp; [Series](series.html) &ensp;·&ensp; [Archive](archive.html) &ensp;·&ensp; [About](about.html)
+:::
+
+:::
+
+:::

@@ -1,0 +1,12 @@
+---
+title: "Archive"
+page-layout: full
+title-block-banner: false
+listing:
+  contents: posts/en
+  type: table
+  fields: [date, title]
+  sort: "date desc"
+  sort-ui: false
+  filter-ui: false
+---

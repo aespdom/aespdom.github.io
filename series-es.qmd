@@ -1,0 +1,15 @@
+---
+title: "Series"
+page-layout: full
+title-block-banner: false
+---
+
+Este blog se organiza en series que exploran un tema matemático a profundidad, además de posts sueltos.
+
+---
+
+## Periodicidad Patológica
+
+Una exploración del conjunto de periodos de funciones periódicas $f:\mathbb{R}\to\mathbb{R}$, las patologías sorprendentes que surgen al asumir el axioma de elección, y temas relacionados en análisis real y teoría de conjuntos. Léelo desde el principio — la serie está diseñada para seguirse en orden.
+
+[→ Ver todos los posts de esta serie](periodicidad-patologica.html)

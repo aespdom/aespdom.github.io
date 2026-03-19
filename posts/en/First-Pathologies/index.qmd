@@ -1,0 +1,56 @@
+---
+title: "Pathological Periodicity, Part III: The First Pathological examples"
+author: "Alonso Espinosa Domínguez"
+date: "2026-03-19"
+categories: [measure theory, periodic functions, ergodic theory]
+draft: true
+---
+## 4. The First Pathologies
+
+Most of the time, when we think of periodic functions, we think of nice, well-behaved functions like sines and cosines. From the perspective of their period modules, we have shown these are all rather boring: they are all one-dimensional over $\mathbb{Z}$, none of them are dense, and any vector spaces $\mathcal V$ consisting solely of strictly periodic functions cannot contain any incommensurable functions, meaning the period spaces $V_f$ for all $f\in \mathcal V$ live along a single 1-dimensional line $p\mathbb{Q}$ of $\mathbb{R}$. 
+
+But, as alluded to many times already, we can find more interesting periodic functions when we drop continuity:
+
+*Examples 3.1 (Periodic functions with dense period modules)*: Let $p, q$ be incommensurable, and consider the functions $\mathbb{1}_{\mathbb{Q}}$ and $\mathbb{1}_{\mathbb{Z}_{p,q}}$.
+
+Notice $\mathbb{1}_{\mathbb{Q}}$ has a period module equal to $\mathbb{Q}$, which is dense and has infinite (actually, uncountable) dimension as a $\mathbb{Z}$-module, but its period space $V_f$ has dimension 1 over $\mathbb{Q}$. 
+
+Meanwhile, $\mathbb{1}_{\mathbb{Z}_{p,q}}$ has a period module equal to $\mathbb{Z}_{p,q}$, which is also dense and has dimension 2 as a $\mathbb{Z}$-module (and its period space $V_f$ also has dimension 2 over $\mathbb{Q}$).
+
+*Example 3.2 (incommensurable, strictly periodic functions with a strictly periodic sum)*: Let $p, q$ be incommensurable, and define
+$$
+   \begin{split}
+    &f(x) = 
+    \begin{cases}
+         0 & \text{if } x \not\in \mathbb{Z}_{p,q}\\
+        n & \text{if } x = mp+nq\in \mathbb{Z}_{p,q}
+    \end{cases} \\ &\text{ and } \\
+    &g(x) = 
+    \begin{cases}
+        0 & \text{if } x \not\in \mathbb{Z}_{p,q}\\
+        -m & \text{if } x = mp+nq\in \mathbb{Z}_{p,q}
+    \end{cases}
+\end{split}
+$$
+
+Notice $P_f = p\mathbb{Z}$ and $P_g = q\mathbb{Z}$. They are strictly periodic and incommensurable. However, evaluating $(f+g)(x)$ for $x = mp+nq$ yields $n-m$. If we translate by $p+q$, we get $(m+1)p + (n+1)q$, which maps to $(n+1)-(m+1) = n-m$. Thus, $P_{f+g} = (p+q)\mathbb{Z}$. They are incommensurable, strictly periodic functions whose sum is strictly periodic!
+
+Notice however that these examples are constant almost everywhere, and all have finite dimensional period spaces (even when the period module is infinite dimensional). Also notice that $\alpha f + \beta g$ is periodic if and only if $\alpha/\beta\in \mathbb{Q}$. This immediately leads to at least three more questions:
+
+**Questions**: 
+
+* Must all periodic functions with the above behaviour be constant a.e.? 
+* What is the maximum dimension a period space can have? 
+* Is there any pair of incommensurable functions whose linear span over $\mathbb{R}$ consists solely of periodic functions (i.e. $\alpha f + \beta g$ is periodic for all $\alpha, \beta \in \mathbb{R}$)?
+
+# 5. Using the Axiom of Choice.
+
+Let's dive right in:
+
+**Proposition 4.1**: *There exists a periodic function $f$ with a dense period module $P_f$ such that $f$ is constant only on sets of measure zero.*
+
+*Proof:* Let $G$ be a $\mathbb{Z}$-submodule of $\mathbb{R}$ with dimension at least 2 and measure zero (i.e., something like $\mathbb{Z}_{p,q}$ for incommensurable $p,q$), and let $X$ be a set of representatives of the quotient $\mathbb{R}/G$ (which exists by the axiom of choice). Define $f:\mathbb{R}\to\mathbb{R}$ by $f(x) = r$ if $x\in r+G$ for some $r\in X$. This function is periodic with period module containing $G$, and thus has a dense period module. Moreover, it is constant only on sets of the form $r+G$, which all have measure zero.
+
+*Remark*. We can also now find pairs of strictly periodic functions $f, g$ with incommensurable periods such that $f+g$ is periodic, and all three functions are constant only on sets of measure zero. Namely, in the functions $f, g$ defined in Example 3.1 we can replace 0 with the pathological function as in Proposition 4.1 but with $G = \mathbb{p,q}$. This makes it so that $f$ and $g$ are strictly periodic with incommensurable periods, their sum is strictly periodic, and all three functions are constant only on sets of measure zero. 
+
+In the next installment of *Pathological Periodicity* we will then prove that no none of the funcitons we have found with AC are measruable, because measurable funcritons with dense period sets must be constant a.e. Next, we will explore period modules and spaces in more detail, and tackle the question about the maximal dimension of period spaces. Finally, the fourth installment will more explicitly tie all we have done to the Periodic Decomposition Problem, and will tackle the third of the above questions. Stay tuned!

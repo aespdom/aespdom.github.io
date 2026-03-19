@@ -22,5 +22,50 @@
   },
   "posts/en/Intro-prelims/index.qmd": {
     "index.html": "fe187c2b"
+  },
+  "posts/en/First-Pathologies/index.qmd": {
+    "index.html": "e830d66a"
+  },
+  "posts/en/Relearning-Basics/index.qmd": {
+    "index.html": "da88d523"
+  },
+  "posts/en/Preliminaries/index.qmd": {
+    "index.html": "69aeca07"
+  },
+  "posts/en/Alg-Top-Periods/index.qmd": {
+    "index.html": "32703d43"
+  },
+  "series.qmd": {
+    "series.html": "ba141c3b"
+  },
+  "archive.qmd": {
+    "archive.html": "445afcc2"
+  },
+  "pathological-periodicity.qmd": {
+    "pathological-periodicity.html": "80cc59dd"
+  },
+  "blog.qmd": {
+    "blog.html": "72247452"
+  },
+  "blog-es.qmd": {
+    "blog-es.html": "8cc00b25"
+  },
+  "archive-es.qmd": {
+    "archive-es.html": "477f9d2a"
+  },
+  "series-es.qmd": {
+    "series-es.html": "4fe25364"
+  },
+  "periodicidad-patologica.qmd": {
+    "periodicidad-patologica.html": "520bcb9d"
+  },
+  "about-es.qmd": {
+    "about-es.html": "095f0a32"
+  },
+  "index-es.qmd": {
+    "index-es.html": "8e1d80be"
+  },
+  "posts/es/Bienvenida/index.qmd": {
+    "index.html": "335fde66"
   }
 }

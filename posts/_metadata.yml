@@ -1,8 +1,35 @@
-# options specified here will apply to all posts in this folder
+# Options applied to all posts in this folder
 
-# freeze computational output
+# Freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: true
 
+# Default author for all posts
+author: "Alonso Espinosa Domínguez"
+
 # Enable banner style title blocks
 title-block-banner: true
+
+# Table of contents
+toc: true
+toc-depth: 3
+
+# Page layout
+page-layout: article
+
+# Giscus comments (based on GitHub Discussions)
+comments:
+  giscus:
+    repo: aespdom/aespdom.github.io
+    repo-id: "R_kgDORn_NFQ"
+    category: "Blog Comments"
+    category-id: "DIC_kwDORn_NFc4C4yXu"
+    mapping: pathname
+    reactions-enabled: true
+    theme: light
+
+# HTML format options
+format:
+  html:
+    include-after-body: ../../../footer.html
+    fig-align: center

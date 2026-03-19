@@ -1,0 +1,26 @@
+---
+page-layout: full
+title-block-banner: false
+---
+
+::: {.grid .hero-section}
+
+::: {.g-col-12 .g-col-md-4 style="text-align: center; padding-top: 1.5rem;"}
+![](profile.png){width="200px" style="border-radius: 50%; border: 3px solid #1a4a6e;"}
+:::
+
+::: {.g-col-12 .g-col-md-8}
+
+# Aventuras Matemáticas
+
+::: {.hero-tagline}
+Las matemáticas son una disciplina con profundidad sorprendente escondida en lugares inesperados — un ejercicio rutinario se convierte en un problema de investigación, una pregunta de análisis encuentra su respuesta en el álgebra. Este blog documenta ese tipo de exploración, junto con reflexiones sobre qué son las matemáticas y cómo funcionan como práctica humana. La serie actual, *Periodicidad Patológica*, se sumerge en la estructura sorprendentemente rica escondida dentro del conjunto de periodos de funciones periódicas $f:\mathbb{R}\to\mathbb{R}$.
+:::
+
+::: {.hero-links}
+[Todos los posts →](blog-es.html) &ensp;·&ensp; [Series](series-es.html) &ensp;·&ensp; [Archivo](archive-es.html) &ensp;·&ensp; [Acerca de](about-es.html)
+:::
+
+:::
+
+:::

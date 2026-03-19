@@ -1,7 +1,21 @@
 {
   "listingMap": {
-    "index.qmd": [
-      "posts",
+    "periodicidad-patologica.qmd": [
+      "posts/es"
+    ],
+    "archive-es.qmd": [
+      "posts/es"
+    ],
+    "archive.qmd": [
+      "posts/en"
+    ],
+    "blog-es.qmd": [
+      "posts/es"
+    ],
+    "pathological-periodicity.qmd": [
+      "posts/en"
+    ],
+    "blog.qmd": [
       "posts/en"
     ]
   }

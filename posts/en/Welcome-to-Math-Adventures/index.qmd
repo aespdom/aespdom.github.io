@@ -1,13 +1,69 @@
 ---
-title: "Welcome to Mathematical Adventures!"
-author: "Alonso Espinosa Domínguez"
+title: "Welcome to Mathematical Adventures"
 date: "2026-03-14"
 categories: [introduction, philosophy]
 ---
 
-Welcome to *Mathematical Adventures*! After many years away from mathematics, I am finally making my way back to this beautiful subject. In this blog, I will first and foremost share my reflections on mathematical topics as I dive into exploring (and re-learning) them. I hope to also provide some meta-mathematical reflections touching on philosophy, pedagogy, and the travails of becoming a mathematician in the current social, political, and economic context.
+I did not leave mathematics gracefully.
 
-When it comes to the mathematical content of this blog, I hope to step away from the highly polished, often opaque final forms of classical theorems and actually get our hands dirty. We will explore rigorous mathematics with the mindset of an adventurer: taking the scenic routes, avoiding black-box machinery whenever possible, and building our intuition from the ground up. I think this approach is not only more fun, but also more rewarding in terms of deep understanding, especially for anyone like myself needing to re-learn the basics.
+By the time I finished my undergraduate degree at MIT in 2020, I was exhausted in
+a way that took years to fully understand. Some of that exhaustion was self-inflicted —
+taking a graduate-level measure theory course in my first year of college is, in
+retrospect, not the wisest decision a young mathematician can make. But some of it
+was deeper than bad course selection: I had treated mathematics as an all-consuming
+identity since the eighth grade, and somewhere along the way I had run out of whatever
+it is that keeps that kind of devotion alive.
 
-This blog will contain some stand alone posts, and some series. The first series I am launching, *Exploring Periodicity*, concerns intriguing questions about periodic functions $f:\mathbb{R}\to\mathbb{R}$. Hop on over to the first post to get started! 
+So I left. But I didn't take any time to rest, or to reflect terribly much on my time doing mathematics. Instead, I threw myself into a different set of questions — political, historical, philosophical. I spent years
+reading, organizing, protesting, and thinking seriously about the social world in a
+way I never had before. I studied philosophy, particularly in the Marxist tradition,
+and that study changed me in ways I am still working out.
 
+It also thoroughly changed how I see mathematics.
+
+Before that period, my relationship to the subject was — I now realize —
+vaguely Kantian. I believed, more or less uncritically, that mathematics was the
+deepest expression of the structures of the mind, and that the mind's structures
+were, in some fundamental sense, the only reality we had access to. Mathematics
+was beautiful precisely because it was the most rigorous cartography of our
+only possible world. This view was, I now think, not merely incomplete but
+fundamentally inverted. Holding it also made it genuinely difficult to reconcile
+my love for mathematics with the jarring concreteness of social and political life.
+If the structures of the mind are what matter most, then what do I make of the fact
+that people face material oppression and exploitation *right now*, in ways that have
+nothing to do with mental structures?
+
+I no longer hold that view — though a real tension remains, and I suspect it always
+will: the question of when to sit with a beautiful problem and when to put it down
+in favor of more immediate struggles is not one that resolves itself cleanly.
+
+I am now, in the broadest sense, a materialist. I take it as a starting point
+that there is a real, objective, material world; that we represent it mentally and
+symbolically; and that our representations improve precisely through the process of
+acting in the world and confronting the consequences. From this vantage point,
+mathematics looks quite different. The objects of mathematics — structures, relations,
+invariants — are not constructs of the mind projecting itself outward. They are real
+features of the material world that we have learned, through a long and genuinely
+social process, to perceive, abstract, and reason about.
+
+This shift has made mathematics feel more, not less, interesting to me. It opens
+up questions I barely thought to ask before: How has mathematical practice changed
+across different historical periods, and why? What does it mean that certain kinds
+of mathematics flourished in certain societies and not others? What is the relationship
+between the abstract and the applied, and how has that relationship shifted as the
+conditions of mathematical production have changed? These are not merely sociological
+questions tacked onto the outside of mathematics — they are, I think, genuinely
+mathematical questions in a broad sense, questions about what mathematics *is* and
+how it works.
+
+This blog is, first of all, an attempt to actually do mathematics again — to work
+through problems, reconstruct rusty knowledge, and hopefully discover something
+genuinely new along the way. But it is also a place for the kind of meta-mathematical
+reflection I have just been gesturing at: the philosophy, the history, and the
+occasionally uncomfortable questions about mathematics as a human activity embedded
+in a human world. The first series, *Pathological Periodicity*, is squarely in the
+first category — a deep dive into the surprisingly rich world of periodic functions
+that began with a single exercise in Chapter 1 of a linear algebra textbook. Later
+posts will venture further into the second.
+
+I hope you find something worth reading here. Let's get into it.

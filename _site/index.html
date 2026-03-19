@@ -33,8 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<link href="./profile.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -44,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b5c9478c667cca52e0752469329e74a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +71,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -133,12 +106,24 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Mathematical Adventures" href="index.xml" data-external="1"></head>
+<meta property="og:title" content="Mathematical Adventures">
+<meta property="og:description" content="Mathematics, relearned and reconsidered.">
+<meta property="og:image" content="https://aespdom.github.io/profile.png">
+<meta property="og:site_name" content="Mathematical Adventures">
+<meta property="og:image:height" content="800">
+<meta property="og:image:width" content="800">
+<meta name="twitter:title" content="Mathematical Adventures">
+<meta name="twitter:description" content="Mathematics, relearned and reconsidered.">
+<meta name="twitter:image" content="https://aespdom.github.io/profile.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="800">
+<meta name="twitter:image-width" content="800">
+</head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -151,18 +136,59 @@ window.Quarto = {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./series.html"> 
+<span class="menu-text">Series</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./archive.html"> 
+<span class="menu-text">Archive</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-es">    
+        <li>
+    <a class="dropdown-item" href="./index-es.html">
+ <span class="dropdown-text">Inicio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./blog-es.html">
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./series-es.html">
+ <span class="dropdown-text">Series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./archive-es.html">
+ <span class="dropdown-text">Archivo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./about-es.html">
+ <span class="dropdown-text">Acerca de</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/aespdom"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/"> <i class="bi bi-bluesky" role="img">
+    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img" aria-label="RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -174,144 +200,36 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Mathematical Adventures</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ZXJnb2RpYyUyMHRoZW9yeQ==">ergodic theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXhwbG9yaW5nJTIwUGVyaW9kaWNpdHk=">Exploring Periodicity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50cm9kdWN0aW9u">introduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVhc3VyZSUyMHRoZW9yeQ==">measure theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVyaW9kJTIwbW9kdWxlcw==">period modules <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVyaW9kaWMlMjBmdW5jdGlvbnM=">periodic functions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGhpbG9zb3BoeQ==">philosophy <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWVhc3VyZSUyMHRoZW9yeSUyQ3BlcmlvZGljJTIwZnVuY3Rpb25zJTJDZXJnb2RpYyUyMHRoZW9yeQ==" data-listing-date-sort="1773550800000" data-listing-file-modified-sort="1773617942160" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1245">
-<div class="thumbnail"><a href="./posts/en/Dense-Periods-Measurability/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Dense-Periods-Measurability/index.html" class="no-external">Exploring Periodicity, Part II: The Wall of Measurability</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWVhc3VyZSUyMHRoZW9yeQ=='); return false;">measure theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyaW9kaWMlMjBmdW5jdGlvbnM='); return false;">periodic functions</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZXJnb2RpYyUyMHRoZW9yeQ=='); return false;">ergodic theory</div>
-
+<div class="grid hero-section">
+<div class="g-col-12 g-col-md-4" style="text-align: center; padding-top: 1.5rem;">
+<p><img src="profile.png" class="img-fluid" style="border-radius: 50%; border: 3px solid #1a4a6e;" width="200"></p>
 </div>
-<div class="delink listing-description"><a href="./posts/en/Dense-Periods-Measurability/index.html" class="no-external">
-In the previous post, we explored the concept of periodic functions and their period modules. We saw that the period modules of continuous and strictly periodic functions…
-</a></div>
+<section id="mathematical-adventures" class="level1 g-col-12 g-col-md-8">
+<h1>Mathematical Adventures</h1>
+<div class="hero-tagline">
+<p>Mathematics is a subject with surprising depth hiding in unexpected places — a routine exercise becomes a research problem, a question in analysis finds its answer in algebra. This blog documents that kind of exploration, alongside reflection on what mathematics is and how it works as a human practice. The current series, <em>Pathological Periodicity</em>, digs into the surprisingly rich structure hidden inside the set of periods of periodic functions <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span>.</p>
 </div>
-<div class="metadata">
-<a href="./posts/en/Dense-Periods-Measurability/index.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2026
+<div class="hero-links">
+<p><a href="blog.html">Read all posts →</a>  ·  <a href="series.html">Series</a>  ·  <a href="archive.html">Archive</a>  ·  <a href="about.html">About</a></p>
 </div>
-<div class="listing-author">
-Alonso Espinosa Domínguez
+</section>
 </div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="RXhwbG9yaW5nJTIwUGVyaW9kaWNpdHklMkNwZXJpb2RpYyUyMGZ1bmN0aW9ucyUyQ3BlcmlvZCUyMG1vZHVsZXM=" data-listing-date-sort="1773550800000" data-listing-file-modified-sort="1773619962061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1828">
-<div class="thumbnail"><a href="./posts/en/Intro-prelims/index.html" class="no-external">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Intro-prelims/index.html" class="no-external">Exploring Periodicity, Part I: Introduction and Preliminaries</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('RXhwbG9yaW5nJTIwUGVyaW9kaWNpdHk='); return false;">Exploring Periodicity</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyaW9kaWMlMjBmdW5jdGlvbnM='); return false;">periodic functions</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGVyaW9kJTIwbW9kdWxlcw=='); return false;">period modules</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Intro-prelims/index.html" class="no-external">
-<strong>1. Introduction</strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Intro-prelims/index.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2026
-</div>
-<div class="listing-author">
-Alonso Espinosa Domínguez
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="aW50cm9kdWN0aW9uJTJDcGhpbG9zb3BoeQ==" data-listing-date-sort="1773464400000" data-listing-file-modified-sort="1773620464921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="193">
-<div class="thumbnail"><a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">Welcome to Mathematical Adventures!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50cm9kdWN0aW9u'); return false;">introduction</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGhpbG9zb3BoeQ=='); return false;">philosophy</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-Welcome to <em>Mathematical Adventures</em>! After many years away from mathematics, I am finally making my way back to this beautiful subject. In this blog, I will first and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/en/Welcome-to-Math-Adventures/index.html" class="no-external">
-<div class="listing-date">
-Mar 14, 2026
-</div>
-<div class="listing-author">
-Alonso Espinosa Domínguez
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -385,7 +303,7 @@ Alonso Espinosa Domínguez
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+        var filterRegex = new RegExp("https:\/\/aespdom\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

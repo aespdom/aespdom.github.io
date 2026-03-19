@@ -1,0 +1,79 @@
+draft: true
+
+## 2. Preliminaries
+
+Let's review some basic definitions and facts about periodic functions that set the stage for our further explorations:
+
+**Definition 2.1 (Periodic Function)** A function $f:\mathbb{R}\to\mathbb{R}$ is said to be **periodic** if there exists a non-zero real number $p$ such that $f(x+p)=f(x)$ for all $x\in\mathbb{R}$. If there exists a smallest positive such $p$, it is called the **fundamental period** of $f$, and we say $f$ is **strictly periodic**. 
+
+*Remark*: Note that a function can be periodic without being strictly periodic; for instance, the constant functions are periodic with any real period, but they are not strictly periodic. In this series we will examine pathological examples of functions that fail to be strictly periodic but are also not constant. Some are even constant only on sets of measure zero, which is as far from being constant as one can get. We will also see pathological functions that are actually strictly periodic. 
+
+**Definition 2.2 (The Period Module)** For any function $f:\mathbb{R}\to\mathbb{R}$, we denote by $P_f$ the set of all periods of $f$, i.e., $P_f := \{p\in\mathbb{R}\setminus\{0\} : f(x+p)=f(x) \text{ for all } x\in\mathbb{R}\}$. We call $P_f$ the **period module** of $f$, for reasons that will become clear in a moment. Also, we say $f, g$ are **incommensurable** if $P_f\cap P_g = \{0\}$, and they are **commensurable** otherwise. Note constant functions are trivially commensurable with any periodic function, since they are periodic with any period. And note that non-periodic functions still have a period module, but it is just $\{0\}$.
+
+**Definition 2.3 ($\mathbb{Z}$-submodule and its dimension)** A subset $M$ of $\mathbb{R}$ is called a **$\mathbb{Z}$-submodule** if it is closed under addition and under multiplication by integers. The **dimension** of a $\mathbb{Z}$-submodule $M$ is the cardinality of a maximal linearly independent subset of $M$ over $\mathbb{Z}$.
+
+**Definition 2.4 ($\mathbb{Q}$-subspace and Period Space)** For any function $f$, we can consider the linear span of its period module over the rational numbers $\mathbb{Q}$. We denote this by $V_f := \text{span}_\mathbb{Q}(P_f)$, and call it the **period space** of $f$. By definition, $V_f$ is a **$\mathbb{Q}$-subspace** of $\mathbb{R}_{\mathbb{Q}}$, which is how we denote the vector space of $\mathbb{R}$ over $\mathbb{Q}$. 
+
+We immediately find some basic facts about periodic functions and about the algebra and topology of their period modules and spaces:
+
+* **Fact 0**: If $f, g$ are incommensurable functions, any (nonzero) periods must be incommensurable real numbers. This is because if $p\in P_f$ and $q\in P_g$ are such that $p/q\in\mathbb{Q}$, then there exist integers $n, m$ such that $np = mq$, and thus $np\in P_f\cap P_g$, showing that $f$ and $g$ are not incommensurable functions.
+* **Fact 1**: If $f$ is periodic with period $p$, then it is also periodic with respect to any integer linear combinations of periods of $f$. This means **$P_f$ is a $\mathbb{Z}$-submodule of $\mathbb{R}$.**
+* **Fact 2**: If $f$ is strictly periodic with fundamental period $p$, then the set of all periods of $f$ is precisely the $\mathbb{Z}$-module $p\mathbb{Z}:= \{np : n\in\mathbb{Z}\}$. I.e., $P_f$ is necessarily *a one-dimensional submodule* and $V_f$ is a one-dimensional $\mathbb{Q}$-subspace.
+* **Fact 3**: The dimension of the period module $P_f$ as a $\mathbb{Z}$-module is not necessarily the same as the dimension of the period space $V_f$ as a $\mathbb{Q}$-vector space. For instance, if $P_f = \mathbb{Q}$, its dimension as a $\mathbb{Z}$-module is infinite, but its dimension as a $\mathbb{Q}$-subspace ($V_f = \mathbb{Q}$) is exactly 1. 
+* **Fact 4**: If $P_f$ is dense, then $f$ is either constant or else it is nowhere continuous. To see this, suppose $f$ is not constant and let $x \in \mathbb{R}$. For any open interval $(a,b)$ containing $x$, the density of $P_f$ guarantees the existence of periods $p, q \in P_f$ such that $a < p < q < b$. Since $P_f$ is a $\mathbb{Z}$-submodule, the difference $r = q-p$ is a strictly positive period. The closed interval $[p, q] \subset (a,b)$ has length exactly $r$, meaning it spans a full period of $f$. Consequently, the image of $[p, q]$ under $f$ is the entire range of $f$. Because $f$ is not constant, its range contains some value distinct from $f(x)$, guaranteeing there is some $z \in [p, q] \subset (a,b)$ such that $f(z) \neq f(x)$. Thus, $f$ cannot be continuous at $x$.
+
+We can start to see how closely the nature of a periodic function relates to the topological and algebraic features of its period module. The following propositions make this even clearer: 
+
+**Proposition 2.6** *$P_f$ is dense if and only if $f$ is not strictly periodic. Thus, if a periodic $f$ is non-constant and continuous, it must be strictly periodic.*
+
+*Proof*: If $P_f$ is dense, then the infimum of positive periods must be zero, and thus no fundamental period can exist. If no fundamental period exists, the infimum $p$ must be zero for otherwise we could find two distinct periods arbitrarily close to $p$, and their difference would be a period smaller than $p$, violating the infimum. Thus any interval around $0$ must contain elements of $P_f$.  Now take any interval with $0\not\in (a, b)$. By the foregoing, we can find $x\in P_f$ with
+$$0<|x|<\min\left(\{|b|, |a|, |b-a|\}\right)$$
+There thus must be some integer $n$ so that $nx\in (a, b)$, for otherwise we could find an $n$ so that $(n-1)x <a<b< nx$. But $nx\in P_f$ showing $P_f$ is dense in $\mathbb{R}$. The last part is an immediate consequence of the above and of Fact 4.
+
+**Proposition 2.7**: *If $p, q$ are incommensurable ($p/q\not\in \mathbb{Q}$), then the $\mathbb{Z}$-module $\mathbb{Z}_{p,q}:=\{np + mq : n,m\in\mathbb{Z}\}$ is dense in $\mathbb{R}$. In particular, if a function $f$ has two incommensurable periods $p$ and $q$, then $\mathbb{Z}_{p,q}\subseteq P_f$, meaning its period module is dense and $f$ is not strictly periodic. Therefore **non-constant functions with incommensurable periods are nowhere continuous.***
+
+*Proof*: To see the first part of the proposition, we make use of the fact that irrationals can be approximated by rationals very nicely: by Dirichlet's approximation theorem, we know that for any $\epsilon>0$, we can find integers $-n, m$ such that $|mp/q -(-n)|<\epsilon/|q|$, and thus $|mp +nq|<\epsilon$. This shows all intervals containing the origin have elements of $\mathbb{Z}_{p,q}$. From here density of $\mathbb{Z}_{p,q}$ follows in the same way as density of $P_f$ in the previous proposition. The second part of the proposition then follows immediately from everything dicussed previously.
+
+## 3. The difference operator and periodic sums
+
+Now, we revisit the quesiton of sums of incommensurable functions, and in particular we show that in the continous case, such sums are never periodic.
+
+For this and for the future posts in this series, we introduce the following operator which is ubiquitously used in discussions of the periodic deconposition problem:
+
+**Definition 3.1 (Difference Operator)** For any function $f:\mathbb{R}\to\mathbb{R}$ and any $p\in\mathbb{R}$, we define the **difference operator in p** $\Delta_p$ by $\Delta_p f(x) := f(x+p) - f(x)$ for all $x\in\mathbb{R}$. As the reader can verify, these are linear operators for all $p$, and they commute with each other, i.e., $\Delta_p\Delta_q = \Delta_q\Delta_p$ for all $p, q\in\mathbb{R}$.
+
+This operator measures how much $f$ changes when we translate by $p$. In particular, $\Delta_p f$ is identically zero if and only if $p$ is a period of $f$. A few more key facts about difference operators and sums of functions:
+
+**Facts about Difference Operators**: 
+
+* For any $f:\mathbb{R}\to\mathbb{R}$ and any $q\in\mathbb{R}$, we have $P_f\subseteq P_{\Delta_q f}$. That is, all periods of $f$ are also periods of $\Delta_q f$. 
+* Given two functions $f,g$, their sum is periodic if and only if there is an $r\neq 0$ such that 
+$$\Delta_r f +\Delta_r g=0$$
+Such an $r$ is then a period of $f+g$.
+* Thus, if $f+g$ is periodic, then for all $p\in P_f$ and all $q\in P_g$ we have
+$$0=\Delta_r \Delta_q f = \Delta_r\Delta_p g$$
+which implies
+$$P_{\Delta_q f} \supseteq P_f +r\mathbb{Z} \text{ and } P_{\Delta_p g} \supseteq P_g +r\mathbb{Z} $$
+* Hence, if $f+g$ is periodic, then ${\Delta_q f}$ and $\Delta_p g$ are commensurable for all $p\in P_f$ and all $q\in P_g$, even if $f$ and $g$ are incommensurable. This however is not a sufficient condition for $f+g$ to be periodic as the reader can verify (we will also see this in the next installement).
+* When $f, g$ are incommensurable and their sum is periodic, then the $r$ above must be incommensurable with all periods of $f$ and $g$, and so we actually have
+$$P_{\Delta_q f} \supseteq P_f \oplus r\mathbb{Z} \text{ and } P_{\Delta_p g} \supseteq P_g \oplus r\mathbb{Z} $$
+* If $f, g$ are themsleves periodic and  incommensurable with $f+g$ periodic, the above then implies $\Delta_q f$ and $\Delta_p g$ must have dense period modules and thus be either constant or nowhere continous.
+
+This leads us to the final result of this installment 
+
+**Proposition 3.2:** *Let $f, g$ be continuous periodic functions. Then $f+g$ is periodic if and only if $f, g$ are commensurable. Thus no set of continuous periodic functions containing two or more incommensurable functions can be a vector subspace of $\mathbb{R}^\mathbb{R}$*
+
+We leave the proof to the reader (hint: apply the final fact listed about difference operators and use the boundedness of continuous periodic functions).
+
+## Beyond Continuity: A Preview of Pathology
+
+With what we have established so far, a clear structural dichotomy emerges: any periodic function with a dense (and thus higher-dimensional) period module, and any pair of incommensurable functions whose sum manages to remain periodic, must be pathological—specifically, they must be discontinuous everywhere. 
+
+In the next installment of *Pathological Periodicity*, we will dive directly into the abyss of these nowhere-continuous functions. We will construct and dissect a variety of pathological examples, including some highly unintuitive functions that are constant only on sets of Lebesgue measure zero—a construction where the Axiom of Choice becomes absolutely indispensable. Stay tuned!
+
+::: {#def-period-space}
+## $\mathbb{Q}$-subspace and Period Space
+For any function $f$, we can consider the linear span of its period module over the rational numbers $\mathbb{Q}$. We denote this by $V_f := \text{span}_\mathbb{Q}(P_f)$, and call it the **period space** of $f$. By definition, $V_f$ is a **$\mathbb{Q}$-subspace** of $\mathbb{R}_{\mathbb{Q}}$, which is how we denote the vector space of $\mathbb{R}$ over $\mathbb{Q}$. 
+:::
+
+* **Fact 3**: Because we are working within $\mathbb{R}$, any $\mathbb{Q}$-linear dependence between periods can be cleared of denominators to form a $\mathbb{Z}$-linear dependence. Therefore, the **rank** of the period module $P_f$ over $\mathbb{Z}$ is always strictly equal to the **dimension** of the period space $V_f$ over $\mathbb{Q}$. However, $P_f$ is often not finitely generated as a $\mathbb{Z}$-module. For instance, if $P_f = \mathbb{Q}$, its rank is exactly 1 (since any two rationals are $\mathbb{Z}$-linearly dependent), but it requires infinitely many generators over $\mathbb{Z}$, which is what gives it its dense topological structure.

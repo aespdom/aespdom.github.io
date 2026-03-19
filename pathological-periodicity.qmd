@@ -1,0 +1,19 @@
+---
+title: "Pathological Periodicity"
+page-layout: full
+title-block-banner: false
+listing:
+  contents: posts/en
+  sort: "date asc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, description]
+  include:
+    categories: "Pathological Periodicity"
+---
+
+An exploration of the set of periods of periodic functions $f:\mathbb{R}\to\mathbb{R}$, the pathologies that arise when the axiom of choice is assumed, and related matters in real analysis and set theory.
+
+Posts are listed in reading order.

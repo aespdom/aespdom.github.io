@@ -4,22 +4,67 @@ project:
     port: 4000
 
 website:
-  description: "A blog built with Quarto"
-  site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
   title: "Mathematical Adventures"
+  site-url: https://aespdom.github.io
+  description: "Mathematics, relearned and reconsidered."
+  favicon: profile.png
+
   navbar:
+    background: primary
+    left:
+      - text: Blog
+        href: blog.qmd
+      - text: Series
+        href: series.qmd
+      - text: Archive
+        href: archive.qmd
+      - text: About
+        href: about.qmd
     right:
-      - about.qmd
+      - text: "ES"
+        menu:
+          - text: "Inicio"
+            href: index-es.qmd
+          - text: "Blog"
+            href: blog-es.qmd
+          - text: "Series"
+            href: series-es.qmd
+          - text: "Archivo"
+            href: archive-es.qmd
+          - text: "Acerca de"
+            href: about-es.qmd
       - icon: github
-        href: https://github.com/
-      - icon: bluesky
-        href: https://bsky.app/
+        href: https://github.com/aespdom
+        aria-label: GitHub
+      - icon: rss
+        href: blog.xml
+        aria-label: RSS Feed
+
+  open-graph:
+    title: "Mathematical Adventures"
+    description: "Mathematics, relearned and reconsidered."
+    image: profile.png
+
+  twitter-card:
+    card-style: summary
+    title: "Mathematical Adventures"
+    description: "Mathematics, relearned and reconsidered."
+    image: profile.png
+
 format:
   html:
     theme:
       - cosmo
-      - brand
+      - theme.scss
     css: styles.css
-
-
-
+    toc: true
+    toc-depth: 3
+    mainfont: "Source Serif Pro"
+    monofont: "Fira Code, monospace"
+    fontsize: 1.1em
+    linestretch: 1.6
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">

@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./profile.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -41,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b5c9478c667cca52e0752469329e74a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,9 +70,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Mathematical Adventures">
+<meta property="og:description" content="Mathematics, relearned and reconsidered.">
+<meta property="og:image" content="https://aespdom.github.io/profile.png">
+<meta property="og:site_name" content="Mathematical Adventures">
+<meta property="og:image:height" content="800">
+<meta property="og:image:width" content="800">
+<meta name="twitter:title" content="Mathematical Adventures">
+<meta name="twitter:description" content="Mathematics, relearned and reconsidered.">
+<meta name="twitter:image" content="https://aespdom.github.io/profile.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="800">
+<meta name="twitter:image-width" content="800">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -90,18 +106,59 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./series.html"> 
+<span class="menu-text">Series</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./archive.html"> 
+<span class="menu-text">Archive</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-es">    
+        <li>
+    <a class="dropdown-item" href="./index-es.html">
+ <span class="dropdown-text">Inicio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./blog-es.html">
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./series-es.html">
+ <span class="dropdown-text">Series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./archive-es.html">
+ <span class="dropdown-text">Archivo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./about-es.html">
+ <span class="dropdown-text">Acerca de</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/aespdom"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/"> <i class="bi bi-bluesky" role="img">
+    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img" aria-label="RSS Feed">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -128,19 +185,25 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
   </div>
 </header><main class="content" id="quarto-document-content">
-<p>Hello! My name is Alonso, a mathematician-in-training based in Texas (and soon, Mexico City). I have been fascinated by mathematics since childhood, and I went on to obtain an undergraduate degree in the subject. However, for various reasons, I have been away from mathematics for several years. I am now making my way back to it with renewed enthusiasm and curiosity. This blog is a way for me to share my journey back into mathematics, as well as scattered reflections on the philosophy and pedagogy of the subject. I hope that my reflections and explorations will be useful and inspiring to others who are also interested in mathematics, whether they are students, educators, or simply curious minds.</p>
+<p>My name is Alonso Espinosa Domínguez. I am a mathematician-in-training based in Texas, and soon in Mexico City. I completed an undergraduate degree in mathematics at MIT in 2020, spent several years away from the subject, and am now making my way back.</p>
+<p>My mathematical interests center on analysis, topology, geometry, and mathematical logic and foundations. I am also interested in the history and philosophy of mathematics — particularly in taking seriously the idea that mathematical practice is a human and social activity, shaped by the same forces that shape everything else.</p>
+<p>The longer version of all of this is in the <a href="./posts/en/Welcome-to-Math-Adventures/index.html">Welcome post</a></p>
 
 
 </main> 
   <hr class="about-sep">
    <div class="about-links">
-  <a href="https://linkedin.com" class="about-link" rel="" target="">
+  <a href="https://www.linkedin.com/in/aespdom" class="about-link" rel="" target="">
     <i class="bi bi-linkedin"></i>
      <span class="about-link-text">LinkedIn</span>
   </a>
-  <a href="https://github.com" class="about-link" rel="" target="">
+  <a href="https://github.com/aespdom" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
+  </a>
+  <a href="mailto:aloespdom@gmail.com" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">Email</span>
   </a>
 </div>
 </div>
@@ -211,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+        var filterRegex = new RegExp("https:\/\/aespdom\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

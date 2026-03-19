@@ -1,0 +1,151 @@
+/*-- scss:defaults --*/
+
+// Colores — azul profundo como primario da seriedad sin ser aburrido
+$primary: #1a4a6e !default;
+$body-color: #333333 !default;
+$link-color: $primary !default;
+$link-hover-color: #0d2e46 !default;
+
+// Tipografía del cuerpo: serif legible para prosa matemática larga
+$font-family-base: 'Source Serif Pro', 'Georgia', serif !default;
+$font-size-base: 1.05rem !default;
+
+// Tipografía de encabezados: misma familia serif que el cuerpo
+$headings-font-family: 'Source Serif Pro', 'Georgia', serif !default;
+$headings-color: #1a2e40 !default;
+$headings-font-weight: 700 !default;
+
+// Espaciado de línea generoso — esencial para legibilidad con fórmulas
+$line-height-base: 1.75 !default;
+
+// Fondo ligeramente cálido
+$body-bg: #fafafa !default;
+
+// Navbar
+$navbar-bg: #1a2e40 !default;
+$navbar-fg: #f0f4f8 !default;
+
+
+/*-- scss:rules --*/
+
+// Ancho de contenido legible para prosa densa
+.page-columns .column-body {
+  max-width: 740px;
+}
+
+// Mejora visual del navbar
+.navbar-brand {
+  font-family: 'Source Serif Pro', 'Georgia', serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+// Bloques de definiciones: borde izquierdo azul, fondo sutil
+.definition {
+  border-left: 4px solid $primary;
+  background-color: rgba(26, 74, 110, 0.05);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+// Proposiciones y teoremas: borde izquierdo verde oscuro
+.proposition,
+.theorem,
+.lemma {
+  border-left: 4px solid #2d6a4f;
+  background-color: rgba(45, 106, 79, 0.05);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+// Corolarios: variante más suave
+.corollary {
+  border-left: 4px solid #52796f;
+  background-color: rgba(82, 121, 111, 0.05);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+// Pruebas: estilo más ligero
+.proof {
+  border-left: 2px solid #aaa;
+  padding: 0.8em 1.2em;
+  margin: 1em 0;
+  font-size: 0.97em;
+  color: #444;
+}
+
+// Ejemplo: amarillo/ocre sutil
+.example {
+  border-left: 4px solid #b5838d;
+  background-color: rgba(181, 131, 141, 0.05);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+// Observaciones/notas
+.remark {
+  border-left: 3px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+}
+
+// Mejor separación visual en listing cards
+.quarto-post {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 2rem;
+}
+
+// Footer de posts
+.post-footer-custom {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid #ddd;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.post-footer-custom h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+// Hero de la landing page
+.hero-section {
+  padding: 3rem 0 2rem 0;
+}
+
+.hero-section h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a2e40;
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.hero-links {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.hero-links a {
+  margin-right: 1.2em;
+  font-weight: 500;
+}

@@ -1,0 +1,23 @@
+---
+title: "Acerca de"
+image: profile.png
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/aespdom
+    - icon: github
+      text: Github
+      href: https://github.com/aespdom
+    - icon: envelope
+      text: Email
+      href: mailto:aloespdom@gmail.com
+
+---
+
+Mi nombre es Alonso Espinosa Domínguez. Soy un matemático en formación, actualmente en Texas y pronto en la Ciudad de México. Completé una licenciatura en matemáticas en el MIT en 2020, pasé varios años alejado de la disciplina, y ahora estoy encontrando el camino de vuelta.
+
+Mis intereses matemáticos se centran en el análisis, la topología, la geometría, y la lógica matemática y fundamentos. También me interesa la historia y la filosofía de las matemáticas — en particular, tomar en serio la idea de que la práctica matemática es una actividad humana y social, moldeada por las mismas fuerzas que moldean todo lo demás.
+
+La versión larga de todo esto está en el [post de bienvenida](/posts/es/Bienvenida/index.html).
