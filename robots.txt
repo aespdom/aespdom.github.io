@@ -1,1 +1,1 @@
-Sitemap: https://aespdom.github.io/sitemap.xml
+Sitemap: https://mathadventures.blog/sitemap.xml

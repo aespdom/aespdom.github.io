@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Mathematical Adventures</title>
-<link>https://aespdom.github.io/blog.html</link>
-<atom:link href="https://aespdom.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://mathadventures.blog/blog.html</link>
+<atom:link href="https://mathadventures.blog/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Mathematics, relearned and reconsidered.</description>
 <generator>quarto-1.9.35</generator>
 <lastBuildDate>Wed, 18 Mar 2026 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Pathological Periodicity, Part II: The Algebra and Topology of Periods</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
-  <link>https://aespdom.github.io/posts/en/Alg-Top-Periods/</link>
+  <link>https://mathadventures.blog/posts/en/Alg-Top-Periods/</link>
   <description><![CDATA[ 
 
 
@@ -94,13 +94,13 @@
   <category>Pathological Periodicity</category>
   <category>periodic functions</category>
   <category>algebra</category>
-  <guid>https://aespdom.github.io/posts/en/Alg-Top-Periods/</guid>
+  <guid>https://mathadventures.blog/posts/en/Alg-Top-Periods/</guid>
   <pubDate>Wed, 18 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Pathological Periodicity, Part I: Relearning the Basics</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
-  <link>https://aespdom.github.io/posts/en/Relearning-Basics/</link>
+  <link>https://mathadventures.blog/posts/en/Relearning-Basics/</link>
   <description><![CDATA[ 
 
 
@@ -138,13 +138,13 @@
   <category>Pathological Periodicity</category>
   <category>periodic functions</category>
   <category>linear algebra</category>
-  <guid>https://aespdom.github.io/posts/en/Relearning-Basics/</guid>
+  <guid>https://mathadventures.blog/posts/en/Relearning-Basics/</guid>
   <pubDate>Sun, 15 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Welcome to Mathematical Adventures</title>
+  <title>Returning, Not Repeating</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
-  <link>https://aespdom.github.io/posts/en/Welcome-to-Math-Adventures/</link>
+  <link>https://mathadventures.blog/posts/en/Welcome-to-Math-Adventures/</link>
   <description><![CDATA[ 
 
 
@@ -152,12 +152,13 @@
 
 
 <p>I did not leave mathematics gracefully.</p>
-<p>By the time I finished my undergraduate degree at MIT in 2020, I was exhausted in a way that took years to fully understand. Some of that exhaustion was self-inflicted — taking a graduate-level measure theory course in my first year of college is, in retrospect, not the wisest decision a young mathematician can make. But some of it was deeper than bad course selection: I had treated mathematics as an all-consuming identity since the eighth grade, and somewhere along the way I had run out of whatever it is that keeps that kind of devotion alive.</p>
+<p>By the time I finished my undergraduate degree at MIT in 2020, I was exhausted in a way that took years to fully understand. Some of that exhaustion was self-inflicted — taking a graduate-level measure theory course in my first year of college is, in retrospect, not the wisest decision a young mathematician can make.</p>
+<p>But some of it went deeper than bad course selection. For more than a third of my life, I had treated mathematics as an all-consuming identity. Sure, I participated in all kinds of non-mathematical activites (a lot of them, actually), but no matter what I accomplished in any other area of life, in my own mind I was either a good mathematician or I was <em>nothing</em>. Either I achieved something great in mathematics, or my life would be a <em>waste</em> (terribly dramatic, I know). And when the contradiction between that extreme view of myself and the reality of the world around me became irreconcilable, I ran out of whatever it is that keeps that kind of devotion alive.</p>
 <p>So I left. But I didn’t take any time to rest, or to reflect terribly much on my time doing mathematics. Instead, I threw myself into a different set of questions — political, historical, philosophical. I spent years reading, organizing, protesting, and thinking seriously about the social world in a way I never had before. I studied philosophy, particularly in the Marxist tradition, and that study changed me in ways I am still working out.</p>
 <p>It also thoroughly changed how I see mathematics.</p>
-<p>Before that period, my relationship to the subject was — I now realize — vaguely Kantian. I believed, more or less uncritically, that mathematics was the deepest expression of the structures of the mind, and that the mind’s structures were, in some fundamental sense, the only reality we had access to. Mathematics was beautiful precisely because it was the most rigorous cartography of our only possible world. This view was, I now think, not merely incomplete but fundamentally inverted. Holding it also made it genuinely difficult to reconcile my love for mathematics with the jarring concreteness of social and political life. If the structures of the mind are what matter most, then what do I make of the fact that people face material oppression and exploitation <em>right now</em>, in ways that have nothing to do with mental structures?</p>
+<p>Before that period, my relationship to the subject was — I now realize — vaguely Kantian. I believed, more or less uncritically, that mathematics was the deepest expression of the structures of the mind, and that the mind’s structures were, in some fundamental sense, the only reality we had access to. Mathematics was beautiful — and required quiasi-religious devotion — precisely because it was the most rigorous cartography of our only possible world. This view was, I now think, fundamentally inverted. Holding it also made it genuinely difficult to reconcile my love for mathematics with the jarring concreteness of social and political life. If the structures of the mind are what matter most, then what do I make of the fact that people face material oppression and exploitation <em>right now</em>, in ways that have nothing to do with mental structures?</p>
 <p>I no longer hold that view — though a real tension remains, and I suspect it always will: the question of when to sit with a beautiful problem and when to put it down in favor of more immediate struggles is not one that resolves itself cleanly.</p>
-<p>I am now, in the broadest sense, a materialist. I take it as a starting point that there is a real, objective, material world; that we represent it mentally and symbolically; and that our representations improve precisely through the process of acting in the world and confronting the consequences. From this vantage point, mathematics looks quite different. The objects of mathematics — structures, relations, invariants — are not constructs of the mind projecting itself outward. They are real features of the material world that we have learned, through a long and genuinely social process, to perceive, abstract, and reason about.</p>
+<p>I am now, in the broadest sense, a materialist. I take it as a starting point that there is a real, objective, material world; that we represent it mentally and symbolically; and that our representations improve precisely through the process of acting in the world and confronting the consequences. From this vantage point, mathematics looks quite different. The objects of mathematics — structures, relations, invariants — are not constructs of the mind projecting itself outward to supposedly generate the only reality we have access to. They are real features of the material world that we have learned, through a long and genuinely social process, to perceive, abstract, and reason about. They are important and fascinating features of this material reality, <em>but they are far from the only ones.</em></p>
 <p>This shift has made mathematics feel more, not less, interesting to me. It opens up questions I barely thought to ask before: How has mathematical practice changed across different historical periods, and why? What does it mean that certain kinds of mathematics flourished in certain societies and not others? What is the relationship between the abstract and the applied, and how has that relationship shifted as the conditions of mathematical production have changed? These are not merely sociological questions tacked onto the outside of mathematics — they are, I think, genuinely mathematical questions in a broad sense, questions about what mathematics <em>is</em> and how it works.</p>
 <p>This blog is, first of all, an attempt to actually do mathematics again — to work through problems, reconstruct rusty knowledge, and hopefully discover something genuinely new along the way. But it is also a place for the kind of meta-mathematical reflection I have just been gesturing at: the philosophy, the history, and the occasionally uncomfortable questions about mathematics as a human activity embedded in a human world. The first series, <em>Pathological Periodicity</em>, is squarely in the first category — a deep dive into the surprisingly rich world of periodic functions that began with a single exercise in Chapter 1 of a linear algebra textbook. Later posts will venture further into the second.</p>
 <p>I hope you find something worth reading here. Let’s get into it.</p>
@@ -167,7 +168,7 @@
  ]]></description>
   <category>introduction</category>
   <category>philosophy</category>
-  <guid>https://aespdom.github.io/posts/en/Welcome-to-Math-Adventures/</guid>
+  <guid>https://mathadventures.blog/posts/en/Welcome-to-Math-Adventures/</guid>
   <pubDate>Sat, 14 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 </channel>
