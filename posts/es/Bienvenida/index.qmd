@@ -1,22 +1,22 @@
 ---
-title: "Bienvenida a Aventuras Matemáticas"
+title: "Va de Nuez"
 date: "2026-03-14"
 categories: [introducción, filosofía]
 ---
 
-No dejé las matemáticas con gracia.
+No abandoné las matemáticas con elegancia.
 
 Para cuando terminé mi licenciatura en el MIT en 2020, estaba agotado de una manera
 que me tomó años entender completamente. Parte de ese agotamiento fue autoinfligido —
-tomar un curso de teoría de la medida a nivel de posgrado en mi primer año de
-universidad es, en retrospectiva, no la decisión más sabia que un joven matemático
-puede tomar. Pero parte de ese agotamiento era más profundo que una mala selección de
-cursos: había tratado a las matemáticas como una identidad que lo consumía todo desde
-el segundo de secundaria, y en algún punto del camino se me agotó lo que sea que
-mantiene vivo ese tipo de devoción.
+tomar un curso de teoría de la medida a nivel de posgrado durante el primer año de
+de la carrera es, en retrospectiva, no la decisión más sabia que un joven matemático
+puede tomar. 
 
-Así que me fui. Pero no me tomé tiempo para descansar, ni para reflexionar demasiado
-sobre mi tiempo haciendo matemáticas. En cambio, me lancé a un conjunto distinto de
+Pero parte de ese agotamiento iba más allá que una mala selección de
+cursos. Llevaba más de un tercio de mi vida tratado a las matemáticas como una identidad que lo consumía todo — no en el sentido de que dejára de hacer cualquier otra cosa que no fuesen matemáticas, si no en el sentido due que sin importar lo que lograse en cualquier otro ámbito de la vida, en mi mente o era buen matemático o no era *nada*. O lograba algo grandioso en las matemáticas, o mi vida sería un desperdicio — muy dramático, lo sé. Y al final de ese arduoso camino, despues de que se volviese irreconciliable la contradiccion entre esa forma extremista de identificarme con las matemáticas y la realidad del mudo a mi alrededor, se me agotó lo que sea que mantiene vivo ese tipo de devoción, y me volvi alérgico a la mera idea de continuar profesionalmente con las matemáticas.
+
+Así que las abandoné. Pero no me tomé tiempo para descansar, ni para reflexionar demasiado
+sobre mi tiempo haciendo matemáticas. Al contrario, me lancé ferreamente a un conjunto distinto de
 preguntas — políticas, históricas, filosóficas. Pasé años leyendo, organizando,
 protestando y pensando seriamente sobre el mundo social de una manera que nunca antes
 había hecho. Estudié filosofía, particularmente en la tradición marxista, y ese
@@ -66,7 +66,7 @@ que he estado apuntando: la filosofía, la historia, y las preguntas ocasionalme
 incómodas sobre las matemáticas como actividad humana incrustada en un mundo humano. La
 primera serie, *Periodicidad Patológica*, cae de lleno en la primera categoría — una
 inmersión profunda en el mundo sorprendentemente rico de las funciones periódicas que
-comenzó con un solo ejercicio del Capítulo 1 de un libro de álgebra lineal. Posts
+comenzó con un solo ejercicio del capítulo 1 de un libro de álgebra lineal. Posts
 posteriores se aventurarán más en la segunda.
 
 Espero que encuentres algo que valga la pena leer aquí. Entrémosle.

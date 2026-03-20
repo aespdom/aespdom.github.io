@@ -3,9 +3,12 @@ project:
   preview:
     port: 4000
 
+resources:
+  - CNAME
+
 website:
   title: "Mathematical Adventures"
-  site-url: https://aespdom.github.io
+  site-url: https://mathadventures.blog
   description: "Mathematics, relearned and reconsidered."
   favicon: profile.png
 

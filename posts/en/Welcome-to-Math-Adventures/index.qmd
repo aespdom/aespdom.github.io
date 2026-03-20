@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Mathematical Adventures"
+title: "Returning, Not Repeating"
 date: "2026-03-14"
 categories: [introduction, philosophy]
 ---
@@ -9,10 +9,9 @@ I did not leave mathematics gracefully.
 By the time I finished my undergraduate degree at MIT in 2020, I was exhausted in
 a way that took years to fully understand. Some of that exhaustion was self-inflicted —
 taking a graduate-level measure theory course in my first year of college is, in
-retrospect, not the wisest decision a young mathematician can make. But some of it
-was deeper than bad course selection: I had treated mathematics as an all-consuming
-identity since the eighth grade, and somewhere along the way I had run out of whatever
-it is that keeps that kind of devotion alive.
+retrospect, not the wisest decision a young mathematician can make. 
+
+But some of it went deeper than bad course selection. For more than a third of my life, I had treated mathematics as an all-consuming identity. Sure, I participated in all kinds of non-mathematical activites (a lot of them, actually), but no matter what I accomplished in any other area of life, in my own mind I was either a good mathematician or I was *nothing*. Either I achieved something great in mathematics, or my life would be a *waste* (terribly dramatic, I know). And when the contradiction between that extreme view of myself and the reality of the world around me became irreconcilable, I ran out of whatever it is that keeps that kind of devotion alive.
 
 So I left. But I didn't take any time to rest, or to reflect terribly much on my time doing mathematics. Instead, I threw myself into a different set of questions — political, historical, philosophical. I spent years
 reading, organizing, protesting, and thinking seriously about the social world in a
@@ -25,8 +24,8 @@ Before that period, my relationship to the subject was — I now realize —
 vaguely Kantian. I believed, more or less uncritically, that mathematics was the
 deepest expression of the structures of the mind, and that the mind's structures
 were, in some fundamental sense, the only reality we had access to. Mathematics
-was beautiful precisely because it was the most rigorous cartography of our
-only possible world. This view was, I now think, not merely incomplete but
+was beautiful — and required quiasi-religious devotion — precisely because it was the most rigorous cartography of our
+only possible world. This view was, I now think,
 fundamentally inverted. Holding it also made it genuinely difficult to reconcile
 my love for mathematics with the jarring concreteness of social and political life.
 If the structures of the mind are what matter most, then what do I make of the fact
@@ -42,12 +41,11 @@ that there is a real, objective, material world; that we represent it mentally a
 symbolically; and that our representations improve precisely through the process of
 acting in the world and confronting the consequences. From this vantage point,
 mathematics looks quite different. The objects of mathematics — structures, relations,
-invariants — are not constructs of the mind projecting itself outward. They are real
+invariants — are not constructs of the mind projecting itself outward to supposedly generate the only reality we have access to. They are real
 features of the material world that we have learned, through a long and genuinely
-social process, to perceive, abstract, and reason about.
+social process, to perceive, abstract, and reason about. They are important and fascinating features of this material reality, *but they are far from the only ones.*
 
-This shift has made mathematics feel more, not less, interesting to me. It opens
-up questions I barely thought to ask before: How has mathematical practice changed
+This shift has made mathematics feel more, not less, interesting to me. It opens up questions I barely thought to ask before: How has mathematical practice changed
 across different historical periods, and why? What does it mean that certain kinds
 of mathematics flourished in certain societies and not others? What is the relationship
 between the abstract and the applied, and how has that relationship shifted as the
