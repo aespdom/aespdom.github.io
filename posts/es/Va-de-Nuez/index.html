@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alonso Espinosa Domínguez">
-<meta name="dcterms.date" content="2026-03-15">
+<meta name="dcterms.date" content="2026-03-14">
 
-<title>Pathological Periodicity, Part I: Relearning the Basics – Mathematical Adventures</title>
+<title>Va de Nuez – Mathematical Adventures</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,44 +77,15 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 <meta property="og:title" content="Mathematical Adventures">
 <meta property="og:description" content="Mathematics, relearned and reconsidered.">
-<meta property="og:image" content="https://mathadventures.blog/posts/en/Relearning-Basics/profile.png">
+<meta property="og:image" content="https://mathadventures.blog/posts/es/Va-de-Nuez/profile.png">
 <meta property="og:site_name" content="Mathematical Adventures">
 <meta name="twitter:title" content="Mathematical Adventures">
 <meta name="twitter:description" content="Mathematics, relearned and reconsidered.">
-<meta name="twitter:image" content="https://mathadventures.blog/posts/en/Relearning-Basics/profile.png">
+<meta name="twitter:image" content="https://mathadventures.blog/posts/es/Va-de-Nuez/profile.png">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -201,11 +172,10 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Pathological Periodicity, Part I: Relearning the Basics</h1>
+      <h1 class="title">Va de Nuez</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Pathological Periodicity</div>
-                <div class="quarto-category">periodic functions</div>
-                <div class="quarto-category">linear algebra</div>
+                <div class="quarto-category">introducción</div>
+                <div class="quarto-category">filosofía</div>
               </div>
                   </div>
   </div>
@@ -223,7 +193,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 15, 2026</p>
+        <p class="date">March 14, 2026</p>
       </div>
     </div>
     
@@ -244,48 +214,35 @@ window.Quarto = {
 
 
 
-<p>My hiatus from math has been quite long. It’s been 9 years since my last algebra class (algebra was one of my weaker subjects, and I regrettably avoided it in favor of taking more analysis classes), a little under 8 years since I seriously attempted any research, 7 years since I gave up on becoming a mathematician, and 6 years since my last math class whatsoever. Needless to say, I am exceedingly rusty. So when life pushed me to reconsider my divorce from mathematics, I thought to myself, <em>let me revisit the basics.</em> And hence I picked up Axler’s excellent <em>Linear Algebra Done Right</em> and started working through the exercises, to start getting the wheels turning again.</p>
-<p>Just in the first chapter, I came across a very innocent-seeming question. Is the set of all periodic functions a vector subspace of <span class="math inline">\(\mathbb{R}^{\mathbb{R}}\)</span>, the space of all real-valued functions on <span class="math inline">\(\mathbb{R}\)</span>? As rusty as I may be, I was still able to quickly and emphatically answer in the negative, because <em>obviously</em> sums of periodic functions with incommensurable periods (i.e., periods whose ratio is irrational) <em>surely</em> fail to be periodic (though sums of functions with commensurable periods are always periodic). Moreover, the only possible vector subspaces consisting solely of periodic functions would <em>definitely</em> have to be made up of functions whose periods are commensurable with one another. I thought to myself, <em>I will hammer out a quick little proof of this, and I will move on to more exciting things in linear algebra.</em></p>
-<p>And then I sat down to write and found myself a little bit… stuck. First, I realized I needed to be a bit more precise with what I meant by functions having incommensurable periods—I didn’t just need there to <em>exist</em> periods <span class="math inline">\(p\)</span> of <span class="math inline">\(f\)</span> and <span class="math inline">\(q\)</span> of <span class="math inline">\(g\)</span> with <span class="math inline">\(p/q \not\in \mathbb{Q}\)</span>, I needed <em>all</em> periods of <span class="math inline">\(f\)</span> to be incommensurable with those of <span class="math inline">\(g\)</span> in order for <span class="math inline">\(f+g\)</span> to potentially fail to be periodic. This was important to specify because constant functions have the “unusual” property of having incommensurable real numbers in their sets of periods, since their set of periods is just all of <span class="math inline">\(\mathbb{R}\)</span>, and this is what makes it possible to add them to any periodic function without affecting the periodicity at all.</p>
-<p>So now I had two questions at once on my mind:</p>
-<ul>
-<li><strong>Question 1:</strong> Was I wrong about sums of incommensurable functions? That is, can I find a pair of <span class="math inline">\(f, g\)</span> such that they are incommensurable in the sense that they have no periods in common (equivalent to having no periods that are rational multiples of each other) and yet <span class="math inline">\(f+g\)</span> is periodic?</li>
-<li><strong>Question 2:</strong> Are there any functions other than constant functions that can have two or more incommensurable periods?</li>
-</ul>
-<p>For a brief period (pun intended) of time, I continued believing that the answer to the above would be no. In particular, for the second question, I realized that if a set of periods contains incommensurables. And surely, only constant functions could have a dense period, right?</p>
-<p>With a little more thought I concluded this is not hard to prove if I restrict myself to continuous functions…and that the proof for continuous functions cannot really be generalized or extended. This was precisely the moment I realized I was almost certainly wrong about Question 2, and by extension probably wrong about Question 1 as well. Even the better part of a decade later, I still remember vividly just how pathological a function can get when you abandon continuity. All of a sudden, the prospect of a non-constant function with a dense set of periods seemed like exactly the sort of thing possible in the strange world of nowhere continuous functions.</p>
-<p>So I set out to come up with some examples. Within hours, I had my first example showing Question 2 could be answered affirmatively: if I chose any incommensurable <span class="math inline">\(p, q\)</span>, then the characteristic function over <span class="math inline">\(p\mathbb{Q} + q\mathbb{Q}\)</span> would be non-constant and have a set of periods equal to all of <span class="math inline">\(p\mathbb{Q} + q\mathbb{Q}\)</span>.</p>
-<p>Question 1 proved to be a bit trickier for me, but after a day or two, I finally came up with an example also answering this question affirmatively—but I won’t show it till a little later in the series, to give any readers a chance to try to come up with examples themselves. For now, suffice it to say, I was extremely intrigued. And as soon as I answered one question, more questions arose. For instance:</p>
-<ul>
-<li><strong>Question 3:</strong> Now that I know sums of incommensurable functions do not always fail to be periodic, is there a neat characterization of when these sums end up being periodic?</li>
-<li><strong>Question 4:</strong> Can I find a vector subspace of <span class="math inline">\(\mathbb{R}^\mathbb{R}\)</span> that consists solely of periodic functions and yet contains two or more incommensurable functions?</li>
-<li><strong>Question 5:</strong> All the examples I had at that point were constant almost everywhere. Do there exist examples that aren’t? Can I find an example that is constant “almost nowhere”? Would these examples have to be non-measurable?</li>
-<li><strong>Question 6:</strong> Given a function with incommensurable periods <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>, like my characteristic function mentioned above, can I break it apart into a function only periodic in <span class="math inline">\(p\mathbb{Z}\)</span> or <span class="math inline">\(p\mathbb{Q}\)</span>, and one only periodic in <span class="math inline">\(q\mathbb{Z}\)</span> or <span class="math inline">\(q\mathbb{Q}\)</span>?</li>
-<li><strong>Question 7:</strong> Clearly, sets of periods can have some interesting topological and algebraic structure. Sometimes they are dense, and they are always at least an additive group (actually, a <span class="math inline">\(\mathbb{Z}\)</span>-module, but I could hardly remember what that was at first). Sometimes they are also a vector space over <span class="math inline">\(\mathbb{Q}\)</span>—what more can be said about these sets/modules/spaces of periods and how they determine the behavior of the function they arise from?</li>
-</ul>
-<p>I can genuinely say, I had not felt this excited about math in at least 8 years. My excitement multiplied even more when I noticed I could invoke the Axiom of Choice to answer Question 5 affirmatively as well (except for the measurability part).</p>
-<p>In other words, here I was, thinking I was just doing a rudimentary exercise in Chapter 1 of a linear algebra text, only to open a can of worms involving many fields of mathematics at once: algebra, measure theory, topology, and set theory.</p>
-<p>With a little digging, I learned that unsurprisingly many others have been interested in similar questions, and that there is a substantial body of work on what is called the Periodic Decomposition Problem, which takes many of the questions I had been posing in directions I had not yet imagined (<a href="https://arxiv.org/abs/1312.3798">see for instance this paper</a>).</p>
-<p>I have much more to learn about the work done so far on the Periodic Decomposition Problem. But I do think I have identified at least two questions that haven’t been so directly posed and answered in the literature so far. First, though it is clear that ZF alone is not enough to show the existence of the most pathological examples I’ve come up with and found in the literature (those that end up being non-measurable), I’d like to know how many can be found in systems strictly weaker than full ZFC, (or if their existence is actually equivalent to the Axiom of Choice). I suspect I could probably use ultrafilters or something like that which is weaker than full AC, but I still need to hammer that out. Second, I’d like to know just how large the dimension of a vector space of periodic functions can be when it contains functions with incommensurable periods. I suspect the answer is not very large, since it seems hard enough to make even a one-dimensional space of this sort (though at least that I know can be done with some AC trickery). But again, I haven’t worked that out yet.</p>
-<p>While I work on these questions (and write up the results more formally), I want to use this blog to bring any readers along with me on this journey into the world of <em>Pathological Periodicity</em>. I hope you enjoy it as much as I have. See you in the next post!</p>
+<p>No abandoné las matemáticas con elegancia.</p>
+<p>Para cuando terminé mi licenciatura en el MIT en 2020, estaba agotado de una manera que me tomó años entender completamente. Parte de ese agotamiento fue autoinfligido — tomar un curso de teoría de la medida a nivel de posgrado durante el primer año de la carrera es, en retrospectiva, no la decisión más sabia que un joven matemáticonpuede tomar.</p>
+<p>Pero parte de ese agotamiento iba más allá que una mala selección de cursos. Llevaba más de un tercio de mi vida tratado a las matemáticas como una identidad que lo consumía todo — no en el sentido de que dejára de hacer cualquier otra cosa que no fuesen matemáticas, si no en el sentido due que sin importar lo que lograse en cualquier otro ámbito de la vida, en mi mente o era buen matemático o no era <em>nada</em>. O lograba algo grandioso en las matemáticas, o mi vida sería un desperdicio — muy dramático, lo sé. Y al final de ese arduo camino, después de que se volviese irreconciliable la contradicción entre esa forma extremista de identificarme con las matemáticas y la realidad del mundo a mi alrededor, se me agotó lo que sea que mantiene vivo ese tipo de devoción, y me volvi alérgico a la mera idea de continuar profesionalmente con las matemáticas.</p>
+<p>Así que las abandoné. Pero no me tomé tiempo para descansar, ni para reflexionar demasiado sobre mi tiempo haciendo matemáticas. Al contrario, me lancé ferreamente a un conjunto distinto de preguntas — políticas, históricas, filosóficas. Pasé años leyendo, organizando, protestando y pensando seriamente sobre el mundo social de una manera que nunca antes había hecho. Estudié filosofía, particularmente en la tradición marxista, y ese estudio me cambió de maneras que todavía estoy procesando.</p>
+<p>También cambió profundamente cómo veo las matemáticas.</p>
+<p>Antes de ese periodo, mi relación con la disciplina era — ahora me doy cuenta — vagamente kantiana. Creía, más o menos acríticamente, que las matemáticas eran la expresión más profunda de las estructuras de la mente, y que las estructuras de la mente eran, en algún sentido fundamental, la única realidad a la que teníamos acceso. Las matemáticas eran bellas precisamente porque eran la cartografía más rigurosa de nuestro único mundo posible. Esta visión era, ahora pienso, no solo incompleta sino fundamentalmente invertida. Sostenerla también hacía genuinamente difícil reconciliar mi amor por las matemáticas con la concretud chocante de la vida social y política. Si las estructuras de la mente son lo que más importa, entonces ¿qué hago con el hecho de que la gente enfrenta opresión y explotación material <em>ahora mismo</em>, de maneras que no tienen nada que ver con estructuras mentales?</p>
+<p>Ya no sostengo esa visión — aunque una tensión real permanece, y sospecho que siempre permanecerá: la pregunta de cuándo quedarse con un problema bello y cuándo dejarlo en favor de luchas más inmediatas no es una que se resuelva limpiamente.</p>
+<p>Soy ahora, en el sentido más amplio, un materialista. Tomo como punto de partida que existe un mundo real, objetivo, material; que lo representamos mental y simbólicamente; y que nuestras representaciones mejoran precisamente a través del proceso de actuar en el mundo y confrontar las consecuencias. Desde este punto de vista, las matemáticas lucen bastante diferentes. Los objetos de las matemáticas — estructuras, relaciones, invariantes — no son constructos de la mente proyectándose hacia afuera. Son rasgos reales del mundo material que hemos aprendido, a través de un proceso largo y genuinamente social, a percibir, abstraer y razonar.</p>
+<p>Este cambio ha hecho que las matemáticas me parezcan más, no menos, interesantes. Abre preguntas que apenas se me ocurría hacer antes: ¿Cómo ha cambiado la práctica matemática a lo largo de diferentes periodos históricos, y por qué? ¿Qué significa que ciertos tipos de matemáticas florecieran en ciertas sociedades y no en otras? ¿Cuál es la relación entre lo abstracto y lo aplicado, y cómo ha cambiado esa relación conforme las condiciones de la producción matemática han cambiado? Estas no son meramente preguntas sociológicas pegadas al exterior de las matemáticas — son, creo, preguntas genuinamente matemáticas en un sentido amplio, preguntas sobre qué <em>son</em> las matemáticas y cómo funcionan.</p>
+<p>Este blog es, antes que nada, un intento de volver a hacer matemáticas — trabajar problemas, reconstruir conocimiento oxidado, y ojalá descubrir algo genuinamente nuevo en el camino. Pero también es un espacio para el tipo de reflexión meta-matemática al que he estado apuntando: la filosofía, la historia, y las preguntas ocasionalmente incómodas sobre las matemáticas como actividad humana incrustada en un mundo humano. La primera serie, <em>Periodicidad Patológica</em>, cae de lleno en la primera categoría — una inmersión profunda en el mundo sorprendentemente rico de las funciones periódicas que comenzó con un solo ejercicio del capítulo 1 de un libro de álgebra lineal. Posts posteriores se aventurarán más en la segunda.</p>
+<p>Espero que encuentres algo que valga la pena leer aquí. Entrémosle.</p>
 
 
 
 </main> <!-- /main -->
 <div class="post-footer-custom">
 
-  <h3>Stay in touch</h3>
-  <p>If you enjoyed this post or spotted an error, I'd love to hear from you.
-  You can reach me at <a href="mailto:alonso@mathadventures.blog">alonso@mathadventures.blog</a>,
-  find me on <a href="https://github.com/aespdom">GitHub</a>,
-  or connect on <a href="https://www.linkedin.com/in/aespdom">LinkedIn</a>.</p>
+  <h3>Mantente en contacto</h3>
+  <p>Si te gustó este post o encontraste un error, me encantaría saberlo.
+  Puedes escribirme a <a href="mailto:alonso@mathadventures.blog">alonso@mathadventures.blog</a>,
+  encontrarme en <a href="https://github.com/aespdom">GitHub</a>,
+  o conectar en <a href="https://www.linkedin.com/in/aespdom">LinkedIn</a>.</p>
 
-  <h3>Subscribe</h3>
-  <p>You can follow this blog via
-  <a href="../../../blog.xml"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16" style="vertical-align: -1px;"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg> RSS feed</a>.</p>
+  <h3>Suscríbete</h3>
+  <p>Puedes seguir este blog vía
+  <a href="../../../blog-es.xml"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16" style="vertical-align: -1px;"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg> RSS</a>.</p>
 
-  <h3>Share</h3>
-  <p>If you found this useful, consider sharing it with someone who might enjoy it too.</p>
+  <h3>Comparte</h3>
+  <p>Si esto te resultó útil, considera compartirlo con alguien a quien le pueda interesar.</p>
 
 </div>
 <script id="quarto-html-after-body" type="application/javascript">

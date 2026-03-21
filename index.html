@@ -34,6 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./profile.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-recent-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-recent-posts'] = new List('listing-recent-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
@@ -203,11 +234,18 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#start-here-pathological-periodicity" id="toc-start-here-pathological-periodicity" class="nav-link active" data-scroll-target="#start-here-pathological-periodicity">Start here: Pathological Periodicity</a></li>
+  <li><a href="#recent-posts" id="toc-recent-posts" class="nav-link" data-scroll-target="#recent-posts">Recent Posts</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -219,15 +257,94 @@ window.Quarto = {
 <section id="mathematical-adventures" class="level1 g-col-12 g-col-md-8">
 <h1>Mathematical Adventures</h1>
 <div class="hero-tagline">
-<p>Mathematics is a subject with surprising depth hiding in unexpected places — a routine exercise becomes a research problem, a question in analysis finds its answer in algebra. This blog documents that kind of exploration, alongside reflection on what mathematics is and how it works as a human practice. The current series, <em>Pathological Periodicity</em>, digs into the surprisingly rich structure hidden inside the set of periods of periodic functions <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span>.</p>
+<p>Mathematics is a subject with surprising depth hiding in unexpected places — a routine exercise becomes a research problem, a question in analysis finds its answer in algebra. This blog documents that kind of exploration, alongside reflection on mathematics as a social practice — its philosophy, its history, and its politics. The current series, <em>Pathological Periodicity</em>, digs into the surprisingly rich structure hidden inside the set of periods of periodic functions.</p>
 </div>
 <div class="hero-links">
 <p><a href="blog.html">Read all posts →</a>  ·  <a href="series.html">Series</a>  ·  <a href="archive.html">Archive</a>  ·  <a href="about.html">About</a></p>
 </div>
 </section>
 </div>
+<hr>
+<section id="start-here-pathological-periodicity" class="level2">
+<h2 class="anchored" data-anchor-id="start-here-pathological-periodicity">Start here: Pathological Periodicity</h2>
+<div class="grid">
+<div class="g-col-12 g-col-md-8">
+<p>Nonconstant continuous periodic functions cannot have dense period sets, and if two continuous functions have no (nonzero) periods in common, their sum won’t be periodic. <em>Neither of these facts holds in general</em>, and they fail in especially fascinating ways for nonmeasurable functions. This series explores the surprisingly rich family of pathological counterexamples that emerges once continuity, and then measurability, are abandoned.</p>
+<p><a href="pathological-periodicity.html">Read the series →</a></p>
+</div>
+<div class="g-col-12 g-col-md-4" style="padding-top: 0.5rem;">
+<p><strong>Posts in this series</strong></p>
+<ul>
+<li><a href="posts/en/Relearning-Basics/index.html">Part I: Relearning the Basics</a></li>
+<li><a href="posts/en/Alg-Top-Periods/index.html">Part II: The Algebra and Topology of Periods</a></li>
+<li><a href="posts/en/First-Pathologies/index.html">Part III: The First Pathological Examples</a></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="recent-posts" class="level2">
+<h2 class="anchored" data-anchor-id="recent-posts">Recent Posts</h2>
+<div id="listing-recent-posts" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHklMkNwZXJpb2RpYyUyMGZ1bmN0aW9ucyUyQ2FsZ2VicmE=" data-listing-date-sort="1773810000000" data-listing-file-modified-sort="1773932674959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1648">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">Pathological Periodicity, Part II: The Algebra and Topology of Periods</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">
+In the previous post, we motivated a series of questions surrounding the sums of periodic functions and the existence of functions with incommensurable periods. Now, we are…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/en/Alg-Top-Periods/index.html" class="no-external">
+<div class="listing-date">
+Mar 18, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="UGF0aG9sb2dpY2FsJTIwUGVyaW9kaWNpdHklMkNwZXJpb2RpYyUyMGZ1bmN0aW9ucyUyQ2xpbmVhciUyMGFsZ2VicmE=" data-listing-date-sort="1773550800000" data-listing-file-modified-sort="1774137033297" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1337">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/en/Relearning-Basics/index.html" class="no-external">Pathological Periodicity, Part I: Relearning the Basics</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/en/Relearning-Basics/index.html" class="no-external">
+My hiatus from math has been quite long. It’s been 9 years since my last algebra class (algebra was one of my weaker subjects, and I regrettably avoided it in favor of…<em></em><em></em>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/en/Relearning-Basics/index.html" class="no-external">
+<div class="listing-date">
+Mar 15, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="aW50cm9kdWN0aW9uJTJDcGhpbG9zb3BoeQ==" data-listing-date-sort="1773464400000" data-listing-file-modified-sort="1774022887074" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="759">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/en/Returning-Not-Repeating/index.html" class="no-external">Returning, Not Repeating</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/en/Returning-Not-Repeating/index.html" class="no-external">
+I did not leave mathematics gracefully.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/en/Returning-Not-Repeating/index.html" class="no-external">
+<div class="listing-date">
+Mar 14, 2026
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

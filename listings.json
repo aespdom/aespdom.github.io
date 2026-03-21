@@ -4,19 +4,27 @@
     "items": [
       "/posts/en/Alg-Top-Periods/index.html",
       "/posts/en/Relearning-Basics/index.html",
-      "/posts/en/Welcome-to-Math-Adventures/index.html"
+      "/posts/en/Returning-Not-Repeating/index.html"
     ]
   },
   {
     "listing": "/blog-es.html",
     "items": [
-      "/posts/es/Bienvenida/index.html"
+      "/posts/es/Va-de-Nuez/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/en/Alg-Top-Periods/index.html",
+      "/posts/en/Relearning-Basics/index.html",
+      "/posts/en/Returning-Not-Repeating/index.html"
     ]
   },
   {
     "listing": "/archive-es.html",
     "items": [
-      "/posts/es/Bienvenida/index.html"
+      "/posts/es/Va-de-Nuez/index.html"
     ]
   },
   {
@@ -28,7 +36,7 @@
     "items": [
       "/posts/en/Alg-Top-Periods/index.html",
       "/posts/en/Relearning-Basics/index.html",
-      "/posts/en/Welcome-to-Math-Adventures/index.html"
+      "/posts/en/Returning-Not-Repeating/index.html"
     ]
   },
   {
