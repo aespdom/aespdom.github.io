@@ -205,7 +205,9 @@ window.Quarto = {
                                 <div class="quarto-categories">
                 <div class="quarto-category">Pathological Periodicity</div>
                 <div class="quarto-category">periodic functions</div>
-                <div class="quarto-category">algebra</div>
+                <div class="quarto-category">modules</div>
+                <div class="quarto-category">dense subsets</div>
+                <div class="quarto-category">continuity</div>
               </div>
                   </div>
   </div>
@@ -304,9 +306,9 @@ window.Quarto = {
 <ul>
 <li>For any <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> and any <span class="math inline">\(q\in\mathbb{R}\)</span>, we have <span class="math inline">\(P_f\subseteq P_{\Delta_q f}\)</span>. That is, all periods of <span class="math inline">\(f\)</span> are also periods of <span class="math inline">\(\Delta_q f\)</span>.</li>
 <li>Given two functions <span class="math inline">\(f,g\)</span>, their sum is periodic if and only if there is an <span class="math inline">\(r\neq 0\)</span> such that <span class="math inline">\(\Delta_r f +\Delta_r g=0\)</span>. Such an <span class="math inline">\(r\)</span> is then a period of <span class="math inline">\(f+g\)</span>.</li>
-<li>Thus, if <span class="math inline">\(f+g\)</span> is periodic, then for all <span class="math inline">\(p\in P_f\)</span> and all <span class="math inline">\(q\in P_g\)</span> we have: <span id="eq-dsuf"><span class="math display">\[0=\Delta_r \Delta_q f = \Delta_r\Delta_p g \tag{1}\]</span></span> which implies: <span class="math display">\[P_{\Delta_q f} \supseteq P_f + r\mathbb{Z} \quad \text{and} \quad P_{\Delta_p g} \supseteq P_g + r\mathbb{Z}\]</span></li>
+<li>Thus, if <span class="math inline">\(r\)</span> is a period of <span class="math inline">\(f+g\)</span>, then for all <span class="math inline">\(p\in P_f\)</span> and all <span class="math inline">\(q\in P_g\)</span> we have: <span id="eq-dsuf"><span class="math display">\[0=\Delta_r \Delta_q f = \Delta_r\Delta_p g \tag{1}\]</span></span> which implies: <span class="math display">\[P_{\Delta_q f} \supseteq P_f + P_{f+g} \quad \text{and} \quad P_{\Delta_p g} \supseteq P_g + P_{f+g}\]</span></li>
 <li>Hence, if <span class="math inline">\(f+g\)</span> is periodic, then <span class="math inline">\(\Delta_q f\)</span> and <span class="math inline">\(\Delta_p g\)</span> are commensurable for all <span class="math inline">\(p\in P_f\)</span> and all <span class="math inline">\(q\in P_g\)</span>, even if <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are incommensurable. This however is not a sufficient condition for <span class="math inline">\(f+g\)</span> to be periodic, as the reader can verify (we will also see this in the next installment).</li>
-<li>When <span class="math inline">\(f, g\)</span> are incommensurable and their sum is periodic, then the <span class="math inline">\(r\)</span> above must be incommensurable with all periods of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>. In other words, we actually have that for all <span class="math inline">\(r\in P_{f+g},\)</span> <span class="math inline">\(p\in P_{f}\)</span>, and <span class="math inline">\(q\in P_g\)</span>: <span id="eq-oplus"><span class="math display">\[P_{\Delta_q f} \supseteq P_f \oplus r\mathbb{Z} \quad \text{and} \quad P_{\Delta_p g} \supseteq P_g \oplus r\mathbb{Z} \tag{2}\]</span></span></li>
+<li>When <span class="math inline">\(f, g\)</span> are incommensurable and their sum is periodic, then the <span class="math inline">\(r\)</span> above must be incommensurable with all periods of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>. In other words, we actually have that for all <span class="math inline">\(r\in P_{f+g},\)</span> <span class="math inline">\(p\in P_{f}\)</span>, and <span class="math inline">\(q\in P_g\)</span>: <span id="eq-oplus"><span class="math display">\[P_{\Delta_q f} \supseteq P_f \oplus P_{f+g} \quad \text{and} \quad P_{\Delta_p g} \supseteq P_g \oplus P_{f+g} \tag{2}\]</span></span></li>
 <li>If <span class="math inline">\(f, g\)</span> are themselves periodic and incommensurable with <span class="math inline">\(f+g\)</span> periodic, the above then implies <span class="math inline">\(\Delta_q f\)</span> and <span class="math inline">\(\Delta_p g\)</span> must have dense period modules, and thus be either constant or nowhere continuous.</li>
 </ul>
 <p>This leads us to the final result of this installment:</p>
@@ -318,14 +320,14 @@ window.Quarto = {
 </div>
 <p>Finally, we leave the reader with a small exercise:</p>
 <div class="exercise">
-<p><strong>Exercise 1.</strong> Slightly extend <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> by showing that if <span class="math inline">\(f,g\)</span> are incommensurable and periodic with <span class="math inline">\(f+g\)</span> periodic, then <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are <em>nowhere</em> continuous (the proof of <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> as written is not yet enough to establish nowhere continuity in the case where <span class="math inline">\(\Delta_q f\)</span> is constant).</p>
+<p><strong>Exercise 1.</strong> Extend <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> by showing that if <span class="math inline">\(f,g\)</span> are incommensurable and periodic with <span class="math inline">\(f+g\)</span> periodic, then <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are <em>nowhere</em> continuous (the proof of <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> as written is not yet enough to establish nowhere continuity in the case where <span class="math inline">\(\Delta_q f\)</span> is constant).</p>
 </div>
 </section>
 <section id="beyond-continuity-a-preview-of-pathology" class="level2">
 <h2 class="anchored" data-anchor-id="beyond-continuity-a-preview-of-pathology">3. Beyond Continuity: A Preview of Pathology</h2>
 <p>With what we have established so far, a clear structural dichotomy emerges: any periodic function with a dense (and thus higher-rank) period module, and any pair of incommensurable functions whose sum manages to remain periodic, must be severely pathological—specifically, they must be discontinuous everywhere.</p>
-<p>The requirement of continuity acts as a rigid cage, forcing period modules to remain of rank 1 over <span class="math inline">\(\mathbb{Z}\)</span> and preventing sums of incommensurable functions from being periodic. But what happens when we remove this cage?</p>
-<p>In the next installment of <em>Pathological Periodicity</em>, we will dive directly into the abyss of these nowhere-continuous functions. We will construct and dissect a variety of pathological examples, including some highly unintuitive functions that are constant only on sets of Lebesgue measure zero (though the functions themselves are non-measurable)—a construction where the Axiom of Choice becomes absolutely indispensable. Stay tuned!</p>
+<p>The requirement of continuity — <em>even just continuity at a single point</em> — acts as a rigid cage, forcing period modules to remain of rank 1 over <span class="math inline">\(\mathbb{Z}\)</span> and preventing sums of incommensurable functions from being periodic. But what happens when we remove this cage?</p>
+<p>In the next installment of <em>Pathological Periodicity</em>, we will dive directly into the abyss of these nowhere-continuous functions. We will construct and dissect a variety of pathological examples, including some highly unintuitive functions that are constant only on sets of Lebesgue measure zero (though the functions themselves are non-measurable)—a construction where the Axiom of Choice becomes very important. Stay tuned!</p>
 
 
 </section>
