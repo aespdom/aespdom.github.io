@@ -9,7 +9,7 @@
 <meta name="author" content="Alonso Espinosa Domínguez">
 <meta name="dcterms.date" content="2026-03-18">
 
-<title>Pathological Periodicity, Part II: The Algebra and Topology of Periods – Mathematical Adventures</title>
+<title>Pathological Periodicity, Part II: The Cage of Continuity – Mathematical Adventures</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-e1ff8503fc4e3ede7a49d283769f99d1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-df450425e4291865d9322b5e0310229f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -201,7 +201,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Pathological Periodicity, Part II: The Algebra and Topology of Periods</h1>
+      <h1 class="title">Pathological Periodicity, Part II: The Cage of Continuity</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Pathological Periodicity</div>
                 <div class="quarto-category">periodic functions</div>
@@ -311,23 +311,38 @@ window.Quarto = {
 <li>When <span class="math inline">\(f, g\)</span> are incommensurable and their sum is periodic, then the <span class="math inline">\(r\)</span> above must be incommensurable with all periods of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>. In other words, we actually have that for all <span class="math inline">\(r\in P_{f+g},\)</span> <span class="math inline">\(p\in P_{f}\)</span>, and <span class="math inline">\(q\in P_g\)</span>: <span id="eq-oplus"><span class="math display">\[P_{\Delta_q f} \supseteq P_f \oplus P_{f+g} \quad \text{and} \quad P_{\Delta_p g} \supseteq P_g \oplus P_{f+g} \tag{2}\]</span></span></li>
 <li>If <span class="math inline">\(f, g\)</span> are themselves periodic and incommensurable with <span class="math inline">\(f+g\)</span> periodic, the above then implies <span class="math inline">\(\Delta_q f\)</span> and <span class="math inline">\(\Delta_p g\)</span> must have dense period modules, and thus be either constant or nowhere continuous.</li>
 </ul>
-<p>This leads us to the final result of this installment:</p>
+<p>This leads us to the final result that we prove in this installment:</p>
 <div id="prp-continuous-sums" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposition 4</strong></span> Let <span class="math inline">\(f, g\)</span> be continuous periodic functions. Then <span class="math inline">\(f+g\)</span> is periodic if and only if <span class="math inline">\(f, g\)</span> are commensurable. Thus, no set of periodic functions containing two or more continuous incommensurable functions can be a vector subspace of <span class="math inline">\(\mathbb{R}^\mathbb{R}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Commensurability of <span class="math inline">\(f, g\)</span> trivially implies periodicity of <span class="math inline">\(f+g\)</span>. For the other direction, suppose <span class="math inline">\(f+g\)</span> is periodic and <span class="math inline">\(f, g\)</span> are incommensurable periodic functions. We prove that <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> must not be continuous. By the discussion above, <span class="math inline">\(\Delta_q f\)</span> has a dense period module for any nonzero <span class="math inline">\(q\in P_g\)</span>, and thus is either nowhere continuous or is consant and nonzero (since <span class="math inline">\(q\not \in P_f\)</span> by assumption). If <span class="math inline">\(\Delta_q f\)</span> is nowhere continuous then clearly <span class="math inline">\(f\)</span> must have been as well. If it is a nonzero constant, then <span class="math inline">\(f\)</span> must be unbounded. But continuous periodic functions must be bounded, so <span class="math inline">\(f\)</span> cannot be continuous. Reasoning in the exact same way establishes noncontinuity of <span class="math inline">\(g\)</span> and this finishes the proof.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Commensurability of <span class="math inline">\(f, g\)</span> trivially implies periodicity of <span class="math inline">\(f+g\)</span>. For the other direction, suppose <span class="math inline">\(f+g\)</span> is periodic and <span class="math inline">\(f, g\)</span> are incommensurable periodic functions. We prove that <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> must not be continuous. By the discussion above, <span class="math inline">\(\Delta_q f\)</span> has a dense period module for any nonzero <span class="math inline">\(q\in P_g\)</span>, and thus is either nowhere continuous or is a nonzero constant (since <span class="math inline">\(q\not \in P_f\)</span> by assumption). If <span class="math inline">\(\Delta_q f\)</span> is nowhere continuous, then <span class="math inline">\(f\)</span> must not have been continuous to begin with. If it is a nonzero constant, then <span class="math inline">\(f\)</span> must be unbounded. But continuous periodic functions must be bounded, so <span class="math inline">\(f\)</span> cannot be continuous. Reasoning in the exact same way establishes non-continuity of <span class="math inline">\(g\)</span> and this finishes the proof.</p>
 </div>
-<p>Finally, we leave the reader with a small exercise:</p>
+<p>The reader may wonder whether <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> can be strengthened: must incommensurable periodic functions with a periodic sum be not just discontinuous, but <em>nowhere</em> continuous? I initially believed so — after all, the proof above shows that <span class="math inline">\(\Delta_q f\)</span> is either nowhere continuous or a nonzero constant, and in the latter case we can show <span class="math inline">\(f\)</span> must actually be nowhere continuous (Exercise 1 below). The remaining case, where <span class="math inline">\(\Delta_q f\)</span> is nowhere continuous, seems like it should force <span class="math inline">\(f\)</span> to be nowhere continuous as well. But as Exercise 2 shows, this inference is not valid: a function can have points of continuity even when all of its nontrivial difference operators are nowhere continuous. This leaves open (for me at least) the question of just how large the set of continuity points can be under these conditions. We formalize this in the next exercises and questions.</p>
+<p>Let <span class="math inline">\(\mathcal{C}(f)\)</span> denote the set of points of continuity of a function <span class="math inline">\(f\)</span>.</p>
 <div class="exercise">
-<p><strong>Exercise 1.</strong> Extend <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> by showing that if <span class="math inline">\(f,g\)</span> are incommensurable and periodic with <span class="math inline">\(f+g\)</span> periodic, then <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are <em>nowhere</em> continuous (the proof of <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> as written is not yet enough to establish nowhere continuity in the case where <span class="math inline">\(\Delta_q f\)</span> is constant).</p>
+<p><strong>Exercises.</strong></p>
+<ol type="1">
+<li>Let <span class="math inline">\(f\)</span> be a periodic function and suppose there is a <span class="math inline">\(q\not\in P_f\)</span> such that <span class="math inline">\(\Delta_q f\)</span> is a nonzero constant. Show that <span class="math inline">\(\mathcal{C}(f) = \emptyset\)</span>.</li>
+<li>Find a periodic function <span class="math inline">\(f\)</span> with nonempty <span class="math inline">\(\mathcal{C}(f)\)</span> such that <span class="math inline">\(\Delta_q f\)</span> is nowhere continuous whenever <span class="math inline">\(q\not\in P_f\)</span>. Conclude that the argument used in <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> does not directly generalize to functions with isolated points of continuity. <em>(Hint: try constructing <span class="math inline">\(f\)</span> so that <span class="math inline">\(\mathcal{C}(f)\)</span> coincides with <span class="math inline">\(P_f\)</span> itself.)</em></li>
+</ol>
 </div>
+<p>And lastly, the questions which I don’t know how to answer, and whose answers I was not able to find after a bit of searching:</p>
+<div class="open-question">
+<p><strong>Open questions.</strong></p>
+<ol type="1">
+<li>Is it possible to find a non-constant periodic function <span class="math inline">\(f\)</span> with nonempty <span class="math inline">\(\mathcal{C}(f)\)</span> such that <span class="math inline">\(P_{\Delta_q f}\)</span> has rank 2 or greater for some <span class="math inline">\(q\not\in P_f\)</span>?</li>
+<li>When the conditions of Exercise 2 or Question 1 above are met, how “large” can <span class="math inline">\(\mathcal{C}(f)\)</span> be? In particular, must points of continuity be isolated?</li>
+<li>Does <a href="#prp-continuous-sums" class="quarto-xref">Proposition&nbsp;4</a> still hold if “continuous” is replaced by “having at least one point of continuity”? In other words, if <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are incommensurable periodic functions with <span class="math inline">\(\mathcal{C}(f)\neq\emptyset\)</span> and <span class="math inline">\(\mathcal{C}(g)\neq\emptyset\)</span>, must <span class="math inline">\(f+g\)</span> fail to be periodic? And if it does <em>not</em> hold, what is the weakest continuity condition on <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> that still forces commensurability to be necessary for <span class="math inline">\(f+g\)</span> to be periodic?</li>
+</ol>
+</div>
+<p>I plan to come back to this in a future post, and would be glad to hear from any readers who have ideas on answers to these questions.</p>
 </section>
 <section id="beyond-continuity-a-preview-of-pathology" class="level2">
 <h2 class="anchored" data-anchor-id="beyond-continuity-a-preview-of-pathology">3. Beyond Continuity: A Preview of Pathology</h2>
-<p>With what we have established so far, a clear structural dichotomy emerges: any periodic function with a dense (and thus higher-rank) period module, and any pair of incommensurable functions whose sum manages to remain periodic, must be severely pathological—specifically, they must be discontinuous everywhere.</p>
-<p>The requirement of continuity — <em>even just continuity at a single point</em> — acts as a rigid cage, forcing period modules to remain of rank 1 over <span class="math inline">\(\mathbb{Z}\)</span> and preventing sums of incommensurable functions from being periodic. But what happens when we remove this cage?</p>
-<p>In the next installment of <em>Pathological Periodicity</em>, we will dive directly into the abyss of these nowhere-continuous functions. We will construct and dissect a variety of pathological examples, including some highly unintuitive functions that are constant only on sets of Lebesgue measure zero (though the functions themselves are non-measurable)—a construction where the Axiom of Choice becomes very important. Stay tuned!</p>
+<p>With what we have established so far, a clear structural dichotomy emerges: any periodic function with a dense (and thus higher-rank) period module must be discontinuous everywhere, and any pair of incommensurable functions whose sum manages to remain periodic must always be discontinuous. In fact, they are typically nowhere continuous, though the precise relationship between the continuity of <span class="math inline">\(f\)</span> and that of its difference operators <span class="math inline">\(\Delta_q f\)</span> turns out to be more subtle than one might expect — as the exercises above illustrate.</p>
+<p>The requirement of continuity acts as a rigid cage, forcing period modules to remain of rank 1 over <span class="math inline">\(\mathbb{Z}\)</span> and preventing sums of incommensurable functions from being periodic. But what happens when we remove this cage?</p>
+<p>In the next installment of <em>Pathological Periodicity</em>, we will dive directly into the abyss of these pathological functions. We will construct and dissect a variety of examples, including some highly unintuitive functions that are constant only on sets of Lebesgue measure zero (though the functions themselves are non-measurable) — a construction where the Axiom of Choice becomes very important. Stay tuned!</p>
 
 
 </section>
