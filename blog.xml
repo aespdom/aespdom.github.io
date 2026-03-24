@@ -14,7 +14,7 @@
 <item>
   <title>Pathological Periodicity, Part II: The Cage of Continuity</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
-  <link>https://mathadventures.blog/posts/en/Alg-Top-Periods/</link>
+  <link>https://mathadventures.blog/posts/en/Cage-Continuity/</link>
   <description><![CDATA[ 
 
 
@@ -85,16 +85,16 @@
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Commensurability of <img src="https://latex.codecogs.com/png.latex?f,%20g"> trivially implies periodicity of <img src="https://latex.codecogs.com/png.latex?f+g">. For the other direction, suppose <img src="https://latex.codecogs.com/png.latex?f+g"> is periodic and <img src="https://latex.codecogs.com/png.latex?f,%20g"> are incommensurable periodic functions. We prove that <img src="https://latex.codecogs.com/png.latex?f"> and <img src="https://latex.codecogs.com/png.latex?g"> must not be continuous. By the discussion above, <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> has a dense period module for any nonzero <img src="https://latex.codecogs.com/png.latex?q%5Cin%20P_g">, and thus is either nowhere continuous or is a nonzero constant (since <img src="https://latex.codecogs.com/png.latex?q%5Cnot%20%5Cin%20P_f"> by assumption). If <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> is nowhere continuous, then <img src="https://latex.codecogs.com/png.latex?f"> must not have been continuous to begin with. If it is a nonzero constant, then <img src="https://latex.codecogs.com/png.latex?f"> must be unbounded. But continuous periodic functions must be bounded, so <img src="https://latex.codecogs.com/png.latex?f"> cannot be continuous. Reasoning in the exact same way establishes non-continuity of <img src="https://latex.codecogs.com/png.latex?g"> and this finishes the proof.</p>
 </div>
-<p>The reader may wonder whether Proposition&nbsp;4 can be strengthened: must incommensurable periodic functions with a periodic sum be not just discontinuous, but <em>nowhere</em> continuous? I initially believed so — after all, the proof above shows that <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> and <img src="https://latex.codecogs.com/png.latex?%5CDelta_p%20g"> are either nowhere continuous or a nonzero constant, and in the latter case we can show <img src="https://latex.codecogs.com/png.latex?f"> and <img src="https://latex.codecogs.com/png.latex?g"> must actually be nowhere continuous (Exercise 1 below). The remaining case, where <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> and <img src="https://latex.codecogs.com/png.latex?%5CDelta_p%20g"> are nowhere continuous, seems like it should force <img src="https://latex.codecogs.com/png.latex?f,%20g"> to be nowhere continuous as well. But as Exercise 2 shows, this inference is not valid: a function can have points of continuity even when all of its nontrivial difference operators are nowhere continuous. This leaves open (for me at least) the question of just how large the set of continuity points can be under these conditions. We formalize this in the next exercises and questions.</p>
+<p>The reader may wonder whether Proposition&nbsp;4 can be strengthened: must incommensurable periodic functions with a periodic sum be not just discontinuous, but <em>nowhere</em> continuous? I initially believed so — after all, the proof above shows that <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> and <img src="https://latex.codecogs.com/png.latex?%5CDelta_p%20g"> are either nowhere continuous or a nonzero constant, and in the latter case we can show <img src="https://latex.codecogs.com/png.latex?f"> and <img src="https://latex.codecogs.com/png.latex?g"> must in fact be nowhere continuous (actually they must be nowhere bounded, which is even worse; see Exercise 1 below). The remaining case, where <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> and <img src="https://latex.codecogs.com/png.latex?%5CDelta_p%20g"> are nowhere continuous, seems like it should force <img src="https://latex.codecogs.com/png.latex?f,%20g"> to be nowhere continuous as well. But as Exercise 2 shows, this inference is not valid: a function can have points of continuity even when all of its nontrivial difference operators are nowhere continuous. This leaves open (for me at least) the question of just how large the set of continuity points can be under these conditions. We formalize this in the next exercises and questions.</p>
 <p>Let <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BC%7D(f)"> denote the set of points of continuity of a function <img src="https://latex.codecogs.com/png.latex?f">.</p>
 <div class="exercise">
 <p><strong>Exercises.</strong></p>
 <ol type="1">
-<li>Let <img src="https://latex.codecogs.com/png.latex?f"> be a periodic function and suppose there is a <img src="https://latex.codecogs.com/png.latex?q%5Cnot%5Cin%20P_f"> such that <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> is a nonzero constant. Show that <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BC%7D(f)%20=%20%5Cemptyset">.</li>
+<li>Let <img src="https://latex.codecogs.com/png.latex?f"> be a periodic function and suppose there is a <img src="https://latex.codecogs.com/png.latex?q%5Cnot%5Cin%20P_f"> such that <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> is a nonzero constant. Show that <img src="https://latex.codecogs.com/png.latex?f"> must be unbounded on every open interval, and thus <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BC%7D(f)%20=%20%5Cemptyset">.</li>
 <li>Find a periodic function <img src="https://latex.codecogs.com/png.latex?f"> with nonempty <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BC%7D(f)"> such that <img src="https://latex.codecogs.com/png.latex?%5CDelta_q%20f"> is nowhere continuous whenever <img src="https://latex.codecogs.com/png.latex?q%5Cnot%5Cin%20P_f">. Conclude that the argument used in Proposition&nbsp;4 does not directly generalize to functions with isolated points of continuity. <em>(Hint: try constructing <img src="https://latex.codecogs.com/png.latex?f"> so that <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BC%7D(f)"> coincides with <img src="https://latex.codecogs.com/png.latex?P_f"> itself.)</em></li>
 </ol>
 </div>
-<p>And lastly, the questions which I don’t know how to answer, and whose answers I was not able to find after a bit of searching:</p>
+<p>And lastly, the questions which I don’t know how to answer, and whose answers I was not able to find after a bit of searching on the internet:</p>
 <div class="open-question">
 <p><strong>Open questions.</strong></p>
 <ol type="1">
@@ -107,8 +107,9 @@
 </section>
 <section id="beyond-continuity-a-preview-of-pathology" class="level2">
 <h2 class="anchored" data-anchor-id="beyond-continuity-a-preview-of-pathology">Beyond Continuity: A Preview of Pathology</h2>
-<p>With what we have established so far, we can see that the requirement of continuity acts as a rigid cage: it forces period modules in the non-constant case to remain of rank 1 over <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D"> and to be nowhere dense, while also preventing sums of incommensurable functions from being periodic. But what happens when we remove this cage?</p>
-<p>In the next installment of <em>Pathological Periodicity</em>, we will dive directly into the abyss of these pathological functions. We will construct and dissect a variety of examples, including some highly unintuitive functions that are constant only on sets of Lebesgue measure zero (though the functions themselves are non-measurable) — a construction where the Axiom of Choice becomes very important. Stay tuned!</p>
+<p>The above discussion shows that continuity acts as a rigid cage, forcing period modules in the non-constant case to be nowhere dense and remain of rank 1 over <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BZ%7D">, while also preventing sums of incommensurable functions from being periodic. But what happens when we remove this cage?</p>
+<p>With what we have established so far, a clear structural dichotomy emerges: any periodic functions with dense or higher-rank period modules and any pair of incommensurable functions whose sum manages to remain periodic must be highly pathological — namely, most (perhaps all?) such functions are nowhere continous and some are even nowhere bounded.</p>
+<p>In the next installment of <em>Pathological Periodicity</em>, we will dive directly into the abyss of these pathological functions. We will construct and dissect a variety of examples, including some highly unintuitive functions “constructed” using the Axiom of Choice. Stay tuned!</p>
 
 
 </section>
@@ -119,7 +120,7 @@
   <category>modules</category>
   <category>dense subsets</category>
   <category>continuity</category>
-  <guid>https://mathadventures.blog/posts/en/Alg-Top-Periods/</guid>
+  <guid>https://mathadventures.blog/posts/en/Cage-Continuity/</guid>
   <pubDate>Wed, 18 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 <item>

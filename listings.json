@@ -2,7 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/en/Alg-Top-Periods/index.html",
+      "/posts/en/Cage-Continuity/index.html",
       "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Returning-Not-Repeating/index.html"
     ]
@@ -16,7 +16,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/en/Alg-Top-Periods/index.html",
+      "/posts/en/Cage-Continuity/index.html",
       "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Returning-Not-Repeating/index.html"
     ]
@@ -34,7 +34,7 @@
   {
     "listing": "/archive.html",
     "items": [
-      "/posts/en/Alg-Top-Periods/index.html",
+      "/posts/en/Cage-Continuity/index.html",
       "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Returning-Not-Repeating/index.html"
     ]
@@ -43,7 +43,7 @@
     "listing": "/pathological-periodicity.html",
     "items": [
       "/posts/en/Relearning-Basics/index.html",
-      "/posts/en/Alg-Top-Periods/index.html"
+      "/posts/en/Cage-Continuity/index.html"
     ]
   }
 ]
