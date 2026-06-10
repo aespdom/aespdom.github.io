@@ -10,7 +10,7 @@
 <atom:link href="https://mathadventures.blog/blog-es.xml" rel="self" type="application/rss+xml"/>
 <description>Mathematics, relearned and reconsidered.</description>
 <generator>quarto-1.9.35</generator>
-<lastBuildDate>Sat, 14 Mar 2026 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 14 Mar 2026 04:00:00 GMT</lastBuildDate>
 <item>
   <title>Va de Nuez</title>
   <dc:creator>Alonso Espinosa Domínguez</dc:creator>
@@ -39,7 +39,7 @@
   <category>introducción</category>
   <category>filosofía</category>
   <guid>https://mathadventures.blog/posts/es/Va-de-Nuez/</guid>
-  <pubDate>Sat, 14 Mar 2026 05:00:00 GMT</pubDate>
+  <pubDate>Sat, 14 Mar 2026 04:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
