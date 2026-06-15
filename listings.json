@@ -2,6 +2,9 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/en/First-Pathologies/index.html",
+      "/posts/en/paper-skeleton/index.html",
+      "/posts/en/Nowhere-Bounded/index.html",
       "/posts/en/Cage-Continuity/index.html",
       "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Returning-Not-Repeating/index.html"
@@ -16,6 +19,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/en/First-Pathologies/index.html",
+      "/posts/en/paper-skeleton/index.html",
+      "/posts/en/Nowhere-Bounded/index.html",
       "/posts/en/Cage-Continuity/index.html",
       "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Returning-Not-Repeating/index.html"
@@ -34,6 +40,9 @@
   {
     "listing": "/archive.html",
     "items": [
+      "/posts/en/First-Pathologies/index.html",
+      "/posts/en/paper-skeleton/index.html",
+      "/posts/en/Nowhere-Bounded/index.html",
       "/posts/en/Cage-Continuity/index.html",
       "/posts/en/Relearning-Basics/index.html",
       "/posts/en/Returning-Not-Repeating/index.html"

@@ -1,2 +1,788 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alonso Espinosa Domínguez">
+<meta name="dcterms.date" content="2026-04-26">
+
+<title>Pathological Periodicity, Part III: Some decompositions and a peculiar homomorphism – Mathematical Adventures</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../profile.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-df450425e4291865d9322b5e0310229f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
+<meta name="quarto:status" content="draft">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Mathematical Adventures">
+<meta property="og:description" content="Mathematics, relearned and reconsidered.">
+<meta property="og:image" content="https://mathadventures.blog/posts/en/First-Pathologies/profile.png">
+<meta property="og:site_name" content="Mathematical Adventures">
+<meta name="twitter:title" content="Mathematical Adventures">
+<meta name="twitter:description" content="Mathematics, relearned and reconsidered.">
+<meta name="twitter:image" content="https://mathadventures.blog/posts/en/First-Pathologies/profile.png">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Mathematical Adventures</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../series.html"> 
+<span class="menu-text">Series</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../archive.html"> 
+<span class="menu-text">Archive</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-es" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">ES</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-es">    
+        <li>
+    <a class="dropdown-item" href="../../../index-es.html">
+ <span class="dropdown-text">Inicio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../blog-es.html">
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../series-es.html">
+ <span class="dropdown-text">Series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../archive-es.html">
+ <span class="dropdown-text">Archivo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about-es.html">
+ <span class="dropdown-text">Acerca de</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/aespdom"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../../blog.xml"> <i class="bi bi-rss" role="img" aria-label="RSS Feed">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Pathological Periodicity, Part III: Some decompositions and a peculiar homomorphism</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">pathological periodicity</div>
+                <div class="quarto-category">periodic functions</div>
+                <div class="quarto-category">axiom of choice</div>
+                <div class="quarto-category">measurability</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Alonso Espinosa Domínguez </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 26, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">3</span> Introduction</a></li>
+  <li><a href="#the-periodic-decomposition-problem." id="toc-the-periodic-decomposition-problem." class="nav-link" data-scroll-target="#the-periodic-decomposition-problem."><span class="header-section-number">4</span> The Periodic Decomposition Problem.</a></li>
+  <li><a href="#the-foundational-example-e_1" id="toc-the-foundational-example-e_1" class="nav-link" data-scroll-target="#the-foundational-example-e_1"><span class="header-section-number">5</span> The Foundational Example: <span class="math inline">\(E_1\)</span></a>
+  <ul class="collapse">
+  <li><a href="#the-properties-of-e_1" id="toc-the-properties-of-e_1" class="nav-link" data-scroll-target="#the-properties-of-e_1"><span class="header-section-number">5.1</span> The properties of <span class="math inline">\(E_1\)</span></a></li>
+  <li><a href="#breaking-measurability-e_1" id="toc-breaking-measurability-e_1" class="nav-link" data-scroll-target="#breaking-measurability-e_1"><span class="header-section-number">5.2</span> Breaking measurability: <span class="math inline">\(E_1'\)</span></a></li>
+  <li><a href="#a-failed-naive-extention" id="toc-a-failed-naive-extention" class="nav-link" data-scroll-target="#a-failed-naive-extention"><span class="header-section-number">5.3</span> A failed naive extention</a></li>
+  </ul></li>
+  <li><a href="#preview-of-a-discontinous-nomeasurable-homomorphsim." id="toc-preview-of-a-discontinous-nomeasurable-homomorphsim." class="nav-link" data-scroll-target="#preview-of-a-discontinous-nomeasurable-homomorphsim."><span class="header-section-number">6</span> Preview of a discontinous, nomeasurable homomorphsim.</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="introduction" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Introduction</h1>
+<p>Nearly three months later, I am finally getting around to writing up some more posts in this series. In that time I have continued figuring out some neat things about these periodic functions I have been calling “pathological”, and have also gotten busy with an unrelated project in 3D topology that I’ll have to write about soon.</p>
+<p>In the last post I said I would give some concrete examples of incommensurable funcitons with periodic sum. I will still do so, but first let me actually reframe things in terms of the periodic decomposition problem I referenced in the post. I will be borrwing extensively from Revesz for this initial exposition.</p>
+</section>
+<section id="the-periodic-decomposition-problem." class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The Periodic Decomposition Problem.</h1>
+<p>The periodic decomposition problem begins with the observation that if a function <span class="math inline">\(f: \mathbb{R}\to \mathbb{R}\)</span> can be written as <span class="math display">\[f = f_1+\ldots +f_n,\]</span> where each <span class="math inline">\(f_i\)</span> is periodic and has a period <span class="math inline">\(p_i\)</span>, then we must have [<em>{p_1}</em>{p_n} f = 0. ] Thus, [] is a necessary condition for <span class="math inline">\(f\)</span> to be decomposable in this manner. The decomposition problem then consists of determining when the implication can be reversed. This is a nice generalization of the fact that a function is periodic with period <span class="math inline">\(p\)</span> if and only if <span class="math inline">\(\Delta_p f = 0\)</span></p>
+<p>Notice that the identity <span class="math inline">\(Id(x) = x\)</span> always satisfies [] no matter what <span class="math inline">\(p_i\)</span> we chose. But if the <span class="math inline">\(p_i\)</span> are all commensurable, the intersection <span class="math inline">\(\bigcap \mathbb{Z}p_i\)</span> contains some nonzero number <span class="math inline">\(p\)</span>. This means it cannot be the case that <span class="math inline">\(Id(x)\)</span> has a decomposition (1), for in that case the sum on the left hand side of (1) would be periodic in <span class="math inline">\(p\)</span>, and <span class="math inline">\(Id\)</span> has no periods other than <span class="math inline">\(0\)</span>. However, For a system of <span class="math inline">\(n\)</span> pairwise incommensurable real numbers <span class="math inline">\(p_1,\ldots, p_n\)</span>, we do have the following theorem <em>assuming the axiom of choice</em> which I will refer to as the Periodic Decomposition Theorem (PDT).</p>
+<p><em>Theorem</em>: Let <span class="math inline">\(p_1,\ldots, p_n\)</span>, be pairwise incommensurable. Then, for any function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span>, there exists a decomposition (1) for <span class="math inline">\(f\)</span> if and only if (2) holds.</p>
+<p>Ill quickly sketch the proof here of the PDT for special case of <span class="math inline">\(n=2\)</span>. Suppose we have a function <span class="math inline">\(h:\mathbb{R}\to\mathbb{R}\)</span>, a pair <span class="math inline">\(p, q\)</span> of incommensurable numbers, and <span class="math inline">\(\Delta_p\Delta_q h = 0\)</span>. Let <span class="math inline">\(G = \mathbb{Z}p+\mathbb{Z}q\)</span>, and consider the quotient <span class="math inline">\(\mathbb{R}/G\)</span>. For each coset in this quotient, choose a single representative (this is where we invoke AC). On a given coset with <span class="math inline">\(y\)</span> as its representative, any <span class="math inline">\(x\)</span> in the can be written uniquely as <span class="math inline">\(x = y + mp + nq\)</span> for some integers <span class="math inline">\(m, n\)</span>. So, on that coset, define <span class="math inline">\(f(x) := h(y+ nq)\)</span> and <span class="math inline">\(g(x) := h(y+mp)-h(y)\)</span>. Now do this on every coset in order to define <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> on all of <span class="math inline">\(\mathbb R\)</span>. The reader can verify that <span class="math inline">\(\Delta_p\Delta_q h = 0\)</span> gives that <span class="math inline">\(h = f + g\)</span>.</p>
+<p>This theorem in fact holds in any model of ZF in which there exists a <em>Vitali Set</em>, meaning a set containing exactly one element from each equivalence class in <span class="math inline">\(\mathbb{R}/\mathbb{Q}\)</span>. This is the quintessential example of a nonmeasurable set. AC of course implies the existence of such a set, but the other way around is not true (this is not obvious; see for example Blaas). Moreover, there are models of ZF where <em>all</em> subsets of the real line are measurable, meaning a Vitali set cannot exist in such a model. In other words, Like AC, the assertion that Vitali sets exist is independent of ZF, but it is strictly weaker than the full Axiom of Choice itself.</p>
+<p>In the previous post, we saw that continuity is a rigid cage: continuous periodic functions must be strictly periodic, and pairs of incommensurable continuous functions can never sum to a periodic function. We also saw partial extensions to functions that are merely <em>somewhere bounded</em> or whose continuity sets are <em>somewhere dense</em>, all under the same conclusion: incommensurable summands fail to produce a periodic sum. Now, we begin exploring the kinds of functions that are free from these constraints.</p>
+<p>Lets begin with an elementary construction that requires no Axiom of Choice. The pointwise behavior of this elementary example will be highly irregular, though the almost-everywhere behavior will be highly boring: the functions in this example will be almost everywhere constant.</p>
+<p>To find examples that are not equivalent in measure to a constant function, we will need to exit the world of measurable functions entirely, and thus begin our foray into some fascinating set-theoretic territory.</p>
+<p>Before we begin, a quick reminder of notation from previous posts: <span class="math inline">\(P_f\)</span> denotes the period module of <span class="math inline">\(f\)</span>, which is always a <span class="math inline">\(\mathbb{Z}\)</span>-submodule of <span class="math inline">\(\mathbb{R}\)</span>. Two periodic functions <span class="math inline">\(f, g\)</span> are <em>incommensurable</em> when <span class="math inline">\(P_f \cap P_g = \{0\}\)</span>. We write <span class="math inline">\(\mathbb{Z}_{p,q} := p\mathbb{Z} + q\mathbb{Z}\)</span> for the <span class="math inline">\(\mathbb{Z}\)</span>-span of <span class="math inline">\(\{p, q\}\)</span>, and similarly <span class="math inline">\(\mathbb{Z}_{p,q,r}\)</span> for three generators. Throughout, <span class="math inline">\(p, q\)</span> (and sometimes <span class="math inline">\(r\)</span>) will be real numbers chosen so that <span class="math inline">\(p/q \notin \mathbb{Q}\)</span> (and <span class="math inline">\(p, q, r\)</span> are <span class="math inline">\(\mathbb{Q}\)</span>-linearly independent when three generators are involved).</p>
+</section>
+<section id="the-foundational-example-e_1" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> The Foundational Example: <span class="math inline">\(E_1\)</span></h1>
+<p>We begin with the simplest possible example answering Question 1 from Part I: a pair of incommensurable periodic functions whose sum is periodic.</p>
+<p><strong>Construction <span class="math inline">\(E_1\)</span>.</strong> Fix <span class="math inline">\(p, q \in \mathbb{R}\)</span> with <span class="math inline">\(p/q \notin \mathbb{Q}\)</span>, and let <span class="math inline">\(G := \mathbb{Z}_{p,q} = p\mathbb{Z} + q\mathbb{Z}\)</span>. Define <span class="math inline">\(f, g: \mathbb{R} \to \mathbb{R}\)</span> by <span class="math display">\[
+f(mp + nq) := n, \qquad g(mp + nq) := -m, \qquad \text{for } mp+nq \in G,
+\]</span> and <span class="math inline">\(f(x) = g(x) := 0\)</span> for <span class="math inline">\(x \notin G\)</span>.</p>
+<p>Note that since <span class="math inline">\(p/q \notin \mathbb{Q}\)</span>, every element of <span class="math inline">\(G\)</span> has a <em>unique</em> representation as <span class="math inline">\(mp + nq\)</span> with <span class="math inline">\(m, n \in \mathbb{Z}\)</span>, so <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are well-defined.</p>
+<p>Let us verify the basic properties of this construction.</p>
+<p><strong>Periodicity of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>.</strong> Take any <span class="math inline">\(x = mp + nq \in G\)</span>. Then <span class="math inline">\(f(x + p) = f((m+1)p + nq) = n = f(x)\)</span>, so <span class="math inline">\(p \in P_f\)</span>. For <span class="math inline">\(x \notin G\)</span>, we have <span class="math inline">\(x + p \notin G\)</span> as well (since <span class="math inline">\(p \in G\)</span>), and so <span class="math inline">\(f(x+p) = 0 = f(x)\)</span>. Thus <span class="math inline">\(p \in P_f\)</span>. By the same reasoning <span class="math inline">\(q \in P_g\)</span>.</p>
+<p><strong>No other periods of <span class="math inline">\(f\)</span> in <span class="math inline">\(G\)</span>.</strong> Suppose <span class="math inline">\(t = m'p + n'q \in G\)</span> is a period of <span class="math inline">\(f\)</span>. Then for <span class="math inline">\(x = 0\)</span>: <span class="math inline">\(f(t) = n' = f(0) = 0\)</span>, so <span class="math inline">\(n' = 0\)</span>. Hence <span class="math inline">\(P_f \cap G \subseteq p\mathbb{Z}\)</span>. Combined with the previous paragraph, <span class="math inline">\(P_f \cap G = p\mathbb{Z}\)</span>.</p>
+<p><strong>No periods of <span class="math inline">\(f\)</span> outside <span class="math inline">\(G\)</span>.</strong> Suppose <span class="math inline">\(t \notin G\)</span> is a period of <span class="math inline">\(f\)</span>. Then <span class="math inline">\(t + G \neq G\)</span>, so <span class="math inline">\(t \notin G\)</span> means in particular that <span class="math inline">\(0 + t = t \notin G\)</span>, hence <span class="math inline">\(f(t) = 0 = f(0)\)</span>. So far consistent. But take <span class="math inline">\(x = q \in G\)</span>: <span class="math inline">\(f(q) = 1\)</span>, while <span class="math inline">\(q + t \notin G\)</span> (because <span class="math inline">\(t \notin G\)</span> and <span class="math inline">\(q \in G\)</span> means their sum is in the coset <span class="math inline">\(t + G \neq G\)</span>), so <span class="math inline">\(f(q + t) = 0 \neq 1\)</span>. So <span class="math inline">\(t \notin G\)</span> is not a period of <span class="math inline">\(f\)</span>.</p>
+<p>Combining: <span class="math inline">\(P_f = p\mathbb{Z}\)</span> exactly. By the same argument, <span class="math inline">\(P_g = q\mathbb{Z}\)</span>. So <span class="math inline">\(f\)</span> is strictly periodic with fundamental period <span class="math inline">\(p\)</span>, <span class="math inline">\(g\)</span> is strictly periodic with fundamental period <span class="math inline">\(q\)</span>, and they are incommensurable since <span class="math inline">\(P_f \cap P_g = p\mathbb{Z} \cap q\mathbb{Z} = \{0\}\)</span>.</p>
+<p><strong>Periodicity of the sum.</strong> Now consider <span class="math inline">\(h := f + g\)</span>. On <span class="math inline">\(G\)</span>: <span class="math inline">\(h(mp + nq) = n - m\)</span>. Take <span class="math inline">\(t = p + q\)</span>: then <span class="math inline">\(h(x + p + q) = h((m+1)p + (n+1)q) = (n+1) - (m+1) = n - m = h(x)\)</span>. ✓ Outside <span class="math inline">\(G\)</span>: <span class="math inline">\(h \equiv 0\)</span>, trivially <span class="math inline">\((p+q)\)</span>-periodic. So <span class="math inline">\(p + q \in P_h\)</span>.</p>
+<p>Verifying that <span class="math inline">\(P_h = (p+q)\mathbb{Z}\)</span> exactly is straightforward and left to the reader. The key takeaway: <span class="math inline">\(h\)</span> is strictly periodic with fundamental period <span class="math inline">\(p + q\)</span>, and so <span class="math inline">\(E_1\)</span> provides our first example of incommensurable periodic functions whose sum is periodic. Settles Question 1 from Part I in the affirmative.</p>
+<section id="the-properties-of-e_1" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="the-properties-of-e_1"><span class="header-section-number">5.1</span> The properties of <span class="math inline">\(E_1\)</span></h2>
+<p><strong><span class="math inline">\(\mathbb{Q}\)</span>-dependence</strong> the fundamental periods <span class="math inline">\(p, q, p+q\)</span> are <em>pairwise</em> incommensurable (pairwise irrational ratios), yet they form a <span class="math inline">\(\mathbb{Z}\)</span>-linearly <em>dependent</em> set, since <span class="math inline">\(p + q - (p+q) = 0\)</span>. In other words, <span class="math inline">\(P_{h}\subset P_{f}+P_g\)</span>. This has the additional consequence that <span class="math inline">\(\Delta_q^2 f = \Delta_p^2 g = 0\)</span>, and naturally <span class="math inline">\(\Delta_q^2 h = \Delta_q^2 h = 0\)</span>. This relationship amongst the period modules of <span class="math inline">\(h, f , g\)</span> and the consequent difference operator identities are directly responsible for the next two features:</p>
+<p><strong><span class="math inline">\(\mathbb{Q}\)</span>-span inside <span class="math inline">\(\mathscr{P}\)</span>.</strong> Consider any <span class="math inline">\(\alpha, \beta \in \mathbb{Q}\)</span>. Is <span class="math inline">\(\alpha f + \beta g\)</span> periodic? Writing <span class="math inline">\(\alpha = a/c\)</span>, <span class="math inline">\(\beta = b/c\)</span> with common denominator <span class="math inline">\(c\)</span>, we can scale: <span class="math inline">\(\alpha f + \beta g = (1/c)(a f + b g)\)</span>. On <span class="math inline">\(G\)</span>: <span class="math inline">\((af + bg)(mp + nq) = an - bm\)</span>. Take <span class="math inline">\(t = bp + aq\)</span>: then <span class="math inline">\((af + bg)(x + bp + aq) = a(n + a) - b(m + b) = an - bm\)</span>. ✓ So <span class="math inline">\(bp + aq \in P_{af + bg}\)</span>, and by extension <span class="math inline">\(\alpha f + \beta g\)</span> is periodic. Hence <span class="math inline">\(\operatorname{span}_\mathbb{Q}(\{f, g\}) \subseteq \mathscr{P}\)</span>. In other words, a <span class="math inline">\(\mathbb{Q}\)</span>-linear combination of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> translates into a <span class="math inline">\(\mathbb{Q}\)</span>-linear combination of their fundamental periods, which is a period of the resulting function. Indeed, as the reader can verify, anytime we have <span class="math inline">\(P_{h}\subset P_{f}+P_g\)</span> for an incommensurable decomposition <span class="math inline">\(h = f+g\)</span>, of a periodic function <span class="math inline">\(h\)</span>, we automatically get that <span class="math inline">\(\operatorname{span}_\mathbb{Q}(\{f, g\}) \subseteq \mathscr{P}\)</span>.</p>
+<p><strong><span class="math inline">\(\mathbb{R}\)</span>-span NOT inside <span class="math inline">\(\mathscr{P}\)</span>.</strong> Take <span class="math inline">\(\alpha = \sqrt{2}\)</span>: then <span class="math inline">\(\sqrt{2} f + g\)</span> on <span class="math inline">\(G\)</span> equals <span class="math inline">\(\sqrt{2} n - m\)</span>, and for any <span class="math inline">\(t = m'p + n'q\)</span> to be a period we would need <span class="math inline">\(\sqrt{2} n' = m'\)</span> for all integer choices — impossible unless <span class="math inline">\(m' = n' = 0\)</span>. So <span class="math inline">\(\sqrt{2} f + g\)</span> has no nontrivial period, and in particular is <em>not</em> in <span class="math inline">\(\mathscr{P}\)</span>. In order to obtain <span class="math inline">\(operatorname{span}_\mathbb{R}(\{f, g\}) \subseteq \mathscr{P}\)</span> for incommensurable <span class="math inline">\(f, g\)</span>, we would need there to be an uncountable family of pairwise incommensurable periods <span class="math inline">\(p_\alpha\)</span> for each <span class="math inline">\(h_\alpha:=\alpha f + g\)</span> and every <span class="math inline">\(\alpha\in \mathbb{R}\)</span>, which naturally could not all be generated by a single pair of fundamental periods <span class="math inline">\(p, q\)</span>. I went back and forth for about a month on whether or not this was possible, until finally last month I found a way to prove that this and much more holds under the Axiom of Choice; this will be the subjet of a future post.</p>
+<p><strong>Unboundedness on every interval.</strong> Since <span class="math inline">\(G\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>, every interval contains points of <span class="math inline">\(G\)</span> with arbitrarily large <span class="math inline">\(|n|\)</span> and <span class="math inline">\(|m|\)</span> values. So <span class="math inline">\(f\)</span> takes values <span class="math inline">\(n \in \mathbb{Z}\)</span> of arbitrary magnitude on every interval, and is therefore unbounded on every interval — what we will simply call <em>nowhere bounded</em>. The same holds for <span class="math inline">\(g\)</span>. I will leave it to the reader (for now at least; I wil liekly cover this in a future post) to show that <span class="math inline">\(\mathbb{Q}\)</span>-linear dependence of the paiwrise incomensurable fundamental periods of <span class="math inline">\(f, g, h\)</span> is also automatically gives nowhere boudnedness of the functions.</p>
+<p><strong>Almost-everywhere constancy and measurability.</strong> Both <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> vanish outside <span class="math inline">\(G\)</span>, and <span class="math inline">\(G\)</span> is countable, hence has Lebesgue measure zero. So <span class="math inline">\(f, g\)</span> are equal to zero almost everywhere — and in particular, they are Lebesgue measurable. This may seem to drain the example of interest from a measure-theoretic standpoint: <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are equivalent (a.e.) to the zero function, which is plainly periodic with <span class="math inline">\(P = \mathbb{R}\)</span>. But the equivalence class of the zero function under “equality almost everywhere” includes many functions with wildly different pointwise behavior — and this example shows that interesting structural phenomena can hide entirely within a single a.e.-equivalence class. The lesson is that periodicity is a fundamentally pointwise notion: two functions equivalent almost everywhere can have very different period modules. From a measure-theoretic standpoint, <span class="math inline">\(E_1\)</span> may be invisible; from a pointwise standpoint, it is the seed of everything that follows.</p>
+</section>
+<section id="breaking-measurability-e_1" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="breaking-measurability-e_1"><span class="header-section-number">5.2</span> Breaking measurability: <span class="math inline">\(E_1'\)</span></h2>
+<p>Now we ask: can we modify <span class="math inline">\(E_1\)</span> to remove the a.e.-constancy while preserving the algebraic features (strict periodicity of <span class="math inline">\(f, g, h\)</span> with fundamental periods <span class="math inline">\(p, q, p+q\)</span>, and incommensurability of <span class="math inline">\(f, g\)</span>)? The answer is yes, assuming the existence of a Vitali-type selector for <span class="math inline">\(\mathbb{R}/G\)</span>, which is strictly weaker than a Hamel basis for <span class="math inline">\(\mathbb{R}\)</span> over <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p><strong>Construction <span class="math inline">\(E_1'\)</span>.</strong> Let <span class="math inline">\(\{y_\alpha\}_{\alpha \in I}\)</span> be a complete set of representatives of cosets of <span class="math inline">\(\mathbb{R}/G\)</span> — that is, every <span class="math inline">\(x \in \mathbb{R}\)</span> has a unique decomposition <span class="math inline">\(x = y_\alpha + mp + nq\)</span> with <span class="math inline">\(y_\alpha\)</span> a representative and <span class="math inline">\(m, n \in \mathbb{Z}\)</span>. (We take the representative of the coset <span class="math inline">\(G\)</span> itself to be <span class="math inline">\(0\)</span>.) On the coset <span class="math inline">\(G\)</span> (i.e., where <span class="math inline">\(y_\alpha = 0\)</span>), define <span class="math inline">\(f, g\)</span> exactly as in <span class="math inline">\(E_1\)</span>: <span class="math display">\[
+f(mp + nq) := n, \qquad g(mp + nq) := -m.
+\]</span> On every other coset <span class="math inline">\(y_\alpha + G\)</span> with <span class="math inline">\(y_\alpha \neq 0\)</span>, define <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> as the <em>constant</em> functions equal to <span class="math inline">\(y_\alpha\)</span>: <span class="math display">\[
+f(y_\alpha + mp + nq) := y_\alpha, \qquad g(y_\alpha + mp + nq) := y_\alpha.
+\]</span></p>
+<p>The assertion that these representatives exist is what uses a weak instance of the Axiom of Choice a selector for <span class="math inline">\(\mathbb{R}/G\)</span>, which is at the level of Vitali sets and strictly weaker than Hamel.</p>
+<p><strong>Verification.</strong> Let us check that <span class="math inline">\(E_1'\)</span> inherits all the algebraic properties of <span class="math inline">\(E_1\)</span>.</p>
+<p><em>Periodicity of <span class="math inline">\(f\)</span>.</em> For <span class="math inline">\(x \in y_\alpha + G\)</span> with <span class="math inline">\(y_\alpha \neq 0\)</span>, <span class="math inline">\(f\)</span> is constant on the coset, so any <span class="math inline">\(t \in G\)</span> trivially preserves <span class="math inline">\(f\)</span> on this coset. On <span class="math inline">\(G\)</span> itself, the analysis from <span class="math inline">\(E_1\)</span> gives <span class="math inline">\(P_f \cap G = p\mathbb{Z}\)</span>. Now suppose <span class="math inline">\(t \notin G\)</span>. Then for <span class="math inline">\(x = 0 \in G\)</span>, <span class="math inline">\(f(0) = 0\)</span>, while <span class="math inline">\(0 + t = t\)</span> lies in some coset <span class="math inline">\(y_\beta + G\)</span> with <span class="math inline">\(y_\beta \neq 0\)</span>, so <span class="math inline">\(f(t) = y_\beta \neq 0\)</span>. Contradiction, so no <span class="math inline">\(t \notin G\)</span> is a period. Hence <span class="math inline">\(P_f = p\mathbb{Z}\)</span>, exactly as in <span class="math inline">\(E_1\)</span>.</p>
+<p>The same reasoning shows <span class="math inline">\(P_g = q\mathbb{Z}\)</span>, and <span class="math inline">\(P_{f+g}\)</span> also turns out to equal <span class="math inline">\((p+q)\mathbb{Z}\)</span> — verification mirrors the <span class="math inline">\(E_1\)</span> case, accounting for the new behavior on cosets outside <span class="math inline">\(G\)</span>, where <span class="math inline">\(f + g \equiv 2y_\alpha\)</span> (constant) and so trivially periodic with period <span class="math inline">\(p+q\)</span>.</p>
+<p>So <span class="math inline">\(E_1'\)</span> shares with <span class="math inline">\(E_1\)</span> the strict periodicity of <span class="math inline">\(f, g, h\)</span>, the incommensurability of <span class="math inline">\(f, g\)</span>, the <span class="math inline">\(\mathbb{Q}\)</span>-span property, and unboundedness (on every interval, since <span class="math inline">\(G\)</span> is dense and on <span class="math inline">\(G\)</span> the function is the same as in <span class="math inline">\(E_1\)</span>).</p>
+<p><em>Nonconstancy and non-measurability.</em> But unlike <span class="math inline">\(E_1\)</span>, the function <span class="math inline">\(f\)</span> is no longer zero almost everywhere: on each coset <span class="math inline">\(y_\alpha + G\)</span> with <span class="math inline">\(y_\alpha \neq 0\)</span>, <span class="math inline">\(f\)</span> takes the value <span class="math inline">\(y_\alpha\)</span>, and these cosets together cover all of <span class="math inline">\(\mathbb{R}\)</span> except <span class="math inline">\(G\)</span> (which has measure zero). So <span class="math inline">\(f\)</span> takes a different nonzero value on each of uncountably many disjoint cosets — it is nowhere a.e. constant.</p>
+<p>To see that <span class="math inline">\(f\)</span> is non-measurable, consider the auxiliary function <span class="math inline">\(\varphi(y_\alpha + mp + nq) := y_\alpha\)</span>, defined on <em>all</em> cosets including <span class="math inline">\(G\)</span> itself. The function <span class="math inline">\(f\)</span> differs from <span class="math inline">\(\varphi\)</span> only on <span class="math inline">\(G\)</span> (a measure-zero set), since on <span class="math inline">\(G\)</span>, <span class="math inline">\(f\)</span> takes the values <span class="math inline">\(\{n : n \in \mathbb{Z}\}\)</span> while <span class="math inline">\(\varphi \equiv 0\)</span> there. Hence <span class="math inline">\(f\)</span> is measurable iff <span class="math inline">\(\varphi\)</span> is.</p>
+<p>But <span class="math inline">\(\varphi\)</span> has period module exactly equal to <span class="math inline">\(G\)</span>: every <span class="math inline">\(r \in G\)</span> keeps <span class="math inline">\(x\)</span> within its coset (where <span class="math inline">\(\varphi\)</span> is constant), so <span class="math inline">\(r \in P_\varphi\)</span>; and any <span class="math inline">\(r \notin G\)</span> moves <span class="math inline">\(x = 0\)</span> out of <span class="math inline">\(G\)</span>, where <span class="math inline">\(\varphi \neq 0\)</span>, while <span class="math inline">\(\varphi(0) = 0\)</span>, so <span class="math inline">\(r \notin P_\varphi\)</span>. Hence <span class="math inline">\(P_\varphi = G\)</span>, which is dense in <span class="math inline">\(\mathbb{R}\)</span>. Yet <span class="math inline">\(\varphi\)</span> is not constant a.e. (it takes a different value on each coset).</p>
+<p>It is a classical result — going back at least to Mirotin’s work on a.e.-periodic functions — that any measurable periodic function with a dense period module must be constant almost everywhere. The contrapositive applies directly to <span class="math inline">\(\varphi\)</span>: since <span class="math inline">\(\varphi\)</span> has a dense period module and is not a.e. constant, it cannot be measurable. And therefore neither is <span class="math inline">\(f\)</span>. The same argument shows <span class="math inline">\(g\)</span> and <span class="math inline">\(h = f + g\)</span> are non-measurable. (I have a fairly elementary proof of the dense-period-module result that I plan to write up in a future post — it has the bonus of yielding the ergodicity of irrational rotations as a corollary.)</p>
+<p>So <span class="math inline">\(E_1'\)</span> achieves what <span class="math inline">\(E_1\)</span> could not: it preserves all the algebraic features of <span class="math inline">\(E_1\)</span> — strict periodicity, incommensurability, <span class="math inline">\(\mathbb{Q}\)</span>-span periodicity, unboundedness — while <em>also</em> answering Question 5 from Part I in the strongest possible sense: there exist incommensurable periodic functions with periodic sum that are nowhere a.e. constant, and as a consequence are non-measurable.</p>
+</section>
+<section id="a-failed-naive-extention" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="a-failed-naive-extention"><span class="header-section-number">5.3</span> A failed naive extention</h2>
+<p>A reader paying close attention may wonder whether there is an even more natural variant of <span class="math inline">\(E_1'\)</span>: instead of making <span class="math inline">\(f, g\)</span> <em>constant</em> on each coset <span class="math inline">\(y_\alpha + G\)</span> with <span class="math inline">\(y_\alpha \neq 0\)</span>, simply repeat the original <span class="math inline">\(E_1\)</span> formula on every coset, defining <span class="math inline">\(f(y_\alpha + mp + nq) := n\)</span> and <span class="math inline">\(g(y_\alpha + mp + nq) := -m\)</span> for <em>all</em> representatives <span class="math inline">\(y_\alpha\)</span>, including the nonzero ones. This seems, at first glance, like the most direct possible extension of <span class="math inline">\(E_1\)</span>.</p>
+<p>This variant is more delicate than it appears. It is not hard to show that <span class="math inline">\(P_f \cap G = p\mathbb{Z}\)</span> still holds, but the question of whether there exist <em>additional</em> periods <span class="math inline">\(r \notin G\)</span> depends sensitively on the choice of representatives. In fact, one can show via transfinite recursion on a well-ordering of <span class="math inline">\(\mathbb{R}/G\)</span> that there exist choices of representatives under which both <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> acquire common periods outside <span class="math inline">\(\mathbb{Q}_{p,q}\)</span> — and so <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> end up <em>commensurable</em>. The Axiom of Choice, when invoked without structure, is a treacherous tool: distinct selectors yield functions with drastically different period modules, some preserving incommensurability and some destroying it.</p>
+<p>Assuming a well order of the reals, one of these choices of representatives actually yields sometihng quite interesting: discontinous, nomeasurbale homomorphisms <span class="math inline">\(\mathbb{R}\to\mathbb{R}\)</span>. I will wrap up this post with the “construction” of such a homomorphism.</p>
+</section>
+</section>
+<section id="preview-of-a-discontinous-nomeasurable-homomorphsim." class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Preview of a discontinous, nomeasurable homomorphsim.</h1>
+<p>What we need is a choice of representatives that forms an additive group itself.</p>
+<p>Let me first show you why such a choice of representatives, if it exists, gives us a homomorphism; actually, it gies us two complementary types of homomorphisms. I will then conclude the post with a brief sketch of how to prove the existence of such a choice of representatives under the assumption of a Hamel basis for <span class="math inline">\(\mathbb{R}\)</span> over <span class="math inline">\(\mathbb{Q}\)</span>; the details of this proof will be the subject of a future post.</p>
+<p>Ok, let <span class="math inline">\(\mathcal V\)</span> be a vitali-type set of representatives that happens to form an additive subgroup of <span class="math inline">\(\mathbb{R}\)</span>, meaning in particular that the representative of <span class="math inline">\(G\)</span> is <span class="math inline">\(0\)</span> and that <span class="math inline">\(y_1, y_2 \in \mathcal V\)</span> implies <span class="math inline">\(y_1 + y_2 \in \mathcal V\)</span>. The first, obvious homomorphsim then is the map that sends <span class="math inline">\(x\)</span> to the representative of <span class="math inline">\(x + G\)</span>. The kernel of this homomorphism is exactly <span class="math inline">\(\mathcal V\)</span>. Now, let <span class="math inline">\(\varphi:G\to \mathbb{R}\)</span> be any the function defined by <span class="math inline">\(\varphi(x) = y_\alpha\)</span> for <span class="math inline">\(x \in y_\alpha + G\)</span>.</p>
+<p>For this we will assume there exists a Hamel basis for <span class="math inline">\(\mathbb{R}\)</span> over <span class="math inline">\(\mathbb{Q}\)</span>, which is a stronger assumption than the existence of a Vitali set, but still weaker than the full Axiom of Choice.</p>
+<p>We will recursively well order both the cosets and their representatives First we set <span class="math inline">\(\gamma_0 = G\)</span> we chose representative <span class="math inline">\(y_0 = 0\)</span>. For <span class="math inline">\(\gamma_1\)</span> we choose any coset other than <span class="math inline">\(G\)</span>, and as its representative we choose any irrational <span class="math inline">\(y_1\in \gamma_1\)</span>; irrationality guarantees that <span class="math inline">\(ny_1\not\in G\cup \gamma_1\)</span> for all integers <span class="math inline">\(n&gt; 1\)</span>. So, for <span class="math inline">\(n&lt;\omega\)</span>, let <span class="math inline">\(y_n = ny_1\)</span>. Whenever <span class="math inline">\(\theta&gt;\omega\)</span> is not a limit ordinal, <span class="math inline">\(\theta\)</span> is equal to some $+n $ for a limit ordinal <span class="math inline">\(\lambda\)</span> and some <span class="math inline">\(n\in \mathbb{N}\)</span>. Set <span class="math inline">\(y_\theta = ny_\lambda\)</span> and <span class="math inline">\(\gamma_\theta = y_\theta + G\)</span>. Then for a limit ordinal <span class="math inline">\(\lambda\)</span>, choose any <span class="math display">\[\gamma_\lambda \in (\mathbb{R}/G)\setminus\{\gamma_\theta\}_{\theta&lt;\lambda}\]</span> and for its representative, pick again any irrational $y__. $.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<div class="post-footer-custom">
+
+  <h3>Stay in touch</h3>
+  <p>If you enjoyed this post or spotted an error, I'd love to hear from you.
+  You can reach me at <a href="mailto:alonso@mathadventures.blog">alonso@mathadventures.blog</a>
+
+  </p><h3>Subscribe</h3>
+  <p>You can follow this blog via
+  <a href="../../../blog.xml"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16" style="vertical-align: -1px;"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg> RSS feed</a>.</p>
+
+  <h3>Share</h3>
+  <p>If you found this useful, consider sharing it with someone who might enjoy it too.</p>
+
+</div>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mathadventures\.blog");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "aespdom/aespdom.github.io";
+    script.dataset.repoId = "R_kgDORn_NFQ";
+    script.dataset.category = "Blog Comments";
+    script.dataset.categoryId = "DIC_kwDORn_NFc4C4yXu";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
