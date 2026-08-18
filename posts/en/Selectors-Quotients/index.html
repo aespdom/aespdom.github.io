@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alonso Espinosa Domínguez">
-<meta name="dcterms.date" content="2026-03-14">
+<meta name="dcterms.date" content="2026-09-17">
 
-<title>Va de Nuez – Mathematical Adventures</title>
+<title>Selectors on quotients of ℝ – Mathematical Adventures</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-b5c9478c667cca52e0752469329e74a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-df450425e4291865d9322b5e0310229f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,23 +76,53 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
+<meta name="quarto:status" content="draft">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 <meta property="og:title" content="Mathematical Adventures">
 <meta property="og:description" content="Mathematics, relearned and reconsidered.">
-<meta property="og:image" content="https://mathadventures.blog/posts/es/Bienvenida/profile.png">
+<meta property="og:image" content="https://mathadventures.blog/posts/en/Selectors-Quotients/profile.png">
 <meta property="og:site_name" content="Mathematical Adventures">
 <meta name="twitter:title" content="Mathematical Adventures">
 <meta name="twitter:description" content="Mathematics, relearned and reconsidered.">
-<meta name="twitter:image" content="https://mathadventures.blog/posts/es/Bienvenida/profile.png">
+<meta name="twitter:image" content="https://mathadventures.blog/posts/en/Selectors-Quotients/profile.png">
 <meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -172,10 +202,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Va de Nuez</h1>
+      <h1 class="title">Selectors on quotients of ℝ</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">introducción</div>
-                <div class="quarto-category">filosofía</div>
+                <div class="quarto-category">set theory</div>
+                <div class="quarto-category">axiom of choice</div>
+                <div class="quarto-category">descriptive set theory</div>
               </div>
                   </div>
   </div>
@@ -193,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 14, 2026</p>
+        <p class="date">September 17, 2026</p>
       </div>
     </div>
     
@@ -204,8 +235,19 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-statement" id="toc-the-statement" class="nav-link" data-scroll-target="#the-statement"><span class="header-section-number">1</span> The statement</a></li>
+  <li><a href="#some-definitions" id="toc-some-definitions" class="nav-link" data-scroll-target="#some-definitions"><span class="header-section-number">2</span> Some definitions</a></li>
+  <li><a href="#the-route-through-the-literature" id="toc-the-route-through-the-literature" class="nav-link" data-scroll-target="#the-route-through-the-literature"><span class="header-section-number">3</span> The route through the literature</a></li>
+  <li><a href="#nonsmoothness-of-sim_g" id="toc-nonsmoothness-of-sim_g" class="nav-link" data-scroll-target="#nonsmoothness-of-sim_g"><span class="header-section-number">4</span> Nonsmoothness of <span class="math inline">\(\sim_G\)</span></a></li>
+  <li><a href="#where-this-leaves-things" id="toc-where-this-leaves-things" class="nav-link" data-scroll-target="#where-this-leaves-things"><span class="header-section-number">5</span> Where this leaves things</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -214,35 +256,68 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>No abandoné las matemáticas con elegancia.</p>
-<p>Para cuando terminé mi licenciatura en el MIT en 2020, estaba agotado de una manera que me tomó años entender completamente. Parte de ese agotamiento fue autoinfligido — tomar un curso de teoría de la medida a nivel de posgrado durante el primer año de la carrera es, en retrospectiva, no la decisión más sabia que un joven matemáticonpuede tomar.</p>
-<p>Pero parte de ese agotamiento iba más allá que una mala selección de cursos. Llevaba más de un tercio de mi vida tratado a las matemáticas como una identidad que lo consumía todo — no en el sentido de que dejára de hacer cualquier otra cosa que no fuesen matemáticas, si no en el sentido due que sin importar lo que lograse en cualquier otro ámbito de la vida, en mi mente o era buen matemático o no era <em>nada</em>. O lograba algo grandioso en las matemáticas, o mi vida sería un desperdicio — muy dramático, lo sé. Y al final de ese arduo camino, después de que se volviese irreconciliable la contradicción entre esa forma extremista de identificarme con las matemáticas y la realidad del mundo a mi alrededor, se me agotó lo que sea que mantiene vivo ese tipo de devoción, y me volvi alérgico a la mera idea de continuar profesionalmente con las matemáticas.</p>
-<p>Así que las abandoné. Pero no me tomé tiempo para descansar, ni para reflexionar demasiado sobre mi tiempo haciendo matemáticas. Al contrario, me lancé ferreamente a un conjunto distinto de preguntas — políticas, históricas, filosóficas. Pasé años leyendo, organizando, protestando y pensando seriamente sobre el mundo social de una manera que nunca antes había hecho. Estudié filosofía, particularmente en la tradición marxista, y ese estudio me cambió de maneras que todavía estoy procesando.</p>
-<p>También cambió profundamente cómo veo las matemáticas.</p>
-<p>Antes de ese periodo, mi relación con la disciplina era — ahora me doy cuenta — vagamente kantiana. Creía, más o menos acríticamente, que las matemáticas eran la expresión más profunda de las estructuras de la mente, y que las estructuras de la mente eran, en algún sentido fundamental, la única realidad a la que teníamos acceso. Las matemáticas eran bellas precisamente porque eran la cartografía más rigurosa de nuestro único mundo posible. Esta visión era, ahora pienso, no solo incompleta sino fundamentalmente invertida. Sostenerla también hacía genuinamente difícil reconciliar mi amor por las matemáticas con la concretud chocante de la vida social y política. Si las estructuras de la mente son lo que más importa, entonces ¿qué hago con el hecho de que la gente enfrenta opresión y explotación material <em>ahora mismo</em>, de maneras que no tienen nada que ver con estructuras mentales?</p>
-<p>Ya no sostengo esa visión — aunque una tensión real permanece, y sospecho que siempre permanecerá: la pregunta de cuándo quedarse con un problema bello y cuándo dejarlo en favor de luchas más inmediatas no es una que se resuelva limpiamente.</p>
-<p>Soy ahora, en el sentido más amplio, un materialista. Tomo como punto de partida que existe un mundo real, objetivo, material; que lo representamos mental y simbólicamente; y que nuestras representaciones mejoran precisamente a través del proceso de actuar en el mundo y confrontar las consecuencias. Desde este punto de vista, las matemáticas lucen bastante diferentes. Los objetos de las matemáticas — estructuras, relaciones, invariantes — no son constructos de la mente proyectándose hacia afuera. Son rasgos reales del mundo material que hemos aprendido, a través de un proceso largo y genuinamente social, a percibir, abstraer y razonar.</p>
-<p>Este cambio ha hecho que las matemáticas me parezcan más, no menos, interesantes. Abre preguntas que apenas se me ocurría hacer antes: ¿Cómo ha cambiado la práctica matemática a lo largo de diferentes periodos históricos, y por qué? ¿Qué significa que ciertos tipos de matemáticas florecieran en ciertas sociedades y no en otras? ¿Cuál es la relación entre lo abstracto y lo aplicado, y cómo ha cambiado esa relación conforme las condiciones de la producción matemática han cambiado? Estas no son meramente preguntas sociológicas pegadas al exterior de las matemáticas — son, creo, preguntas genuinamente matemáticas en un sentido amplio, preguntas sobre qué <em>son</em> las matemáticas y cómo funcionan.</p>
-<p>Este blog es, antes que nada, un intento de volver a hacer matemáticas — trabajar problemas, reconstruir conocimiento oxidado, y ojalá descubrir algo genuinamente nuevo en el camino. Pero también es un espacio para el tipo de reflexión meta-matemática al que he estado apuntando: la filosofía, la historia, y las preguntas ocasionalmente incómodas sobre las matemáticas como actividad humana incrustada en un mundo humano. La primera serie, <em>Periodicidad Patológica</em>, cae de lleno en la primera categoría — una inmersión profunda en el mundo sorprendentemente rico de las funciones periódicas que comenzó con un solo ejercicio del capítulo 1 de un libro de álgebra lineal. Posts posteriores se aventurarán más en la segunda.</p>
-<p>Espero que encuentres algo que valga la pena leer aquí. Entrémosle.</p>
+<section id="introduction" class="level1 unnumbered">
+<h1 class="unnumbered">Introduction</h1>
+<p>A <strong>selector</strong> for a quotient <span class="math inline">\(\mathbb{R}/G\)</span> is a set containing exactly one element from each coset. The most famous instance is the <strong>Vitali selector</strong>, the case <span class="math inline">\(G = \mathbb{Q}\)</span>: a set picking out one real from each equivalence class of <span class="math inline">\(\mathbb{R}/\mathbb{Q}\)</span>. No such set can be constructed explicitly — its existence is a weak fragment of the Axiom of Choice, unprovable in ZF alone — and it is the standard example of a nonmeasurable set.</p>
+<p>This post is about a question that sounds like it should be easy. Suppose you are handed a selector for <span class="math inline">\(\mathbb{R}/\mathbb{Q}\)</span>. Can you build one for <span class="math inline">\(\mathbb{R}/G\)</span>, where <span class="math inline">\(G\)</span> is some other countable dense subgroup of <span class="math inline">\(\mathbb{R}\)</span> — say <span class="math inline">\(G = p\mathbb{Z}+q\mathbb{Z}\)</span> with <span class="math inline">\(p/q\notin\mathbb{Q}\)</span>? And conversely? Intuitively the answer ought to be yes in both directions: these quotients all look alike, and being able to choose from the cosets of one really does feel like it should let you choose from the cosets of another.</p>
+<p>It does turn out to be yes. But I do not know of any elementary proof, and the only route I have found runs through the theory of <strong>hyperfinite Borel equivalence relations</strong> — a corner of descriptive set theory that is still an active research area. This post lays out that route.</p>
+<p>I ran into this question while writing &lt;em&gt;Pathological Periodicity, Part III&lt;/em&gt;. There I prove that certain versions of the periodic decomposition theorem are equivalent, over ZF, to the existence of a Vitali selector. The proofs of those decomposition theorems, however, do not invoke choice for <span class="math inline">\(\mathbb{R}/\mathbb{Q}\)</span>; they invoke it for quotients <span class="math inline">\(\mathbb{R}/G\)</span> with <span class="math inline">\(G\)</span> of finite rank <span class="math inline">\(\geq 2\)</span>. Closing that gap is exactly what the theorem below does, and justifying it properly turned out to need a post of its own.</p>
+<p>A warning before we start: I do not understand the machinery involved at any real depth. What follows is a route through the literature that makes me confident the statement is true, not a proof I could defend line by line. I flag the places where I am least sure.</p>
+</section>
+<section id="the-statement" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> The statement</h1>
+<div id="thm-selector-transfer" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.1 (Selector transfer)</strong></span> Let <span class="math inline">\(G\)</span> be a countable, dense subgroup of <span class="math inline">\(\mathbb{R}\)</span>. Then a selector for <span class="math inline">\(\mathbb{R}/G\)</span> exists if and only if a selector for <span class="math inline">\(\mathbb{R}/\mathbb{Q}\)</span> exists.</p>
+</div>
+<p>As I said above, the statement is not surprising in itself. What is surprising is how much machinery it seems to take. I haven’t quite seen this theorem stated as-is anywhere; what I am doing here is weaving together results from a variety of papers/preprints, including some published in recent years. In other words, we are touching on some pretty deep facts in descriptive set theory that are part of active areas of research!</p>
+</section>
+<section id="some-definitions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Some definitions</h1>
+<p>Everything below concerns equivalence relations on <span class="math inline">\(\mathbb{R}\)</span>, or more generally on a Polish (separable, completely metrizable) space. The relation we care about is the one induced by a subgroup: for <span class="math inline">\(G\leq \mathbb{R}\)</span>, write <span class="math display">\[x \mathrel{\sim_G} y \quad :\Longleftrightarrow\quad x - y \in G,\]</span> so that the equivalence classes of <span class="math inline">\(\sim_G\)</span> are exactly the cosets of <span class="math inline">\(G\)</span>, and a selector for <span class="math inline">\(\mathbb{R}/G\)</span> is exactly a <em>transversal</em> for <span class="math inline">\(\sim_G\)</span> — a set meeting each class exactly once. The case <span class="math inline">\(G = \mathbb{Q}\)</span> is called the <strong>Vitali equivalence relation</strong>.</p>
+<p>An equivalence relation <span class="math inline">\(E\)</span> on a Polish space <span class="math inline">\(X\)</span> is <strong>Borel</strong> if, viewed as a subset of <span class="math inline">\(X\times X\)</span>, it is a Borel set. It is a <strong>countable Borel equivalence relation</strong> if in addition every equivalence class is countable. Each <span class="math inline">\(\sim_G\)</span> with <span class="math inline">\(G\)</span> countable is a countable Borel equivalence relation: it is the preimage of the Borel set <span class="math inline">\(G\)</span> under the continuous map <span class="math inline">\((x,y)\mapsto x-y\)</span>, and its classes are the cosets of a countable group.</p>
+<p><span class="math inline">\(E\)</span> is <strong>finite</strong> if all of its classes are finite, and <strong>hyperfinite</strong> if it can be written as an increasing union <span class="math display">\[E = \bigcup_{n\in\mathbb{N}} E_n, \qquad E_0\subseteq E_1\subseteq E_2\subseteq\cdots,\]</span> of finite Borel equivalence relations <span class="math inline">\(E_n\)</span>. Hyperfiniteness is a strong tameness condition, and which countable Borel equivalence relations are hyperfinite is precisely the subject of the papers cited below.</p>
+<p><span class="math inline">\(E\)</span> is <strong>smooth</strong> if there is a Borel map <span class="math inline">\(\theta: X\to Y\)</span> into some Polish space <span class="math inline">\(Y\)</span> such that <span class="math inline">\(x \mathrel{E} y\)</span> if and only if <span class="math inline">\(\theta(x) = \theta(y)\)</span> — informally, if the classes of <span class="math inline">\(E\)</span> can be told apart by a Borel-definable invariant. It is <strong>nonsmooth</strong> otherwise. For countable Borel equivalence relations, smoothness is equivalent to the existence of a <em>Borel</em> transversal, and it is this reformulation that we will actually use.</p>
+<p>[TODO] Check the exact phrasing DJK give for “smooth <span class="math inline">\(\iff\)</span> admits a Borel transversal”, and whether they state it for all countable Borel equivalence relations or under extra hypotheses. The argument in the last section leans on it directly.</p>
+<p>[TODO] All of these notions are normally set up in ZFC, or at least in ZF + DC. Since the whole point here is to work over ZF, I need to check which of the results quoted below survive without DC, and in what form. Larson–Zapletal explicitly work in ZF, which is why their formulation is the one I lean on.</p>
+</section>
+<section id="the-route-through-the-literature" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> The route through the literature</h1>
+<p>So here is the route of papers/preprints that makes me fairly confident <a href="#thm-selector-transfer" class="quarto-xref">Theorem&nbsp;1.1</a> holds, even though I do not yet understand the machinery employed at any depth. First, a preprint by Larson and Zapletal working within ZF set theory uses, in the course of their argument, the fact that for any two “hyperfinite and nonsmooth” Borel equivalence relations, there exists a selector for one if there exists a selector for the other.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Larson-Zapletal cite a classic 1994 paper on hyperfinite Borel equivalence relations by Dougherty, Jackson and Kechris (DJK) for this fact.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> DJK and Larson-Zapletal list the Vitali equivalence relation induced by <span class="math inline">\(\mathbb{R}/\mathbb{Q}\)</span> as an example of a hyperfinite nonsmooth relation, so the question becomes whether this holds for the equivalence relation induced by <span class="math inline">\(\mathbb{R}/G\)</span> for any countable dense subgroup <span class="math inline">\(G\)</span>.</p>
+<p>Hyperfiniteness for all such quotients (not just <span class="math inline">\(\mathbb{R}/\mathbb{Q}\)</span>) follows from a paper by J. Frisch and F. Shinko.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> I don’t have a direct citation for nonsmoothness, but it follows from the definition of nonsmoothness given by DJK, the density of <span class="math inline">\(G\)</span>, and nonmeasurability of selectors for <span class="math inline">\(\mathbb{R}/G\)</span>; I spell that argument out in the next section. From here, <a href="#thm-selector-transfer" class="quarto-xref">Theorem&nbsp;1.1</a> follows from DJK and Larson-Zapletal.</p>
+</section>
+<section id="nonsmoothness-of-sim_g" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Nonsmoothness of <span class="math inline">\(\sim_G\)</span></h1>
+<p>If <span class="math inline">\(G\)</span> is a countable dense subgroup of <span class="math inline">\(\mathbb{R}\)</span> and <span class="math inline">\(\sim_G\)</span> is the equivalence relation induced by the quotient <span class="math inline">\(\mathbb{R}/G\)</span>, then any selector for <span class="math inline">\(\mathbb{R}/G\)</span> is necessarily non-measurable, and thus cannot be Borel. The proof of this is basically the same as the proof of the nonmeasurability of a Vitali set. But, according to DJK, nonsmoothness is equivalent to the nonexistence of a Borel selector for any countable Borel equivalence relation, including <span class="math inline">\(\sim_G\)</span>. Thus <span class="math inline">\(\sim_G\)</span> is nonsmooth.</p>
+</section>
+<section id="where-this-leaves-things" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Where this leaves things</h1>
+<p>The chain, then, is: <span class="math inline">\(\sim_G\)</span> is a countable Borel equivalence relation for every countable <span class="math inline">\(G\leq\mathbb{R}\)</span>; it is hyperfinite by Frisch–Shinko; it is nonsmooth whenever <span class="math inline">\(G\)</span> is dense, by the argument just given; and DJK’s transfer result, in the ZF formulation used by Larson–Zapletal, moves a selector between any two hyperfinite nonsmooth Borel equivalence relations. Taking one of them to be the Vitali relation gives <a href="#thm-selector-transfer" class="quarto-xref">Theorem&nbsp;1.1</a>.</p>
+<p>I want to be clear about the status of this. Each link is a statement I have read in the literature and believe, but I have not worked through the proofs, and the two [TODO]s above mark real gaps in my understanding rather than mere pedantry. I intend to come back and close them.</p>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>P. B. Larson and J. Zapletal, <em>Discontinuous homomorphisms, selectors and automorphisms of the complex field (in ZF)</em>, <a href="https://arxiv.org/abs/1803.02740">arXiv:1803.02740v3</a> (2020). A version of this appeared as Proc. Amer. Math. Soc. <strong>147</strong> (2019), no. 4, 1733–1737, but that one assumes a weak form of AC; the arXiv version proves the result in ZF alone, which is the version that matters for our purposes here. This article is itself super interesting. So is a related preprint posted recently by Larson and Shelah: <em>Discontinuous homomorphisms without Hamel bases</em>, <a href="https://arxiv.org/pdf/2606.08384v2">arXiv:2606.08384</a>. In fact, discontinuous homomorphisms and certain pairs of nonmeasurable periodic functions with incommensurable periods whose sum is again periodic turn out to be “cousins” in a sense; I’ll write about this in another post.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>R. Dougherty, S. Jackson and A. S. Kechris, <a href="https://www.ams.org/journals/tran/1994-341-01/S0002-9947-1994-1149121-0/S0002-9947-1994-1149121-0.pdf"><em>The structure of hyperfinite Borel equivalence relations</em></a>, Trans. Amer. Math. Soc. <strong>341</strong> (1994), no. 1, 193–225.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>J. Frisch and F. Shinko, <em>Quotients by countable normal subgroups are hyperfinite</em>, Groups Geom. Dyn. <strong>17</strong> (2023); <a href="https://arxiv.org/abs/1909.08716">arXiv:1909.08716</a> (2020). This paper in turn cites S. Gao, S. Jackson, <em>Countable abelian group actions and hyperfinite equivalence relations</em> Invent. Math. <strong>201</strong> (2015), no. 1, 309–383. <a href="https://doi.org/10.1007/s00222-015-0603-y">doi:10.1007/s00222-015-0603-y</a>. <a href="https://sites.cos.unt.edu/~sgao/pub/paper30.pdf">Author’s copy</a>. Larson-Shelah also cite this paper.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <div class="post-footer-custom">
 
-  <h3>Mantente en contacto</h3>
-  <p>Si te gustó este post o encontraste un error, me encantaría saberlo.
-  Puedes escribirme a <a href="mailto:aloespdom@gmail.com">aloespdom@gmail.com</a>,
-  encontrarme en <a href="https://github.com/aespdom">GitHub</a>,
-  o conectar en <a href="https://www.linkedin.com/in/aespdom">LinkedIn</a>.</p>
+  <h3>Stay in touch</h3>
+  <p>If you enjoyed this post or spotted an error, I'd love to hear from you.
+  You can reach me at <a href="mailto:alonso@mathadventures.blog">alonso@mathadventures.blog</a>
 
-  <h3>Suscríbete</h3>
-  <p>Puedes seguir este blog vía
-  <a href="../../../blog-es.xml"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16" style="vertical-align: -1px;"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg> RSS</a>.</p>
+  </p><h3>Subscribe</h3>
+  <p>You can follow this blog via
+  <a href="../../../blog.xml"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16" style="vertical-align: -1px;"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path></svg> RSS feed</a>.</p>
 
-  <h3>Comparte</h3>
-  <p>Si esto te resultó útil, considera compartirlo con alguien a quien le pueda interesar.</p>
+  <h3>Share</h3>
+  <p>If you found this useful, consider sharing it with someone who might enjoy it too.</p>
 
 </div>
 <script id="quarto-html-after-body" type="application/javascript">
