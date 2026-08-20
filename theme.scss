@@ -87,6 +87,24 @@ $navbar-fg: #f0f4f8 !default;
   border-radius: 0 4px 4px 0;
 }
 
+// Ejercicios: naranja/ámbar sutil, invita a la acción
+.exercise {
+  border-left: 4px solid #c77c3a;
+  background-color: rgba(199, 124, 58, 0.05);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+
+// Preguntas abiertas: violeta/púrpura, evoca lo desconocido
+.open-question {
+  border-left: 4px solid #7b5ea7;
+  background-color: rgba(123, 94, 167, 0.05);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+
 // Observaciones/notas
 .remark {
   border-left: 3px solid #ccc;

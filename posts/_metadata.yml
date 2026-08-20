@@ -17,6 +17,9 @@ toc-depth: 3
 # Page layout
 page-layout: article
 
+# Section numbering (1, 2, 3... per post)
+number-sections: true
+
 # Giscus comments (based on GitHub Discussions)
 comments:
   giscus:

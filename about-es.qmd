@@ -4,15 +4,12 @@ image: profile.png
 about:
   template: jolla
   links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/aespdom
     - icon: github
       text: Github
       href: https://github.com/aespdom
     - icon: envelope
       text: Email
-      href: mailto:aloespdom@gmail.com
+      href: mailto:alonso@mathadventures.blog
 
 ---
 
@@ -20,4 +17,4 @@ Mi nombre es Alonso Espinosa Domínguez. Soy un matemático en formación, actua
 
 Mis intereses matemáticos se centran en el análisis, la topología, la geometría, y la lógica matemática y fundamentos. También me interesa la historia y la filosofía de las matemáticas — en particular, tomar en serio la idea de que la práctica matemática es una actividad humana y social, moldeada por las mismas fuerzas que moldean todo lo demás.
 
-La versión larga de todo esto está en el [post de bienvenida](/posts/es/Bienvenida/index.html).
+La versión larga de todo esto está en [Va de Nuez](/posts/es/Va-de-Nuez/index.html).

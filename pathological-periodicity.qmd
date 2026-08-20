@@ -14,6 +14,6 @@ listing:
     categories: "Pathological Periodicity"
 ---
 
-An exploration of the set of periods of periodic functions $f:\mathbb{R}\to\mathbb{R}$, the pathologies that arise when the axiom of choice is assumed, and related matters in real analysis and set theory.
+An exploration of the periodic functions $f:\mathbb{R}\to\mathbb{R}$ that admit what may be called "incommensurable decompositions", the pathologies that arise when the axiom of choice is assumed, and related matters in real analysis and set theory.
 
 Posts are listed in reading order.

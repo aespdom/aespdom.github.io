@@ -1,0 +1,70 @@
+---
+title: "Selectors on quotients of ℝ"
+author: "Alonso Espinosa Domínguez"
+date: "2026-09-17"
+categories: [set theory, axiom of choice, descriptive set theory]
+crossref:
+  chapters: true
+draft: true
+---
+
+# Introduction {.unnumbered}
+
+A **selector** for a quotient $\mathbb{R}/G$ is a set containing exactly one element from each coset. The most famous instance is the **Vitali selector**, the case $G = \mathbb{Q}$: a set picking out one real from each equivalence class of $\mathbb{R}/\mathbb{Q}$. No such set can be constructed explicitly — its existence is a weak fragment of the Axiom of Choice, unprovable in ZF alone — and it is the standard example of a nonmeasurable set.
+
+This post is about a question that sounds like it should be easy. Suppose you are handed a selector for $\mathbb{R}/\mathbb{Q}$. Can you build one for $\mathbb{R}/G$, where $G$ is some other countable dense subgroup of $\mathbb{R}$ — say $G = p\mathbb{Z}+q\mathbb{Z}$ with $p/q\notin\mathbb{Q}$? And conversely? Intuitively the answer ought to be yes in both directions: these quotients all look alike, and being able to choose from the cosets of one really does feel like it should let you choose from the cosets of another.
+
+It does turn out to be yes. But I do not know of any elementary proof, and the only route I have found runs through the theory of **hyperfinite Borel equivalence relations** — a corner of descriptive set theory that is still an active research area. This post lays out that route.
+
+I ran into this question while writing [*Pathological Periodicity, Part III*](../PDP-Vitali/index.qmd). There I prove that certain versions of the periodic decomposition theorem are equivalent, over ZF, to the existence of a Vitali selector. The proofs of those decomposition theorems, however, do not invoke choice for $\mathbb{R}/\mathbb{Q}$; they invoke it for quotients $\mathbb{R}/G$ with $G$ of finite rank $\geq 2$. Closing that gap is exactly what the theorem below does, and justifying it properly turned out to need a post of its own.
+
+A warning before we start: I do not understand the machinery involved at any real depth. What follows is a route through the literature that makes me confident the statement is true, not a proof I could defend line by line. I flag the places where I am least sure.
+
+# The statement
+
+::: {#thm-selector-transfer}
+## Selector transfer
+Let $G$ be a countable, dense subgroup of $\mathbb{R}$. Then a selector for $\mathbb{R}/G$ exists if and only if a selector for $\mathbb{R}/\mathbb{Q}$ exists.
+:::
+
+As I said above, the statement is not surprising in itself. What is surprising is how much machinery it seems to take. I haven't quite seen this theorem stated as-is anywhere; what I am doing here is weaving together results from a variety of papers/preprints, including some published in recent years. In other words, we are touching on some pretty deep facts in descriptive set theory that are part of active areas of research! 
+
+# Some definitions
+
+Everything below concerns equivalence relations on $\mathbb{R}$, or more generally on a Polish (separable, completely metrizable) space. The relation we care about is the one induced by a subgroup: for $G\leq \mathbb{R}$, write
+$$x \mathrel{\sim_G} y \quad :\Longleftrightarrow\quad x - y \in G,$$
+so that the equivalence classes of $\sim_G$ are exactly the cosets of $G$, and a selector for $\mathbb{R}/G$ is exactly a *transversal* for $\sim_G$ — a set meeting each class exactly once. The case $G = \mathbb{Q}$ is called the **Vitali equivalence relation**.
+
+An equivalence relation $E$ on a Polish space $X$ is **Borel** if, viewed as a subset of $X\times X$, it is a Borel set. It is a **countable Borel equivalence relation** if in addition every equivalence class is countable. Each $\sim_G$ with $G$ countable is a countable Borel equivalence relation: it is the preimage of the Borel set $G$ under the continuous map $(x,y)\mapsto x-y$, and its classes are the cosets of a countable group.
+
+$E$ is **finite** if all of its classes are finite, and **hyperfinite** if it can be written as an increasing union
+$$E = \bigcup_{n\in\mathbb{N}} E_n, \qquad E_0\subseteq E_1\subseteq E_2\subseteq\cdots,$$
+of finite Borel equivalence relations $E_n$. Hyperfiniteness is a strong tameness condition, and which countable Borel equivalence relations are hyperfinite is precisely the subject of the papers cited below.
+
+$E$ is **smooth** if there is a Borel map $\theta: X\to Y$ into some Polish space $Y$ such that $x \mathrel{E} y$ if and only if $\theta(x) = \theta(y)$ — informally, if the classes of $E$ can be told apart by a Borel-definable invariant. It is **nonsmooth** otherwise. For countable Borel equivalence relations, smoothness is equivalent to the existence of a *Borel* transversal, and it is this reformulation that we will actually use.
+
+[TODO] Check the exact phrasing DJK give for "smooth $\iff$ admits a Borel transversal", and whether they state it for all countable Borel equivalence relations or under extra hypotheses. The argument in the last section leans on it directly.
+
+[TODO] All of these notions are normally set up in ZFC, or at least in ZF + DC. Since the whole point here is to work over ZF, I need to check which of the results quoted below survive without DC, and in what form. Larson–Zapletal explicitly work in ZF, which is why their formulation is the one I lean on.
+
+# The route through the literature
+
+So here is the route of papers/preprints that makes me fairly confident @thm-selector-transfer holds, even though I do not yet understand the machinery employed at any depth. First, a preprint by Larson and Zapletal working within ZF set theory uses, in the course of their argument, the fact that for any two "hyperfinite and nonsmooth" Borel equivalence relations, there exists a selector for one if there exists a selector for the other.[^larson-zapletal] Larson-Zapletal cite a classic 1994 paper on hyperfinite Borel equivalence relations by Dougherty, Jackson and Kechris (DJK) for this fact.[^djk] DJK and Larson-Zapletal list the Vitali equivalence relation induced by $\mathbb{R}/\mathbb{Q}$ as an example of a hyperfinite nonsmooth relation, so the question becomes whether this holds for the equivalence relation induced by $\mathbb{R}/G$ for any countable dense subgroup $G$. 
+
+Hyperfiniteness for all such quotients (not just $\mathbb{R}/\mathbb{Q}$) follows from a paper by J. Frisch and F. Shinko.[^FrSh] I don't have a direct citation for nonsmoothness, but it follows from the definition of nonsmoothness given by DJK, the density of $G$, and nonmeasurability of selectors for $\mathbb{R}/G$; I spell that argument out in the next section. From here, @thm-selector-transfer follows from DJK and Larson-Zapletal.
+
+# Nonsmoothness of $\sim_G$
+
+If $G$ is a countable dense subgroup of $\mathbb{R}$ and $\sim_G$ is the equivalence relation induced by the quotient $\mathbb{R}/G$, then any selector for $\mathbb{R}/G$ is necessarily non-measurable, and thus cannot be Borel. The proof of this is basically the same as the proof of the nonmeasurability of a Vitali set. But, according to DJK, nonsmoothness is equivalent to the nonexistence of a Borel selector for any countable Borel equivalence relation, including $\sim_G$. Thus $\sim_G$ is nonsmooth.
+
+# Where this leaves things
+
+The chain, then, is: $\sim_G$ is a countable Borel equivalence relation for every countable $G\leq\mathbb{R}$; it is hyperfinite by Frisch–Shinko; it is nonsmooth whenever $G$ is dense, by the argument just given; and DJK's transfer result, in the ZF formulation used by Larson–Zapletal, moves a selector between any two hyperfinite nonsmooth Borel equivalence relations. Taking one of them to be the Vitali relation gives @thm-selector-transfer.
+
+I want to be clear about the status of this. Each link is a statement I have read in the literature and believe, but I have not worked through the proofs, and the two [TODO]s above mark real gaps in my understanding rather than mere pedantry. I intend to come back and close them.
+
+[^larson-zapletal]: P. B. Larson and J. Zapletal, [*Discontinuous homomorphisms, selectors and automorphisms of the complex field (in ZF)*](https://arxiv.org/abs/1803.02740) (arXiv v3, 2020). An earlier version appeared in the *Proceedings of the AMS* in 2019, but that one assumes a weak form of AC; the arXiv version proves the result in ZF alone, which is the version that matters for our purposes here. This article is itself super interesting. So is a related preprint posted recently by Larson and Shelah, [*Discontinuous homomorphisms without Hamel bases*](https://arxiv.org/abs/2606.08384). In fact, discontinuous homomorphisms and certain pairs of nonmeasurable periodic functions with incommensurable periods whose sum is again periodic turn out to be "cousins" in a sense; I'll write about this in another post. 
+
+[^djk]: R. Dougherty, S. Jackson and A. S. Kechris, [*The structure of hyperfinite Borel equivalence relations*](https://www.ams.org/journals/tran/1994-341-01/S0002-9947-1994-1149121-0/S0002-9947-1994-1149121-0.pdf) (1994).
+
+[^FrSh]: J. Frisch and F. Shinko, [*Quotients by countable normal subgroups are hyperfinite*](https://arxiv.org/abs/1909.08716) (arXiv v2, 2020; published 2023). This paper in turn cites S. Gao and S. Jackson, [*Countable abelian group actions and hyperfinite equivalence relations*](https://sites.cos.unt.edu/~sgao/pub/paper30.pdf) (2015), which Larson and Shelah also cite.

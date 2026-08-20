@@ -1,0 +1,216 @@
+---
+title: "Pathological Periodicity, Part III: The Periodic Decomposition Problem and Vitali sets."
+author: "Alonso Espinosa Domínguez"
+date: "2026-08-17"
+number-offset: 2
+crossref:
+  chapters: true
+categories: [Pathological Periodicity, periodic functions, axiom of choice, measurability]
+draft: true
+---
+
+# Introduction {.unnumbered}
+
+It has been 5 months since my last post. I did not intend for there to be such a substantial gap, but a handful of things have gotten in the way of my writing. For one, the topics I am investigating at the heart of *Pathological Periodicity* have just kept branching into ever more directions and questions. I ended up pursuing too many of them simultaneously, making it difficult to finish writing about any of them. Not to mention, the more threads I explore, the more I feel compelled to re-think my plans both for these posts and for the more formal papers I would like to write up in the future. On top of that, several months back I began to learn about a totally distinct topic in 3-D algebraic topology, prompted by a former professor of mine. It was perhaps a bit over-ambitious to try to handle both projects at once given my other time constraints, but oh well, I guess I can't help but learn these things the hard way still.
+
+Anyhow, my thoughts on what to emphasize in this series and how to organize it have naturally changed in all this time. In truth, I had already snuck some of the changes in my thinking into the initial posts via numerous edits, some unannounced. In this post I want to introduce the periodic decomposition problem I have already referenced previously, state the theorem sitting at its foundation, and lay out the side of that theorem which has most strongly captured my imagination: the precise nature of its dependence on the Axiom of Choice (AC for short). The fuller reframing of *Pathological Periodicity* around this problem will come in the next post.
+
+Actually, in the course of drafting this post, I managed to figure out (with some help) how to resolve affirmatively one of the big questions on this set-theoretic side. Namely, the arguments I will present here prove that what I am calling the Periodic Decomposition Theorem (PDT) is *equivalent*, over ZF, to the existence of a **Vitali set** or **Vitali selector**, which is a set containing exactly one element from each equivalence class in $\mathbb{R}/\mathbb{Q}$. As will be explained below, the existence of such sets is one of many famous examples of a *fragment* of AC (i.e. a weaker version). In other words, the PDT, a foundational result in the literature on the periodic decomposition problem, is not a theorem of ZF set theory, and its logical strength can be pinned down as exactly identical to that of this well-known fragment. I'll explain all this in more detail below.
+
+But first let me give some basic background on the periodic decomposition problem, and formally state the PDT. In the next section, I will be borrowing from a survey of this problem by the Hungarian mathematicians Bálint Farkas and Szilárd Gy. Révész.[^survey] Let's jump in.
+
+# The Periodic Decomposition Problem
+
+The periodic decomposition problem begins with the observation that if a function $f: \mathbb{R}\to \mathbb{R}$ can be written as
+
+$$f = f_1+\cdots +f_n,$$ {#eq-decomp}
+
+where each $f_i$ is periodic and has a period $p_i$, then we must have
+
+$$\Delta_{p_1}\cdots \Delta_{p_n} f = 0.$$ {#eq-pdt}
+
+Thus, @eq-pdt is a necessary condition for $f$ to be decomposable in this manner. The decomposition problem consists of determining when the implication can be reversed.[^ruzsa] This is a nice generalization of the fact that a function is periodic with period $p$ if and only if $\Delta_p f = 0$.
+
+Notice that the identity $\operatorname{Id}(x) = x$ always satisfies @eq-pdt (for $n\geq 2$) no matter which $p_i$ we choose. But if the $p_i$ are all commensurable, the intersection $\bigcap_i p_i\mathbb{Z}$ contains some nonzero number $p$. This means it cannot be the case that $\operatorname{Id}$ has a decomposition of the form @eq-decomp, for in that case the sum on the right-hand side of @eq-decomp would be periodic with period $p$, and $\operatorname{Id}$ has no periods other than $0$. However, for a system of $n$ pairwise incommensurable real numbers $p_1,\ldots, p_n$, we do have the following theorem *assuming the axiom of choice*, which I will refer to as the **Periodic Decomposition Theorem** (PDT). 
+
+::: {#thm-pdt}
+## Periodic Decomposition Theorem (PDT)
+Let $p_1,\ldots, p_n$ be pairwise incommensurable. Then, for any function $f:\mathbb{R}\to\mathbb{R}$, there exists a decomposition of the form @eq-decomp for $f$ if and only if @eq-pdt holds.
+:::
+
+This is a foundational result in the literature on the periodic decomposition problem. It appears to have been first proved by the Italian analysts Stefano Mortola and Roberto Peirone in 1999 (20+ years after the decomposition problem was posed by Ruzsa).[^mortola]
+
+Mortola and Peirone tackle the problem assuming the existence of a basis for $\mathbb{R}$ as a $\mathbb{Q}$-vector space — a **Hamel basis**. Later we will see that this is one of the famous fragments of AC, sitting, in terms of deductive strength, between the existence of a Vitali set and the existence of a well-ordering of the reals.
+
+The motivating insight is that, granted such a basis, it is easy to decompose $\operatorname{Id}$. Write $B = \{b_\alpha\}_{\alpha\in A}$ for the basis, so that every real $x$ has a unique expansion
+$$x = \sum_{\alpha\in A} x_\alpha\, b_\alpha, \qquad x_\alpha\in\mathbb{Q},$$
+with all but finitely many $x_\alpha$ equal to zero. Pick two distinct indices $\alpha_1\neq\alpha_2$ and split the expansion in two:
+$$f_1(x) := x_{\alpha_1} b_{\alpha_1}, \qquad\qquad f_2(x) := \sum_{\alpha\neq\alpha_1} x_\alpha\, b_\alpha.$$
+Adding $b_{\alpha_1}$ to $x$ bumps the coordinate $x_{\alpha_1}$ by one and leaves every other coordinate alone, so $f_2$ does not notice: $b_{\alpha_1}\in P_{f_2}$. Adding $b_{\alpha_2}$ leaves $x_{\alpha_1}$ alone, so $b_{\alpha_2}\in P_{f_1}$. And of course $f_1+f_2 = \operatorname{Id}$. So $\operatorname{Id}$, a function with no nonzero period whatsoever, is the sum of two periodic functions whose periods are incommensurable.
+
+Mortola and Peirone realized this could be pushed a great deal further: essentially the same manoeuvre decomposes not just $\operatorname{Id}$, but *any* $f$ satisfying @eq-pdt. All of the work is concentrated into a single lemma.
+
+::: {#lem-mortola}
+## Mortola–Peirone
+Let $p, q$ be incommensurable, and let $g:\mathbb{R}\to\mathbb{R}$ be $p$-periodic. Then there exists a $p$-periodic $f:\mathbb{R}\to\mathbb{R}$ such that $\Delta_q f = g$.
+:::
+
+Said differently: the operator $\Delta_q$, restricted to the space of $p$-periodic functions, maps that space *onto* itself. Mortola and Peirone prove this using a Hamel basis, and the interested reader can consult their paper. After we discuss some set-theoretic preliminaries, we will give a proof that closely resembles theirs but replaces the Hamel basis with the considerably weaker assumption that a Vitali selector exists.
+
+For now, let's proceed to the proof of the PDT that follows once the lemma is in hand. It is exceedingly short.
+
+::: {.proof}
+Necessity is the observation we opened with, so only sufficiency is at issue. We argue by induction on $n$.
+
+For $n=1$, the hypothesis $\Delta_{p_1}f = 0$ says exactly that $f$ is $p_1$-periodic, so $f = f_1$ is already a decomposition.
+
+Suppose the theorem holds for $n$, and let $p_1,\ldots,p_{n+1}$ be pairwise incommensurable with $\Delta_{p_1}\cdots\Delta_{p_{n+1}}f = 0$. Since difference operators commute, we may read this as
+$$\Delta_{p_1}\cdots\Delta_{p_n}\big(\Delta_{p_{n+1}}f\big) = 0,$$
+so the inductive hypothesis applies to the function $\Delta_{p_{n+1}}f$: there are $g_1,\ldots,g_n$ with $p_i\in P_{g_i}$ and
+$$\Delta_{p_{n+1}}f = g_1+\cdots+g_n.$$
+Each $g_i$ is $p_i$-periodic, and $p_{n+1}$ is incommensurable with $p_i$, so @lem-mortola applies to the pair $(p_i, p_{n+1})$: there is a $p_i$-periodic $f_i$ with $\Delta_{p_{n+1}}f_i = g_i$. Put $h := f_1+\cdots+f_n$. Since $\Delta_{p_{n+1}}$ is linear,
+$$\Delta_{p_{n+1}}h = \sum_{i=1}^{n} \Delta_{p_{n+1}}f_i = \sum_{i=1}^{n} g_i = \Delta_{p_{n+1}}f,$$
+and therefore $\Delta_{p_{n+1}}(f-h) = 0$. That is, $f_{n+1} := f - h$ is $p_{n+1}$-periodic, and
+$$f = h + f_{n+1} = f_1+\cdots+f_n+f_{n+1}$$
+is a decomposition of the required form.
+:::
+
+That is the entire proof. What makes it go is that @lem-mortola lets us *lift* a decomposition of $\Delta_{p_{n+1}}f$ to a decomposition of $f$ itself, one summand at a time.
+
+Needless to say, I was very excited to find Mortola and Peirone's proof. Months ago I tried to prove the PDT by exactly this induction, but I got as far as reducing the whole problem to the need for @lem-mortola and then simply could not produce it. I knew Mortola and Peirone had proved it and I suspected they probably did so via a similar route, but somehow I failed to find a pdf of their paper. As such, just 2 days ago the draft of this post was much longer and more convoluted, as it contained proofs of weaker versions of the PDT that I was able to prove on my own. *Those* I could show were equivalent to existence of a Vitali set, but I was very dissatisfied not being able to say for sure whether the PDT in general was. So I am quite happy to have finally found a PDF of Mortola and Peirone's paper, even though it forced me to rewrite a good chunk of this post.
+
+And the rewrite was well worth it, for the following reason. Notice where the Axiom of Choice appears in the argument above: nowhere! The induction is pure ZF. *All* of the choice consumed by the PDT is consumed inside @lem-mortola. So the question of how much choice the PDT needs reduces entirely to the question of how much choice that one lemma needs — and the answer is going to be a good deal less than a Hamel basis.[^fhkr]
+
+# A little set theory 
+
+For the last 100 years, set theory has acted as the de facto foundation for most of mathematics. The majority of mathematicians use set theory fairly informally. They know set theorists have worked out all kinds of axiomatic systems to justify their manipulations with sets, and that the system called "Zermelo–Fraenkel Set Theory with the Axiom of Choice (ZFC)" in particular seems to work well for most of their purposes. But they often don't concern themselves too much with the details of these axioms. In these posts, we will still use set theory relatively informally, but we will concern ourselves heavily with the exact dependence of statements on the Axiom of Choice. 
+
+Recall that the **Axiom of Choice** (AC) states that given *any collection* of nonempty sets $\{S_\alpha\}_{\alpha\in \mathcal{I}}$, regardless of the cardinality of this collection, there exists a **selector** for this collection; i.e., a set consisting of exactly one element from each $S_\alpha$. AC is equivalent to a great many other statements, including the Well-Ordering Theorem (every set can be well-ordered) and the assertion that every single vector space has a basis. 
+
+AC in full generality is quite powerful, but when applied in practice you often don't need to actually assume that literally any collection as above has a selector. You just need to assume that a selector exists for the types of collections you are actually working with. 
+
+If you are working with finite sets, you don't even need an additional axiom. Finite choice, as it is called, can be proved from the axioms of ZF alone. Once the collection is *infinite*, however, ZF alone no longer guarantees you a selector. Sometimes you can still write one down by hand — if every $S_\alpha$ happens to be a nonempty set of natural numbers, just take the least element of each — but in general you cannot, and asserting that you can means *adding an axiom to your underlying set theory*. Any consequence of the full Axiom of Choice that is not equivalent to it but is still independent of ZF is often called a **fragment** of AC, and that is the term I will use here. Examples include the Axiom of Countable Choice, which asserts choice for any countable collection of (nonempty) sets.[^countable]
+
+The most important fragments of AC for our purposes are, first, the assertion that there exists a Vitali set/selector (call this assertion VIT for brevity); recall this is a selector for $\mathbb{R}/\mathbb{Q}$. Vitali sets are famous as the quintessential (non-constructive) "examples" of nonmeasurable subsets of the real line. Second, the assertion that there exists a **Hamel basis** (a basis specifically for $\mathbb{R}$ as a $\mathbb{Q}$-vector space).
+
+These two sit in a definite order, and locating them on it is exactly the kind of question this post is about. A Hamel basis yields a Vitali selector, but VIT does not yield a Hamel basis; and the existence of Hamel bases is in turn weaker than the existence of a well-ordering of $\mathbb{R}$, which is weaker still than the full AC.[^hamel] So VIT sits low on this ladder, and a Hamel basis strictly above it.
+
+However, VIT is still stronger than what can be proved in ZF alone. The famous witness to this is the *Solovay model*, a model of ZF plus another fragment called Dependent Choice (DC) in which *all* subsets of the real line are Lebesgue measurable, so that no Vitali set can exist in it.[^solovay] Saharon Shelah later built a different model of ZF + DC which likewise contains no Vitali set, and whose consistency rests on nothing beyond the consistency of ZF.[^shelah] So we can say with confidence that VIT is independent of ZF, provided ZF is consistent at all.
+
+So where does this leave the PDT? As we saw, Mortola and Peirone's argument spends choice in exactly one place, @lem-mortola, and what it spends there is a Hamel basis — a strictly stronger assumption than VIT, and one that lands the PDT higher up the hierarchy than it needs to be.
+
+The proof we will give in the next section spends much less. Instead of a basis for $\mathbb{R}$ over $\mathbb{Q}$, it needs only a selector for $\mathbb{R}/(p\mathbb{Z}+q\mathbb{Z})$ — a single quotient, by a subgroup of rank $2$, for each application of the lemma. And the induction applies the lemma only finitely many times, while finite choice is a theorem of ZF.
+
+But a selector for $\mathbb{R}/(p\mathbb{Z}+q\mathbb{Z})$ is not literally a Vitali selector: $p\mathbb{Z}+q\mathbb{Z}$ is not $\mathbb{Q}$. So the question naturally arises: over ZF, what does the existence of a selector for one such quotient imply about the existence of one for another, and in particular for $\mathbb{R}/\mathbb{Q}$?
+
+## Transferability of selectors and Borel equivalence relations
+
+Well, it turns out a Vitali selector exists if and only if a selector for any one of these quotients exists. In fact, a stronger result holds, which I will call the **selector transfer theorem**; this theorem itself is the consequence of many even stronger and deeper theorems in descriptive set theory and the theory of Borel equivalence relations. This is the theorem:
+
+::: {#thm-selector-transfer}
+## Selector transfer
+Let $G$ be a countable, dense subgroup of $\mathbb{R}$. Then a selector for $\mathbb{R}/G$ exists if and only if a selector for $\mathbb{R}/\mathbb{Q}$ exists.
+:::
+
+I have not seen this result stated in quite this form anywhere in the literature; it is a synthesis of results drawn from several papers and preprints, some of them quite recent. Writing that synthesis out carefully turned into a post of its own, [*Selectors on quotients of $\mathbb{R}$*](../Selectors-Quotients/index.qmd), where I give the definitions it rests on and trace the route through the literature. Here I will simply take @thm-selector-transfer as given, and note that we are leaning on some deep facts in descriptive set theory that belong to active areas of research.
+
+What @thm-selector-transfer buys us is the freedom to move between all of these quotients at will. A Vitali selector yields a selector for $\mathbb{R}/(p\mathbb{Z}+q\mathbb{Z})$ for any incommensurable $p,q$, and conversely. With that established, we can finally settle how much choice the PDT costs.
+
+# The PDT and the existence of a Vitali selector
+
+Now we can tackle the main result of this post: over ZF, the PDT is equivalent to the existence of a Vitali selector.
+
+To do so, we first need a proof of @lem-mortola that does not use a Hamel basis, and gets by with a selector for a quotient by a countable dense subgroup. The proof ends up being almost identical to Mortola and Peirone's. The idea of using a selector for such a quotient is specifically inspired by the way Farkas and Révész use one in their Proposition 1.3, which proves the PDT in the special case of a decomposition into two summands.
+
+::: {.proof}
+Assume VIT, and let $G := p\mathbb{Z}+q\mathbb{Z}$. Because $p/q\notin\mathbb{Q}$, this sum is direct: every element of $G$ is $mp+nq$ for a *unique* pair of integers $(m,n)$. The group $G$ is countable and, having rank $2$, dense, so @thm-selector-transfer turns our Vitali selector into a selector for $\mathbb{R}/G$. Fix one, and for each $x\in\mathbb{R}$ write $y_x$ for the representative of its coset, so that
+$$x = y_x + m(x)\,p + n(x)\,q$$
+with $m(x), n(x)\in\mathbb{Z}$ uniquely determined by $x$. Note that translating by $q$ does not change the coset, and so
+$$y_{x+q} = y_x, \qquad m(x+q) = m(x), \qquad n(x+q) = n(x)+1,$$
+while translating by $p$ leaves both $y_x$ and $n(x)$ alone.
+
+Now define $f:\mathbb{R}\to\mathbb{R}$ coset by coset, as follows:
+
+$$f(x) := \begin{cases} \sum_{k=0}^{n(x)-1} g(y_x + kq) & \text{if } n(x) > 0, \\ 0 & \text{if } n(x) = 0, \\ -\sum_{k=n(x)}^{-1} g(y_x + kq) & \text{if } n(x) < 0. \end{cases}$$ {#eq-lemma-f}
+
+*$f$ is $p$-periodic.* The right-hand side of @eq-lemma-f depends on $x$ only through $y_x$ and $n(x)$, and translating by $p$ changes neither. So $f(x+p) = f(x)$.
+
+*$\Delta_q f = g$.* Fix a coset representative $y$, and write $F(n)$ for the value @eq-lemma-f assigns to a point with $y_x = y$ and $n(x) = n$. I claim that
+$$F(n+1) - F(n) = g(y+nq) \qquad\text{for every } n\in\mathbb{Z}.$$ {#eq-lemma-telescope}
+For $n\geq 1$ the two sums differ by the single term $k = n$; for $n=0$ we get $F(1)-F(0) = g(y) - 0$; for $n = -1$ we get $F(0)-F(-1) = 0 + g(y-q)$; and for $n\leq -2$ the two sums again differ by the single term $k=n$. So @eq-lemma-telescope holds in every case, including at the two seams where the definition changes form.
+
+Now take any $x$ and write $y = y_x$, $n = n(x)$. Since $y_{x+q} = y$ and $n(x+q) = n+1$,
+$$\Delta_q f(x) = f(x+q) - f(x) = F(n+1) - F(n) = g(y+nq).$$
+Finally, $g$ is $p$-periodic, so $g(y + nq) = g(y + m(x)p + nq) = g(x)$. Hence $\Delta_q f = g$, as required.
+:::
+
+Two things are worth pausing on. First, the only appeal to choice in the whole argument is that one selector for $\mathbb{R}/G$, with $G$ of rank $2$ — nothing remotely like a basis for $\mathbb{R}$ over $\mathbb{Q}$. Second, the place where $p$-periodicity of $g$ gets used is precisely the place that lets us work modulo $G$ rather than modulo something finer. The sum in @eq-lemma-f ignores the $p$-coordinate of $x$ completely, and $g$, being $p$-periodic, obliges by not caring about it either. That is exactly the slack Mortola and Peirone spend a Hamel basis to buy.
+
+The induction in the proof of @thm-pdt applies @lem-mortola once for each pair $(p_i, p_{n+1})$, so finitely many times in total, and finite choice is a theorem of ZF. Putting these together:
+
+::: {#prp-vit-implies-pdt}
+Over ZF, VIT implies the PDT.
+:::
+
+For the reverse direction, let me first explain the thought process that led me there. Before I knew whether any of this was true, it was evident that the PDT does imply the existence of nonmeasurable (though not necessarily Vitali) sets, and is thus independent of ZF, per Solovay. This follows because $\operatorname{Id}$ (and in fact any $f$ with $\lim_{x\to \infty} f(x) = \infty$) cannot have a measurable decomposition (see the survey by Farkas and Révész),[^survey] yet must have a decomposition in ZF + PDT. This suggested to me that a possible way to prove the converse is to show that a decomposition of $\operatorname{Id}$ must itself induce a Vitali-type selector. I thought that maybe one of the nonmeasurable pre-images of a summand in the decomposition must actually be such a Vitali-type set.
+
+But I was stuck on how to prove this, and I was not sure if it was even true. It turns out, as was pointed out to me, that I was halfway there. The function $\operatorname{Id}$ is in fact the correct one to consider, but the Vitali set is not a pre-image of a summand in the decomposition. The key instead is to see that if $x = f(x) + g(x)$ is a $(p,q)$-decomposition of $\operatorname{Id}$, then $f(x + nq) = f(x) + nq$ and $g(x+mp) = g(x) + mp$, and thus $f(x)\in [0, q)$ and $g(x)\in [0, p)$ can occur only once per coset. To put this more formally:
+
+::: {#lem-vitali-from-pdt}
+Suppose $p, q > 0$ with $p/q\not\in \mathbb{Q}$, and suppose $\operatorname{Id}$ admits a $(p, q)$-decomposition, $\operatorname{Id} = f + g$ with $p\in P_f$ and $q\in P_g$. Then the set
+$$S := \{x\in \mathbb{R}: \lfloor f(x)/q \rfloor = 0 = \lfloor g(x)/p \rfloor \}$$ {#eq-selector}
+is a selector for $\mathbb{R}/(p\mathbb{Z} + q\mathbb{Z})$.
+:::
+
+::: {.proof}
+Since $\operatorname{Id} = f+g$ and $nq\in P_g$ for every $n\in\mathbb{Z}$,
+
+$$f(x+nq) = (x+nq) - g(x+nq) = (x+nq) - g(x) = f(x) + nq,$$
+
+and symmetrically $g(x+mp) = g(x)+mp$ for every $m\in\mathbb{Z}$, using $mp\in P_f$.
+
+Let $x\in \mathbb{R}$. Then $f(x) = nq + t$ for some $n\in \mathbb{Z}$ and $t\in [0, q)$, where $n$ may be zero. This means $x - nq$ is in the same coset as $x$, and $f(x-nq) = f(x) - nq = t\in [0, q)$. Similarly, $g(x) = mp + s$ for some $m\in \mathbb{Z}$ and $s\in [0, p)$, and thus $x - mp$ is in the same coset as $x$, and $g(x-mp) = g(x) - mp = s\in [0, p)$. Let $y = x - nq - mp$. Then $y$ is in the same coset as $x$, and, since $p\in P_f$ and $q\in P_g$, we have $f(y) = f(x-nq) = t\in [0, q)$ and $g(y) = g(x-mp) = s\in [0, p)$. Thus $y\in S$. In other words, each coset intersects $S$ at least once.
+
+Now we observe that this $y$ must be unique. Let $y_1, y_2\in S$ be in the same coset. Then $y_1 - y_2 = mp + nq$ for some $m, n\in \mathbb{Z}$. But then $f(y_1) - f(y_2) = nq$ and $g(y_1) - g(y_2) = mp$. Since $f(y_i)\in [0, q)$ and $g(y_i)\in [0, p)$, we must have $n = m = 0$, and thus $y_1 = y_2$. Therefore, each coset intersects $S$ at most once. This finishes the proof that $S$ is a selector for $\mathbb{R}/(p\mathbb{Z} + q\mathbb{Z})$.
+:::
+
+A perfectly simple, elementary proof that eluded me for months! And with it we have both directions:
+
+::: {#thm-pdt-iff-vit}
+## The PDT is equivalent to VIT
+Over ZF, the Periodic Decomposition Theorem holds if and only if there exists a Vitali selector.
+:::
+
+::: {.proof}
+One direction is @prp-vit-implies-pdt. For the other, assume the PDT and fix any positive incommensurable $p, q$. Since $\Delta_q\operatorname{Id}$ is the constant function $q$, we have $\Delta_p\Delta_q\operatorname{Id} = 0$, so the PDT hands us a $(p,q)$-decomposition of $\operatorname{Id}$. By @lem-vitali-from-pdt this decomposition yields a selector for $\mathbb{R}/(p\mathbb{Z}+q\mathbb{Z})$, and by @thm-selector-transfer that selector yields a Vitali selector.
+:::
+
+In particular, since VIT is not a theorem of ZF, neither is the PDT.
+
+To me, this is pretty neat. But it is only the beginning. There are many possible variations of the PDT that can be considered by altering the conditions on the summands in the decomposition. For instance, we could require that the summands in a decomposition be not only periodic, but incommensurable (they won't necessarily be incommensurable if the function being decomposed is already periodic, as we will see in the next post), or require that they be strictly periodic. We could also generalize from periodicity by considering operators $T:A\to A$ on arbitrary sets and $T$-invariance of functions $f:A\to \mathbb{R}$ defined by $f(Tx) = f(x)$; this is actually the route taken in FHKR to prove the PDT as a corollary of a more general statement. In each such variation or generalization, we can ask what choice principles the resulting decomposition theorems require or are equivalent to. In fact, so far the variations I have considered seem to each require distinct levels of choice, and I suspect these distinct levels of choice I have used in the proofs are in fact equivalent to the theorems. I'll be writing more about this in the future.
+
+# Conclusion {.unnumbered}
+
+Here is why we should care about all this: AC is very powerful when it comes to proving that things exist. Indeed, in some ways, it is a little *too* powerful: AC together with the rest of ZF can be used to assert the existence of objects that are impossible to explicitly construct, and some of these are very bizarre (as *Pathological Periodicity* will attest to). This seems to be one of many factors that push a minority of mathematicians to reject ZFC as an axiom system.
+
+I don't think it is necessary to reject ZFC outright. I *do* think however that figuring out *precisely how much* various results throughout "standard" mathematics depend on AC and its weaker fragments is in and of itself highly interesting and worthwhile mathematics. Doing so gives us a more accurate picture of the spectrum of deductive strength — of exactly how much choice — underlying results throughout the parts of our discipline built over ZF, and hence of how far each of them sits from anything you could actually construct.
+
+Philosophically, I think this matters because, even if you accept the existence of objects that cannot be constructed, such objects come with sharply limited domains of applicability. Grant a Hamel basis, for instance, and there exist additive functions $\mathbb{R}\to\mathbb{R}$ that fail to be linear; these are nowhere continuous, and their graphs are dense in the plane. But you will never write one down, never evaluate one at a point, never compute anything with one. Their existence is a fact about what ZFC proves, not a fact you can put to work to model the motion of a ball or even the behavior of a quantum system. Locating a theorem on the spectrum above means knowing, for that theorem, roughly where this line falls.
+
+A good chunk of *Pathological Periodicity* will be about parsing out this spectrum specifically within the literature on the Periodic Decomposition Problem. Today, we got a nice start by pinning down the PDT exactly. Throughout the rest of the series, we will seek to pin down the deductive strength of other variants of the PDT, as well as that of the specific, highly pathological phenomena they give rise to. As a little preview: assuming VIT, there exist whole vector subspaces of $\mathbb{R}^\mathbb{R}$ generated by incommensurable periodic functions, whose elements are periodic and yet can be decomposed into sums of pairwise incommensurable periodic functions (this answers Question 4 of [Part I](../Relearning-Basics/index.qmd)). It is unclear to me as of yet whether this implication can be reversed.
+
+[^survey]: B. Farkas and Sz. Gy. Révész, [*The periodic decomposition problem*](https://www.renyi.hu/~revesz/farkas-revesz-oman-springer.pdf) (2015).
+
+[^ruzsa]: Farkas and Révész credit the question to Imre Z. Ruzsa, who posed it in the 1970s; it is Problem 1.1 in their survey, and the survey itself is dedicated to him on the occasion of his 60th birthday. Ruzsa is best known as a number theorist — one of the architects of modern additive combinatorics — which makes it all the more charming that he seems to have set a generation of Hungarian analysts to work on a question about periodic functions on the line. He recurs throughout the resulting literature: an unpublished theorem of Ruzsa and Szegedy rules out the analogous statement for polynomial "quasi-decompositions", and he is a co-author on G. Károlyi, T. Keleti, G. Kós and I. Z. Ruzsa, [*Periodic decomposition of integer valued functions*](https://karolyigy.web.elte.hu/preprints/javkakekoru4.pdf) (2008).
+
+[^mortola]: S. Mortola and R. Peirone, [*The sum of periodic functions*](http://www.bdim.eu/item?fmt=pdf&id=BUMI_1999_8_2B_2_393_0) (1999). The survey attributes Corollary 6.3 jointly to them and to a two-author paper of Farkas and Révész, [*Decomposition as the sum of invariant functions with respect to commuting transformations*](https://arxiv.org/abs/math/0507605) (2007) — which is a different article from the four-author one cited in the next footnote. The two lines of argument appear to have been arrived at independently.
+
+[^fhkr]: There is a second, quite different route to the PDT. In the Farkas–Révész survey it appears as Corollary 6.3, deduced from their Theorem 5.9, whose proof is not in the survey; for that one must go to Theorem 2.3 of B. Farkas, V. Harangi, T. Keleti and Sz. Gy. Révész, [*Invariant decomposition of functions with respect to commuting invertible transformations*](https://arxiv.org/abs/math/0703382) (2008). That theorem is far more general — it concerns arbitrary commuting invertible transformations of an arbitrary set — and correspondingly harder. Its proof is well beyond the scope of this post, and how much choice *it* consumes is a separate question I intend to take up later.
+
+[^countable]: That the Axiom of Countable Choice (AC$_\omega$) really is a fragment in this sense — not provable in ZF, yet strictly weaker than AC — is classical. It fails in the Feferman–Lévy model of ZF, in which $\mathbb{R}$ is a countable union of countable sets; and it holds in the Solovay model discussed below, where the full AC fails. From what I can gather, the standard catalogue of such implications and non-implications among choice principles is P. Howard and J. E. Rubin, *Consequences of the Axiom of Choice* (1998); the classic textbook treatment is T. Jech, *The Axiom of Choice* (1973). I myself have only started Jech and haven't tackled Howard and Rubin; but after all of this I sure have reason to read much more of these books!
+
+[^hamel]: That a Hamel basis yields a Vitali selector can be seen as follows. First, you can always take an existing basis and get a new basis $B$ containing $1$ (replace any basis element in the expansion for $1$ with $1$). Then the $\mathbb{Q}$-span of $B\setminus\{1\}$ is a complement to $\mathbb{Q}$ in $\mathbb{R}$, and hence a selector for $\mathbb{R}/\mathbb{Q}$; generally, the complement of a subspace of a vector space is always a selector for that subspace. That a Vitali set does not imply a Hamel basis is proved by Larson-Zapletal in their book *Geometric Set Theory* assuming consistency of an inaccessible cardinal; Larson and Shelah claim, in [*Discontinuous homomorphisms without Hamel bases*](https://arxiv.org/abs/2606.08384), that this assumption can be removed. That the existence of a Hamel basis does *not* imply a well-ordering of $\mathbb{R}$ is the main result of M. Beriashvili, R. Schindler, L. Wu and L. Yu, [*Hamel bases and well-ordering the continuum*](https://ivv5hpp.uni-muenster.de/u/rds/hamel_basis.pdf) (2018).
+
+[^solovay]: R. M. Solovay, [*A model of set-theory in which every set of reals is Lebesgue measurable*](https://annals.math.princeton.edu/1970/92-1/p01) (1970).
+
+[^shelah]: S. Shelah, [*Can you take Solovay's inaccessible away?*](https://doi.org/10.1007/BF02760522) (1984). The title is the question, and the answer turns out to depend on which regularity property you ask for. Shelah proves both halves of the asymmetry. On the one hand, ZF + DC + "every set of reals is Lebesgue measurable" is equiconsistent with ZFC + "there exists an inaccessible cardinal" — a large-cardinal axiom whose consistency strength is strictly greater than that of ZFC itself — so Solovay's extra hypothesis genuinely cannot be dropped. On the other hand, ZF + DC + "every set of reals has the **Baire property**" is equiconsistent with ZF alone. It is this second model that we want, because we never needed every set to be measurable; we only needed a model of ZF containing no Vitali selector, and since a Vitali selector can never have the Baire property, Shelah's Baire model contains none. A caveat the reader deserves: I have not read this paper or Solovay's, and the subtleties around inaccessible cardinals and the forcing constructions used to build these models are well beyond what I currently understand. I am relying on the standard statements of these results as they are reported in the literature, and if I have misrepresented them the fault is mine.

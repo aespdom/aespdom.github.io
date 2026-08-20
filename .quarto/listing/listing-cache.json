@@ -9,6 +9,9 @@
     "archive.qmd": [
       "posts/en"
     ],
+    "index.qmd": [
+      "posts/en"
+    ],
     "blog-es.qmd": [
       "posts/es"
     ],

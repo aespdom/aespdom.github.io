@@ -1,71 +1,59 @@
 {
-  "posts/post-with-code/index.qmd": {
-    "index.html": "0a5d1cda"
+  "posts/es/Va-de-Nuez/index.qmd": {
+    "index.html": "5b79405d"
   },
-  "posts/welcome/index.qmd": {
-    "index.html": "a8b46f50"
+  "posts/en/PDP-Vitali/index.qmd": {
+    "index.html": "058e2d2f"
   },
-  "index.qmd": {
-    "index.html": "1e359346"
+  "posts/en/Degeneracy-Decomposability/index.qmd": {
+    "index.html": "06880532"
   },
-  "about.qmd": {
-    "about.html": "6c2e816b"
-  },
-  "posts/Welcome-to-Math-Adventures/index.qmd": {
-    "index.html": "182cc9cd"
-  },
-  "posts/en/Welcome-to-Math-Adventures/index.qmd": {
-    "index.html": "d869be54"
-  },
-  "posts/en/Dense-Periods-Measurability/index.qmd": {
-    "index.html": "3c7b6f72"
-  },
-  "posts/en/Intro-prelims/index.qmd": {
-    "index.html": "fe187c2b"
-  },
-  "posts/en/First-Pathologies/index.qmd": {
-    "index.html": "e830d66a"
+  "posts/en/Cage-Continuity/index.qmd": {
+    "index.html": "32232bcb"
   },
   "posts/en/Relearning-Basics/index.qmd": {
-    "index.html": "da88d523"
+    "index.html": "e69e7926"
   },
-  "posts/en/Preliminaries/index.qmd": {
-    "index.html": "69aeca07"
+  "posts/en/Selectors-Quotients/index.qmd": {
+    "index.html": "a64c715a"
   },
-  "posts/en/Alg-Top-Periods/index.qmd": {
-    "index.html": "32703d43"
-  },
-  "series.qmd": {
-    "series.html": "ba141c3b"
-  },
-  "archive.qmd": {
-    "archive.html": "445afcc2"
-  },
-  "pathological-periodicity.qmd": {
-    "pathological-periodicity.html": "80cc59dd"
-  },
-  "blog.qmd": {
-    "blog.html": "72247452"
-  },
-  "blog-es.qmd": {
-    "blog-es.html": "8cc00b25"
-  },
-  "archive-es.qmd": {
-    "archive-es.html": "477f9d2a"
-  },
-  "series-es.qmd": {
-    "series-es.html": "4fe25364"
-  },
-  "periodicidad-patologica.qmd": {
-    "periodicidad-patologica.html": "520bcb9d"
+  "posts/en/Returning-Not-Repeating/index.qmd": {
+    "index.html": "d720511b"
   },
   "about-es.qmd": {
-    "about-es.html": "095f0a32"
+    "about-es.html": "a3f24082"
+  },
+  "series.qmd": {
+    "series.html": "5ec07dc1"
+  },
+  "periodicidad-patologica.qmd": {
+    "periodicidad-patologica.html": "0070d74a"
+  },
+  "archive-es.qmd": {
+    "archive-es.html": "b128aeb8"
+  },
+  "archive.qmd": {
+    "archive.html": "8bf62482"
+  },
+  "index.qmd": {
+    "index.html": "2993327a"
+  },
+  "about.qmd": {
+    "about.html": "8e10d575"
+  },
+  "blog-es.qmd": {
+    "blog-es.html": "8a3ed064"
   },
   "index-es.qmd": {
-    "index-es.html": "8e1d80be"
+    "index-es.html": "89bc328e"
   },
-  "posts/es/Bienvenida/index.qmd": {
-    "index.html": "335fde66"
+  "series-es.qmd": {
+    "series-es.html": "ab073e46"
+  },
+  "pathological-periodicity.qmd": {
+    "pathological-periodicity.html": "ceebd7e2"
+  },
+  "blog.qmd": {
+    "blog.html": "064951e1"
   }
 }

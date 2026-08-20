@@ -1,0 +1,93 @@
+---
+title: "Pathological Periodicity, Part IV: Degeneracy and Decomposability"
+author: "Alonso Espinosa Domínguez"
+date: "2026-08-17"
+number-offset: 5
+crossref:
+  chapters: true
+categories: [Pathological Periodicity, periodic functions, axiom of choice, measurability]
+draft: true
+---
+
+<!-- BORRADOR INICIAL — esqueleto, no listo para publicar -->
+
+# Introduction {.unnumbered}
+
+<!-- TODO: write the introduction. It should pick up where Part III left off: Part III
+     introduced the periodic decomposition problem and settled how much choice the PDT
+     consumes; this post turns to the structure of the decompositions themselves, and
+     recasts the series around them. -->
+
+# Recasting the series
+
+To conclude, let's recast *Pathological Periodicity* firmly as an exploration of certain aspects of the periodic decomposition problem.
+
+<!-- TODO: "To conclude" was the opening of the final section of Part III. Reword for its
+     new position as the opening of this post. -->
+
+First, observe that if a non-periodic function admits a periodic decomposition as in @eq-decomp, the summands must satisfy $\bigcap_i P_{f_i} = \{0\}$. For $n = 2$ this says precisely that $f_1$ and $f_2$ are incommensurable. This need not be the case if $f$ is periodic; as we will see in a future post, the set of representatives of, say, $\mathbb{R}/(p\mathbb{Z} + q\mathbb{Z})$ may induce common shared periods amongst the $f_i$. The decompositions of periodic functions that are interesting, however, are those where the $f_i$ are incommensurable with each other and with $f$ itself.
+
+<!-- TODO: BROKEN CROSS-REF. @eq-decomp is defined in Part III, not here. Either restate
+     the equation $f = f_1 + \cdots + f_n$ in this post and give it its own label, or
+     replace the reference with a prose link to Part III. -->
+
+Essentially, this series is an investigation into periodically decomposable functions, with special attention to decomposable functions that are themselves already periodic.
+
+It is fairly obvious why one might be interested in periodic decompositions of non-periodic functions. But why care about periodic decomposability of functions that are already periodic?
+
+Because studying this means studying the limits of periodicity's closure with respect to the operation of addition. The set of periodic functions $\mathscr{P}$ is closed under composition, but not under addition (or multiplication). We could leave things at that, but anyone with a dose of curiosity would want to understand more fully the extent to which additive (and multiplicative) algebraic structures exist or fail to exist within $\mathscr{P}$. The fact that the boundaries of such algebraic structures are traced by analytic conditions (boundedness, continuity, measurability), as well as by the strength of choice principles adopted at the axiomatic level, is what makes this topic so interesting.
+
+We can restate the results of [Part II](../Cage-Continuity/index.qmd) as follows.
+
+::: {.theorem}
+**Part II, Theorem 2.3 (restated).** Suppose $f$ is a periodic function that is bounded on some interval, and suppose $q$ is a number such that $\mathcal{C}(\Delta_q f)$ is nonempty. Then $f$ does not have an incommensurable $(p, q)$-decomposition for any $p$.
+:::
+
+::: {.corollary}
+**Corollary.** Suppose $f$ is as above and $\mathcal{C}(\Delta_q f)$ is nonempty for all $q$. Then $f$ is not 2-decomposable.
+:::
+
+::: {.corollary}
+**Part II, Theorem 2.2 (restated).** Suppose $f$ is a periodic function such that $\mathcal{C}(f)$ is somewhere dense. Then $f$ is not 2-decomposable. In particular, no continuous periodic function is 2-decomposable (Theorem 2.1 of Part II).
+:::
+
+<!-- TODO: these three blocks use "incommensurable $(p,q)$-decomposition" and
+     "2-decomposable", which are only defined in the Terminology section below.
+     Either move them after that section, or forward-reference it. -->
+
+# Degeneracy in $n$-ary decompositions
+
+<!-- TODO: write this section.
+
+     Planned content: suppose $h$ admits a $(p,q)$-decomposition whose summands are
+     incommensurable. Then for any $r$ incommensurable with both $p$ and $q$, the
+     condition $\Delta_r\Delta_p\Delta_q h = 0$ holds automatically — the third
+     difference operator buys nothing. But this does NOT guarantee that $h$ admits a
+     3-decomposition whose summands are pairwise incommensurable with one another.
+
+     So the necessary condition of the PDT can be satisfied "degenerately": it is met
+     for reasons that have nothing to do with genuine $3$-ary structure. Note that this
+     phenomenon has no analogue at $n = 2$.
+
+     This is what motivates the notion of a non-degenerate (= incommensurable)
+     decomposition in the next section. -->
+
+# Terminology
+
+Let's formalize some terminology. I will say a function $f$ **admits a $(p_1, \ldots, p_n)$-decomposition** if it admits a decomposition as in @eq-decomp with $f_i$ having period $p_i$, and with the $p_i$ being mutually incommensurable. This decomposition will be **incommensurable** if additionally the functions $f_i$ are pairwise incommensurable. This decomposition will be **strict** if the $f_i$ are strictly periodic with fundamental periods $p_i$. Moreover, let's agree to say $f$ is **$n$-decomposable** if it admits an incommensurable $(p_1, \ldots, p_n)$-decomposition, and to say it is **decomposable** if it is $n$-decomposable for some $n\geq 2$.
+
+<!-- TODO: BROKEN CROSS-REF — same @eq-decomp problem as above. -->
+
+<!-- TODO: decide on the name. The section above calls the phenomenon "degeneracy", so
+     "non-degenerate decomposition" may read better than "incommensurable decomposition"
+     for the case where the $f_i$ are pairwise incommensurable. If the name changes, it
+     has to change in the three restated blocks above too, and in the footnote of the
+     selectors post that alludes to these functions. -->
+
+# The Incommensurable Decomposition Theorem
+
+<!-- TODO: state the IDT. Statement only, no proof — the proof goes in Part V. -->
+
+I will stop for now, as this post has already surveyed a lot of ground.
+
+<!-- TODO: this was the closing line of Part III; rewrite it for this post. -->
