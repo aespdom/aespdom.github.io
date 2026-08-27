@@ -1,20 +1,5 @@
 [
   {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/en/PDP-Vitali/index.html",
-      "/posts/en/Cage-Continuity/index.html",
-      "/posts/en/Relearning-Basics/index.html",
-      "/posts/en/Returning-Not-Repeating/index.html"
-    ]
-  },
-  {
-    "listing": "/blog-es.html",
-    "items": [
-      "/posts/es/Va-de-Nuez/index.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/en/PDP-Vitali/index.html",
@@ -24,17 +9,16 @@
     ]
   },
   {
-    "listing": "/archive-es.html",
+    "listing": "/archive.html",
     "items": [
-      "/posts/es/Va-de-Nuez/index.html"
+      "/posts/en/PDP-Vitali/index.html",
+      "/posts/en/Cage-Continuity/index.html",
+      "/posts/en/Relearning-Basics/index.html",
+      "/posts/en/Returning-Not-Repeating/index.html"
     ]
   },
   {
-    "listing": "/periodicidad-patologica.html",
-    "items": []
-  },
-  {
-    "listing": "/archive.html",
+    "listing": "/blog.html",
     "items": [
       "/posts/en/PDP-Vitali/index.html",
       "/posts/en/Cage-Continuity/index.html",
