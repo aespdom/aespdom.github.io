@@ -35,7 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../favicon-tests/favicon-medium.png" rel="icon" type="image/png">
+<link href="../../../favicon-medium.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -266,7 +266,7 @@ window.Quarto = {
 <p>with all but finitely many <span class="math inline">\(x_\alpha\)</span> equal to zero. Pick two distinct indices <span class="math inline">\(\alpha_1\neq\alpha_2\)</span> and split the expansion in two:</p>
 <p><span class="math display">\[f_1(x) := x_{\alpha_1} b_{\alpha_1}, \qquad\qquad f_2(x) := \sum_{\alpha\neq\alpha_1} x_\alpha\, b_\alpha.\]</span></p>
 <p>Adding <span class="math inline">\(b_{\alpha_1}\)</span> to <span class="math inline">\(x\)</span> bumps the coordinate <span class="math inline">\(x_{\alpha_1}\)</span> by one and leaves every other coordinate alone, so <span class="math inline">\(f_2\)</span> does not notice: <span class="math inline">\(b_{\alpha_1}\in P_{f_2}\)</span>. Adding <span class="math inline">\(b_{\alpha_2}\)</span> leaves <span class="math inline">\(x_{\alpha_1}\)</span> alone, so <span class="math inline">\(b_{\alpha_2}\in P_{f_1}\)</span>. And of course <span class="math inline">\(f_1+f_2 = \operatorname{Id}\)</span>. So <span class="math inline">\(\operatorname{Id}\)</span>, a function with no nonzero period whatsoever, is the sum of two periodic functions.</p>
-<p>Mortola and Peirone realized this could be pushed a great deal further: a more sophisticated version of the same Hamel-basis maneuver decomposes not just <span class="math inline">\(\operatorname{Id}\)</span>, but <em>any</em> <span class="math inline">\(f\)</span> satisfying <a href="#eq-pdt" class="quarto-xref">Equation&nbsp;2</a>. All of the work is concentrated into a single lemma:</p>
+<p>Mortola and Peirone realized this could be pushed a great deal further: a more sophisticated version of the same Hamel-basis maneuver decomposes not just <span class="math inline">\(\operatorname{Id}\)</span>, but <em>any</em> <span class="math inline">\(f\)</span> satisfying <a href="#eq-pdt" class="quarto-xref">Equation&nbsp;2</a> for any system of <span class="math inline">\(n\)</span> pairwise-incommensurable periods <span class="math inline">\(p_1,\ldots p_n\)</span>. All of the work is concentrated into a single lemma:</p>
 <div id="lem-mortola" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 1 (Mortola–Peirone)</strong></span> Let <span class="math inline">\(p, q\)</span> be incommensurable, and let <span class="math inline">\(g:\mathbb{R}\to\mathbb{R}\)</span> be <span class="math inline">\(p\)</span>-periodic. Then there exists a <span class="math inline">\(p\)</span>-periodic <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> such that <span class="math inline">\(\Delta_q f = g\)</span>.</p>
 </div>
